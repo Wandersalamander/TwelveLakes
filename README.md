@@ -1,6 +1,6 @@
 # TwelveLakes <div style="float: left;"><img src="https://github.com/Wandersalamander/TwelveLakes/blob/master/resources/drawables/launcher_icon.png" width="40" height="40"/></div> 
 
-TwelveLakes is a Garmin Glance app designed to provide detailed information about alpine lakes directly on your Garmin watch. By leveraging the Alplakes API, TwelveLakes displays a list of twelve alpine lakes with essential details for outdoor enthusiasts, hikers, and nature lovers.
+TwelveLakes is a Garmin Glance app designed to provide detailed information about alpine lakes directly on your Garmin watch. By leveraging the Alplakes API, TwelveLakes displays one of twelve alpine lakes with essential details for outdoor enthusiasts, hikers, and nature lovers.
 
 ## Features
 
