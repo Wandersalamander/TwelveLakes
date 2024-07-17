@@ -10,19 +10,18 @@ using Toybox.Application.Storage;
 
 (:glance)
 class WidgetGlanceView extends Ui.GlanceView {
-    var response_info = "init";
-    var lake = "init";
-    var temperature = null;
-    var lastUpdate = null;
+    var response_info as String = "init";
+    var lake as String = "init";
+    var temperature as Float or Null = null;
+    var lastUpdate as Time.Moment or Null = null;
 ;
 	
-    function initialize(lakeName, position) {
+    function initialize(lakeName as String , position as [Float, Float]) {
       GlanceView.initialize();
       lake = lakeName;
       temperature = Storage.getValue("glanceTemperature");
-      lastUpdate = Storage.getValue("glanceLastUpdate");
-      if (lastUpdate != null){
-        lastUpdate = new Time.Moment(lastUpdate);
+      if (Storage.getValue("glanceLastUpdate") != null){
+        lastUpdate = new Time.Moment(Storage.getValue("glanceLastUpdate"));
       }
       makeRequest(lakeName, position);
       
@@ -55,7 +54,7 @@ class WidgetGlanceView extends Ui.GlanceView {
     }
 
     //! Make the web request
-    public function makeRequest(lakeName, position) as Void {
+    public function makeRequest(lakeName as String, position as [Float, Float]) as Void {
         System.println("Executing\nRequest");
         if ((lakeName != null) && (position != null)){
           var readyForUpdate = true;
@@ -103,10 +102,11 @@ class WidgetGlanceView extends Ui.GlanceView {
         System.println(responseCode);
         if (responseCode == 200) {
             System.println(data);
-            temperature = data["temperature"]["data"][0];
-            Storage.setValue("glanceTemperature", temperature);
-            Storage.setValue("glanceLastUpdate", Time.now().value());
-
+            if (data instanceof Dictionary){
+              temperature = data["temperature"]["data"][0];
+              Storage.setValue("glanceTemperature", temperature);
+              Storage.setValue("glanceLastUpdate", Time.now().value());
+            }
             response_info = "Sucessful";
         } else {
             response_info = "Failed to load\nError: " + responseCode.toString();

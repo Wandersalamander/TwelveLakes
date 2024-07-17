@@ -1,6 +1,8 @@
 import Toybox.Graphics;
+import Toybox.Lang;
+
 (:glance)
-function getColor(temperature){
+function getColor(temperature as Float or Null) as Lang.Number or Graphics.ColorValue{
     var color = Graphics.COLOR_DK_BLUE;
     if (temperature != null){
         if (temperature < 10){

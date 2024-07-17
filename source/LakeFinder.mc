@@ -1,7 +1,9 @@
 using Toybox.Position;
 import Toybox.Activity;
+import Toybox.Lang;
+
 class MyLakeFinder {
-    public var available_lakes = [
+    public var available_lakes as Array<String> = [
         "geneva",
         "garda",
         "zurich",
@@ -16,7 +18,7 @@ class MyLakeFinder {
         "caldonazzo"
     ];
 
-    private var lakePositions = {
+    private var lakePositions as Dictionary<String, [Float, Float]>  = {
         // todo add severlal positions for big lakes
         "greifensee"=> [47.350895, 8.678143],
         "biel"=>[47.082150, 7.173328],
@@ -32,7 +34,7 @@ class MyLakeFinder {
         "stmoritz" =>[46.494658, 9.844898],
     };
 
-    function getPosition(){
+    function getPosition() as [Double, Double] or Null{
         var myPos = null;
         var info = Position.getInfo();
 
@@ -46,7 +48,7 @@ class MyLakeFinder {
         System.println(myPos);
         return myPos;
     }
-    function getClosesLake(position_lat_long){
+    function getClosesLake(position_lat_long as [Double, Double] or Null) as String or Null {
         var minDistVal = 666;
         var minDistIdx = null;
 

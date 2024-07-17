@@ -13,33 +13,31 @@ using Toybox.Time.Gregorian;
 using Toybox.Application.Storage;
 
 class TwelveLakesView extends WatchUi.View {
-    public var currentLake = null;
-    public var currentPosition = null;
-    public var currentTemperature = null;
-    public var currentDistance = null;
+    public var currentLake as String or Null = null;
+    public var currentPosition as [Double,Double] or Null = null;
+    public var currentTemperature as Float or Null = null;
+    public var currentDistance as Float or Null= null;
 
-    public var favouriteLake = null;
-    public var favouritePosition = null;
-    public var favouriteTemperature = null;
+    public var favouriteLake as String or Null= null;
+    public var favouritePosition as Array<Double> or Null= null;
+    public var favouriteTemperature as Float or Null = null;
 
-    public var favouriteTemperatureArray = null;
-    public var favouriteTimeArray = null;
+    public var favouriteTemperatureArray as Array<Float> or Null = null;
+    public var favouriteTimeArray as Array<String> or Null= null;
     
 
-    var response_info = "init";
-    var lastUpdateFav = null;
-    var lastUpdateProx = null;
+    var response_info as String = "init";
+    var lastUpdateFav as Time.Moment or Null = null;
+    var lastUpdateProx as Time.Moment or Null = null;
 
     function initialize(favouriteLake,favouritePosition) {
         View.initialize();
 
-        lastUpdateFav = Storage.getValue("viewLastUpdateFav");
-        lastUpdateProx = Storage.getValue("viewLastUpdateProx");
-        if (lastUpdateFav != null){
-            lastUpdateFav = new Time.Moment(lastUpdateFav);
+        if (lastUpdateFav != Storage.getValue("viewLastUpdateFav")){
+            lastUpdateFav = new Time.Moment(Storage.getValue("viewLastUpdateFav"));
         }
-        if (lastUpdateProx != null){
-            lastUpdateProx = new Time.Moment(lastUpdateProx);
+        if (lastUpdateProx != Storage.getValue("viewLastUpdateProx")){
+            lastUpdateProx = new Time.Moment(Storage.getValue("viewLastUpdateProx"));
         }
         self.favouriteLake = favouriteLake;
         self.favouritePosition = favouritePosition;
@@ -221,19 +219,20 @@ class TwelveLakesView extends WatchUi.View {
         System.println("TwelveLakesView.onReceiveFav");
         System.println(responseCode);;
         if (responseCode == 200) {
-            System.println(data);;
-            favouriteTimeArray = data["time"]; // YYYYmmddhhmm
-            Storage.setValue("favouriteTimeArray", favouriteTimeArray);
-            favouriteTemperatureArray = data["temperature"]["data"];
-            Storage.setValue("favouriteTemperatureArray", favouriteTemperatureArray);
-            favouriteTemperature = favouriteTemperatureArray[favouriteTemperatureArray.size()-1];
-            Storage.setValue("favouriteTemperature", favouriteTemperature);
-            response_info = "Sucessful";
-            Storage.setValue("viewLastUpdateFav", Time.now().value());
-
+            System.println(data);
+            if (data instanceof Dictionary){
+                favouriteTimeArray = data["time"]; // YYYYmmddhhmm
+                Storage.setValue("favouriteTimeArray", favouriteTimeArray);
+                favouriteTemperatureArray = data["temperature"]["data"];
+                Storage.setValue("favouriteTemperatureArray", favouriteTemperatureArray);
+                favouriteTemperature = favouriteTemperatureArray[favouriteTemperatureArray.size()-1];
+                Storage.setValue("favouriteTemperature", favouriteTemperature);
+                response_info = "Sucessful";
+                Storage.setValue("viewLastUpdateFav", Time.now().value());
+            }
         } else {
             response_info = "Failed to load\nError: " + responseCode.toString();
-            favouriteTemperature = 0;
+            favouriteTemperature = 0.0;
         }
         requestUpdate();
     }
@@ -251,7 +250,7 @@ class TwelveLakesView extends WatchUi.View {
 
         } else {
             response_info = "Failed to load\nError: " + responseCode.toString();
-            currentTemperature = 0;
+            currentTemperature = 0.0;
         }
         requestUpdate();
     }

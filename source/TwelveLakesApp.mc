@@ -4,8 +4,8 @@ import Toybox.WatchUi;
 import Toybox.Activity;
 
 class TwelveLakesApp extends Application.AppBase {
-    var favouriteLake = "geneva";
-    var favouritePosition = [46.210417, 6.154484];
+    var favouriteLake as String = "geneva";
+    var favouritePosition as [Float, Float]= [46.210417, 6.154484];
 
 
     function initialize() {
