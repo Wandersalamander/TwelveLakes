@@ -26,328 +26,361 @@ class WidgetGlanceView extends Ui.GlanceView{
     <init> {
     }
     [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 13; @position = 8; ]
-    var response_info = "init";
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 14; @position = 8; ]
-    var lake = "init";
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 15; @position = 8; ]
-    var temperature = null;
+    var response_info as String = "init";
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 14; @position = 15; ]
+    public
+    var favouriteLake as String or Null = null;
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 15; @position = 15; ]
+    public
+    var favouritePosition as Array<Double> or Null = null;
     [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 16; @position = 8; ]
-    var lastUpdate = null;
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 19; ]
-    function initialize(lakeName, position) as Void {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_19_44_30_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 20 6 ]
+    var temperature as Float or Null = null;
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 17; @position = 8; ]
+    var lastUpdate as Time.Moment or Null = null;
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 20; ]
+    function initialize() as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_20_26_32_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 21 6 ]
         %tmp.2 = getv ? :GlanceView;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 21 6 ]
-        %tmp.5 = lgetv %lakeName;
-        putv self :lake %tmp.5;
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 22 6 ]
+        %tmp.4 = self;
+        %tmp.5 = getv function %tmp.4 :updateFavourites;
+        invoke %tmp.4 %tmp.5();
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 23 6 ]
         %tmp.6 = getm $.Toybox.Application.Storage;
         %tmp.7 = getv function %tmp.6 :getValue;
-        %tmp.8 = "glanceTemperature";
+        %tmp.8 = "favouriteTemperature";
         %tmp.9 = invoke %tmp.6 %tmp.7(%tmp.8);
         putv self :temperature %tmp.9;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 23 6 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 24 6 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_24_6_26_6_if_stmt:
         %tmp.10 = getm $.Toybox.Application.Storage;
         %tmp.11 = getv function %tmp.10 :getValue;
         %tmp.12 = "glanceLastUpdate";
         %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
-        putv self :lastUpdate %tmp.13;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 24 6 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_24_6_26_6_if_stmt:
-        %tmp.15 = getv ? :lastUpdate;
-        %tmp.16 = null;
-        %tmp.17 = ne %tmp.15 %tmp.16;
-        bf %tmp.17 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_24_6_26_6_if_end;
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        bf %tmp.15 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_24_6_26_6_if_end;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_24_6_26_6_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_24_29_26_6_start:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_24_55_26_6_start:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 25 8 ]
-        %tmp.20 = getm $.Toybox.Time;
-        %tmp.21 = getv function ? %tmp.20 :Moment;
-        %tmp.23 = getv ? :lastUpdate;
-        %tmp.24 = as %tmp.23 { (!Null) };
-        %tmp.18 = newc %tmp.21 (%tmp.24);
-        putv self :lastUpdate %tmp.18;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_24_29_26_6_stop:
+        %tmp.18 = getm $.Toybox.Time;
+        %tmp.19 = getv function ? %tmp.18 :Moment;
+        %tmp.20 = getm $.Toybox.Application.Storage;
+        %tmp.21 = getv function %tmp.20 :getValue;
+        %tmp.22 = "glanceLastUpdate";
+        %tmp.23 = invoke %tmp.20 %tmp.21(%tmp.22);
+        %tmp.16 = newc %tmp.19 (%tmp.23);
+        putv self :lastUpdate %tmp.16;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_24_55_26_6_stop:
         goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_24_6_26_6_if_end;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_24_6_26_6_if_end:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 27 6 ]
-        %tmp.25 = self;
-        %tmp.26 = getv function %tmp.25 :makeRequest;
-        %tmp.28 = lgetv %lakeName;
-        %tmp.30 = lgetv %position;
-        invoke %tmp.25 %tmp.26(%tmp.28, %tmp.30);
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_19_44_30_4_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_6_29_6_if_stmt:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_10_27_63_begin:
+        %tmp.25 = getv ? :favouriteLake;
+        %tmp.26 = null;
+        %tmp.27 = ne %tmp.25 %tmp.26;
+        bf %tmp.27 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_6_29_6_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_37_27_63_true:
+        %tmp.29 = getv ? :favouritePosition;
+        %tmp.30 = null;
+        %tmp.31 = ne %tmp.29 %tmp.30;
+        push %tmp.31;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_37_27_63_end:
+        %tmp.32 = phi [%tmp.27 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_10_27_63_begin] [%tmp.31 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_37_27_63_true] [%tmp.32 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_37_27_63_end];
+        bf %tmp.32 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_6_29_6_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_6_29_6_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_65_29_6_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 28 8 ]
+        %tmp.33 = self;
+        %tmp.34 = getv function %tmp.33 :makeRequest;
+        %tmp.36 = getv ? :favouriteLake;
+        %tmp.37 = as %tmp.36 { (!Null) };
+        %tmp.39 = getv ? :favouritePosition;
+        %tmp.40 = as %tmp.39 { (!Null) };
+        invoke %tmp.33 %tmp.34(%tmp.37, %tmp.40);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_65_29_6_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_6_29_6_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_27_6_29_6_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_20_26_32_4_stop:
     }
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 32; ]
-    function onUpdate(dc) {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_32_26_55_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 33 6 ]
-        %tmp.1 = lgetv %dc;
-        %tmp.2 = getv function %tmp.1 :setColor;
-        %tmp.3 = getm $.Toybox.Graphics;
-        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
-        %tmp.5 = getm $.Toybox.Graphics;
-        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
-        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 34 6 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_6_39_6_if_stmt:
-        %tmp.8 = getv ? :lake;
-        %tmp.9 = null;
-        %tmp.10 = ne %tmp.8 %tmp.9;
-        bf %tmp.10 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_6_39_6_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_6_39_6_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_23_39_6_start:
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 34; ]
+    function updateFavourites() {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_31_46_4_start:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 35 8 ]
-        %tmp.11 = lgetv %dc;
-        %tmp.12 = getv function %tmp.11 :drawText;
-        %tmp.13 = 0;
-        %tmp.14 = 0.2;
-        %tmp.15 = lgetv %dc;
-        %tmp.16 = getv function %tmp.15 :getHeight;
-        %tmp.17 = invoke %tmp.15 %tmp.16();
-        %tmp.18 = mul %tmp.14 %tmp.17;
-        %tmp.20 = getv ? :Graphics;
-        %tmp.21 = getv %tmp.20 :FONT_GLANCE;
-        %tmp.22 = getm $.Toybox.Lang;
-        %tmp.23 = getv function %tmp.22 :format;
-        %tmp.24 = "$1$$2$";
-        %tmp.25 = newa 2;
-        %tmp.27 = getv ? :lake;
-        %tmp.28 = getv function %tmp.27 :substring;
-        %tmp.29 = 0;
-        %tmp.30 = 1;
-        %tmp.31 = invoke %tmp.27 %tmp.28(%tmp.29, %tmp.30);
-        %tmp.32 = getv function %tmp.31 :toUpper;
-        %tmp.33 = invoke %tmp.31 %tmp.32();
-        %tmp.34 = dup %tmp.25;
-        %tmp.35 = aputv %tmp.34 0 %tmp.33;
-        %tmp.37 = getv ? :lake;
-        %tmp.38 = getv function %tmp.37 :substring;
-        %tmp.39 = 1;
-        %tmp.41 = getv ? :lake;
-        %tmp.42 = getv function %tmp.41 :length;
-        %tmp.43 = invoke %tmp.41 %tmp.42();
-        %tmp.44 = invoke %tmp.37 %tmp.38(%tmp.39, %tmp.43);
-        %tmp.45 = dup %tmp.35;
-        %tmp.46 = aputv %tmp.45 1 %tmp.44;
-        %tmp.47 = invoke %tmp.22 %tmp.23(%tmp.24, %tmp.46);
-        %tmp.49 = getv ? :Graphics;
-        %tmp.50 = getv %tmp.49 :TEXT_JUSTIFY_VCENTER;
-        %tmp.52 = getv ? :Graphics;
-        %tmp.53 = getv %tmp.52 :TEXT_JUSTIFY_LEFT;
-        %tmp.54 = bitor %tmp.50 %tmp.53;
-        invoke %tmp.11 %tmp.12(%tmp.13, %tmp.18, %tmp.21, %tmp.47, %tmp.54);
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_23_39_6_stop:
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_6_39_6_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_6_39_6_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 40 6 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_40_6_45_6_if_stmt:
-        %tmp.56 = getv ? :temperature;
-        %tmp.57 = null;
-        %tmp.58 = ne %tmp.56 %tmp.57;
-        bf %tmp.58 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_40_6_45_6_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_40_6_45_6_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_40_30_45_6_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 41 8 ]
-        %tmp.59 = lgetv %dc;
-        %tmp.60 = getv function %tmp.59 :drawText;
-        %tmp.61 = 0;
-        %tmp.62 = 0.8;
-        %tmp.63 = lgetv %dc;
-        %tmp.64 = getv function %tmp.63 :getHeight;
-        %tmp.65 = invoke %tmp.63 %tmp.64();
-        %tmp.66 = mul %tmp.62 %tmp.65;
-        %tmp.68 = getv ? :Graphics;
-        %tmp.69 = getv %tmp.68 :FONT_GLANCE;
-        %tmp.70 = getm $.Toybox.Lang;
-        %tmp.71 = getv function %tmp.70 :format;
-        %tmp.72 = "$1$°C";
-        %tmp.73 = newa 1;
-        %tmp.75 = getv ? :temperature;
-        %tmp.76 = getv function %tmp.75 :format;
-        %tmp.77 = "%.1f";
-        %tmp.78 = invoke %tmp.75 %tmp.76(%tmp.77);
-        %tmp.79 = dup %tmp.73;
-        %tmp.80 = aputv %tmp.79 0 %tmp.78;
-        %tmp.81 = invoke %tmp.70 %tmp.71(%tmp.72, %tmp.80);
-        %tmp.83 = getv ? :Graphics;
-        %tmp.84 = getv %tmp.83 :TEXT_JUSTIFY_VCENTER;
-        %tmp.86 = getv ? :Graphics;
-        %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_LEFT;
-        %tmp.88 = bitor %tmp.84 %tmp.87;
-        invoke %tmp.59 %tmp.60(%tmp.61, %tmp.66, %tmp.69, %tmp.81, %tmp.88);
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_40_30_45_6_stop:
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_40_6_45_6_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_40_6_45_6_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 46 6 ]
-        %tmp.89 = lgetv %dc;
-        %tmp.90 = getv function %tmp.89 :setColor;
-        %tmp.92 = getv ? :Graphics;
-        %tmp.93 = getv %tmp.92 :COLOR_LT_GRAY;
-        %tmp.95 = getv ? :Graphics;
-        %tmp.96 = getv %tmp.95 :COLOR_DK_GREEN;
-        invoke %tmp.89 %tmp.90(%tmp.93, %tmp.96);
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 47 6 ]
-        %tmp.97 = lgetv %dc;
-        %tmp.98 = getv function %tmp.97 :drawLine;
-        %tmp.99 = 0;
-        %tmp.100 = lgetv %dc;
-        %tmp.101 = getv function %tmp.100 :getHeight;
-        %tmp.102 = invoke %tmp.100 %tmp.101();
-        %tmp.103 = 2;
-        %tmp.104 = div %tmp.102 %tmp.103;
-        %tmp.105 = lgetv %dc;
-        %tmp.106 = getv function %tmp.105 :getWidth;
-        %tmp.107 = invoke %tmp.105 %tmp.106();
-        %tmp.108 = lgetv %dc;
-        %tmp.109 = getv function %tmp.108 :getHeight;
-        %tmp.110 = invoke %tmp.108 %tmp.109();
-        %tmp.111 = 2;
-        %tmp.112 = div %tmp.110 %tmp.111;
-        invoke %tmp.97 %tmp.98(%tmp.99, %tmp.104, %tmp.107, %tmp.112);
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_31_46_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_31_46_4_stop" ]
+        %pos.1 = local;
+        %tmp.1 = getm $.Toybox.Application.Storage;
+        %tmp.2 = getv function %tmp.1 :getValue;
+        %tmp.3 = "favouritePosition";
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        lputv %pos.1 %tmp.4;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 36 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_31_46_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_31_46_4_stop" ]
+        %name.2 = local;
+        %tmp.5 = getm $.Toybox.Application.Storage;
+        %tmp.6 = getv function %tmp.5 :getValue;
+        %tmp.7 = "favouriteLake";
+        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+        lputv %name.2 %tmp.8;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 37 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_8_45_8_if_stmt:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_12_37_35_begin:
+        %tmp.10 = lgetv %pos.1;
+        %tmp.11 = null;
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        bf %tmp.12 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_8_45_8_if_false;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_27_37_35_true:
+        %tmp.14 = lgetv %name.2;
+        %tmp.15 = null;
+        %tmp.16 = ne %tmp.14 %tmp.15;
+        push %tmp.16;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_27_37_35_end:
+        %tmp.17 = phi [%tmp.12 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_12_37_35_begin] [%tmp.16 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_27_37_35_true] [%tmp.17 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_27_37_35_end];
+        bf %tmp.17 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_8_45_8_if_false;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_8_45_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_40_40_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 38 12 ]
+        %tmp.18 = newa 2;
+        %tmp.20 = lgetv %pos.1;
+        %tmp.21 = as %tmp.20 { (!Null) };
+        %tmp.22 = 0;
+        %tmp.23 = agetv %tmp.21 %tmp.22;
+        %tmp.24 = getv function %tmp.23 :toDouble;
+        %tmp.25 = invoke %tmp.23 %tmp.24();
+        %tmp.26 = dup %tmp.18;
+        %tmp.27 = aputv %tmp.26 0 %tmp.25;
+        %tmp.29 = lgetv %pos.1;
+        %tmp.30 = as %tmp.29 { (!Null) };
+        %tmp.31 = 1;
+        %tmp.32 = agetv %tmp.30 %tmp.31;
+        %tmp.33 = getv function %tmp.32 :toDouble;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        %tmp.35 = dup %tmp.27;
+        %tmp.36 = aputv %tmp.35 1 %tmp.34;
+        putv self :favouritePosition %tmp.36;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 39 12 ]
+        %tmp.38 = lgetv %name.2;
+        %tmp.39 = as %tmp.38 { (!Null) };
+        putv self :favouriteLake %tmp.39;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_40_40_8_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_8_45_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_8_45_8_if_false:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_41_12_45_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 43 12 ]
+        %tmp.40 = "geneva";
+        putv self :favouriteLake %tmp.40;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 44 12 ]
+        %tmp.41 = newa 2;
+        %tmp.42 = 46.210417;
+        %tmp.43 = getv function %tmp.42 :toDouble;
+        %tmp.44 = invoke %tmp.42 %tmp.43();
+        %tmp.45 = dup %tmp.41;
+        %tmp.46 = aputv %tmp.45 0 %tmp.44;
+        %tmp.47 = 6.154484;
+        %tmp.48 = getv function %tmp.47 :toDouble;
+        %tmp.49 = invoke %tmp.47 %tmp.48();
+        %tmp.50 = dup %tmp.46;
+        %tmp.51 = aputv %tmp.50 1 %tmp.49;
+        putv self :favouritePosition %tmp.51;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_41_12_45_8_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_37_8_45_8_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_34_31_46_4_stop:
+    }
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 48; ]
+    function onUpdate(dc) {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_48_26_64_4_start:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 49 6 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_49_6_54_6_if_stmt:
-        %tmp.114 = getv ? :temperature;
-        %tmp.115 = null;
-        %tmp.116 = ne %tmp.114 %tmp.115;
-        bf %tmp.116 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_49_6_54_6_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_49_6_54_6_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_49_30_54_6_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 50 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_49_30_54_6_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_49_30_54_6_stop" ]
-        %height.1 = local;
-        %tmp.117 = lgetv %dc;
-        %tmp.118 = getv function %tmp.117 :getHeight;
-        %tmp.119 = invoke %tmp.117 %tmp.118();
-        %tmp.120 = 0.1;
-        %tmp.121 = mul %tmp.119 %tmp.120;
-        lputv %height.1 %tmp.121;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 51 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_49_30_54_6_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_49_30_54_6_stop" ]
-        %width.2 = local;
-        %tmp.123 = getv ? :temperature;
-        %tmp.124 = 10;
-        %tmp.125 = add %tmp.123 %tmp.124;
-        %tmp.126 = 60;
-        %tmp.127 = div %tmp.125 %tmp.126;
-        %tmp.128 = lgetv %dc;
-        %tmp.129 = getv function %tmp.128 :getWidth;
-        %tmp.130 = invoke %tmp.128 %tmp.129();
-        %tmp.131 = mul %tmp.127 %tmp.130;
-        lputv %width.2 %tmp.131;
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :updateFavourites;
+        invoke %tmp.1 %tmp.2();
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 50 6 ]
+        %tmp.3 = lgetv %dc;
+        %tmp.4 = getv function %tmp.3 :setColor;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_WHITE;
+        %tmp.7 = getm $.Toybox.Graphics;
+        %tmp.8 = getv %tmp.7 :COLOR_TRANSPARENT;
+        invoke %tmp.3 %tmp.4(%tmp.6, %tmp.8);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 51 6 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_51_6_56_6_if_stmt:
+        %tmp.10 = getv ? :favouriteLake;
+        %tmp.11 = null;
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        bf %tmp.12 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_51_6_56_6_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_51_6_56_6_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_51_32_56_6_start:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 52 8 ]
-        %tmp.132 = lgetv %dc;
-        %tmp.133 = getv function %tmp.132 :setColor;
-        %tmp.134 = self;
-        %tmp.135 = getv function %tmp.134 :getColor;
-        %tmp.137 = getv ? :temperature;
-        %tmp.138 = invoke %tmp.134 %tmp.135(%tmp.137);
-        %tmp.140 = getv ? :Graphics;
-        %tmp.141 = getv %tmp.140 :COLOR_DK_GREEN;
-        invoke %tmp.132 %tmp.133(%tmp.138, %tmp.141);
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 53 8 ]
-        %tmp.142 = lgetv %dc;
-        %tmp.143 = getv function %tmp.142 :fillRectangle;
-        %tmp.144 = 0;
-        %tmp.145 = lgetv %dc;
-        %tmp.146 = getv function %tmp.145 :getHeight;
-        %tmp.147 = invoke %tmp.145 %tmp.146();
-        %tmp.148 = 2.0;
-        %tmp.149 = div %tmp.147 %tmp.148;
-        %tmp.151 = lgetv %height.1;
-        %tmp.152 = 2.0;
-        %tmp.153 = div %tmp.151 %tmp.152;
-        %tmp.154 = sub %tmp.149 %tmp.153;
-        %tmp.156 = lgetv %width.2;
-        %tmp.158 = lgetv %height.1;
-        invoke %tmp.142 %tmp.143(%tmp.144, %tmp.154, %tmp.156, %tmp.158);
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_49_30_54_6_stop:
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_49_6_54_6_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_49_6_54_6_if_end:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_32_26_55_4_stop:
+        %tmp.13 = lgetv %dc;
+        %tmp.14 = getv function %tmp.13 :drawText;
+        %tmp.15 = 0;
+        %tmp.16 = 0.2;
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :getHeight;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = mul %tmp.16 %tmp.19;
+        %tmp.22 = getv ? :Graphics;
+        %tmp.23 = getv %tmp.22 :FONT_GLANCE;
+        %tmp.24 = getm $.Toybox.Lang;
+        %tmp.25 = getv function %tmp.24 :format;
+        %tmp.26 = "LAKE TEMPERATURE";
+        %tmp.27 = newa 0;
+        %tmp.28 = invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27);
+        %tmp.30 = getv ? :Graphics;
+        %tmp.31 = getv %tmp.30 :TEXT_JUSTIFY_VCENTER;
+        %tmp.33 = getv ? :Graphics;
+        %tmp.34 = getv %tmp.33 :TEXT_JUSTIFY_LEFT;
+        %tmp.35 = bitor %tmp.31 %tmp.34;
+        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.20, %tmp.23, %tmp.28, %tmp.35);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_51_32_56_6_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_51_6_56_6_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_51_6_56_6_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 57 6 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_57_6_62_6_if_stmt:
+        %tmp.37 = getv ? :temperature;
+        %tmp.38 = null;
+        %tmp.39 = ne %tmp.37 %tmp.38;
+        bf %tmp.39 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_57_6_62_6_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_57_6_62_6_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_57_30_62_6_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 58 8 ]
+        %tmp.40 = lgetv %dc;
+        %tmp.41 = getv function %tmp.40 :drawText;
+        %tmp.42 = 0;
+        %tmp.43 = 0.8;
+        %tmp.44 = lgetv %dc;
+        %tmp.45 = getv function %tmp.44 :getHeight;
+        %tmp.46 = invoke %tmp.44 %tmp.45();
+        %tmp.47 = mul %tmp.43 %tmp.46;
+        %tmp.49 = getv ? :Graphics;
+        %tmp.50 = getv %tmp.49 :FONT_GLANCE;
+        %tmp.51 = getm $.Toybox.Lang;
+        %tmp.52 = getv function %tmp.51 :format;
+        %tmp.53 = "$1$$2$ $3$°C";
+        %tmp.54 = newa 3;
+        %tmp.56 = getv ? :favouriteLake;
+        %tmp.57 = getv function %tmp.56 :substring;
+        %tmp.58 = 0;
+        %tmp.59 = 1;
+        %tmp.60 = invoke %tmp.56 %tmp.57(%tmp.58, %tmp.59);
+        %tmp.61 = getv function %tmp.60 :toUpper;
+        %tmp.62 = invoke %tmp.60 %tmp.61();
+        %tmp.63 = dup %tmp.54;
+        %tmp.64 = aputv %tmp.63 0 %tmp.62;
+        %tmp.66 = getv ? :favouriteLake;
+        %tmp.67 = getv function %tmp.66 :substring;
+        %tmp.68 = 1;
+        %tmp.70 = getv ? :favouriteLake;
+        %tmp.71 = getv function %tmp.70 :length;
+        %tmp.72 = invoke %tmp.70 %tmp.71();
+        %tmp.73 = invoke %tmp.66 %tmp.67(%tmp.68, %tmp.72);
+        %tmp.74 = dup %tmp.64;
+        %tmp.75 = aputv %tmp.74 1 %tmp.73;
+        %tmp.77 = getv ? :temperature;
+        %tmp.78 = getv function %tmp.77 :format;
+        %tmp.79 = "%.1f";
+        %tmp.80 = invoke %tmp.77 %tmp.78(%tmp.79);
+        %tmp.81 = dup %tmp.75;
+        %tmp.82 = aputv %tmp.81 2 %tmp.80;
+        %tmp.83 = invoke %tmp.51 %tmp.52(%tmp.53, %tmp.82);
+        %tmp.85 = getv ? :Graphics;
+        %tmp.86 = getv %tmp.85 :TEXT_JUSTIFY_VCENTER;
+        %tmp.88 = getv ? :Graphics;
+        %tmp.89 = getv %tmp.88 :TEXT_JUSTIFY_LEFT;
+        %tmp.90 = bitor %tmp.86 %tmp.89;
+        invoke %tmp.40 %tmp.41(%tmp.42, %tmp.47, %tmp.50, %tmp.83, %tmp.90);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_57_30_62_6_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_57_6_62_6_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_57_6_62_6_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 63 6 ]
+        %tmp.91 = self;
+        %tmp.92 = getv function %tmp.91 :drawColorBar;
+        %tmp.94 = lgetv %dc;
+        invoke %tmp.91 %tmp.92(%tmp.94);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_48_26_64_4_stop:
     }
     //! Make the web request
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 58; ]
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 67; ]
     public
-    function makeRequest(lakeName, position) as Void {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_58_60_97_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 59 8 ]
+    function makeRequest(lakeName as String, position as [Double, Double] or Array<Double>) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_67_106_106_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 68 8 ]
         %tmp.1 = getm $.Toybox.System;
         %tmp.2 = getv function %tmp.1 :println;
         %tmp.3 = "Executing\nRequest";
         invoke %tmp.1 %tmp.2(%tmp.3);
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 60 8 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_8_96_8_if_stmt:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_12_60_51_begin:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 69 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_8_105_8_if_stmt:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_12_69_51_begin:
         %tmp.5 = lgetv %lakeName;
         %tmp.6 = null;
         %tmp.7 = ne %tmp.5 %tmp.6;
-        bf %tmp.7 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_8_96_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_34_60_51_true:
+        bf %tmp.7 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_8_105_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_34_69_51_true:
         %tmp.9 = lgetv %position;
         %tmp.10 = null;
         %tmp.11 = ne %tmp.9 %tmp.10;
         push %tmp.11;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_34_60_51_end:
-        %tmp.12 = phi [%tmp.7 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_12_60_51_begin] [%tmp.11 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_34_60_51_true] [%tmp.12 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_34_60_51_end];
-        bf %tmp.12 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_8_96_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_8_96_8_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 61 10 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_stop" ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_34_69_51_end:
+        %tmp.12 = phi [%tmp.7 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_12_69_51_begin] [%tmp.11 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_34_69_51_true] [%tmp.12 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_34_69_51_end];
+        bf %tmp.12 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_8_105_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_8_105_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 70 10 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_stop" ]
         %readyForUpdate.1 = local;
         %tmp.13 = true;
         lputv %readyForUpdate.1 %tmp.13;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 62 10 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_62_10_65_10_if_stmt:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 71 10 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_71_10_74_10_if_stmt:
         %tmp.15 = getv ? :lastUpdate;
         %tmp.16 = null;
         %tmp.17 = ne %tmp.15 %tmp.16;
-        bf %tmp.17 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_62_10_65_10_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_62_10_65_10_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_62_31_65_10_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 63 14 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_62_31_65_10_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_62_31_65_10_stop" ]
-        %fivteenMin.2 = local;
+        bf %tmp.17 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_71_10_74_10_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_71_10_74_10_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_71_31_74_10_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 72 14 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_71_31_74_10_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_71_31_74_10_stop" ]
+        %skipUpdateBelowSeconds.2 = local;
         %tmp.20 = getm $.Toybox.Time;
         %tmp.21 = getv function ? %tmp.20 :Duration;
-        %tmp.22 = 15;
+        %tmp.22 = 60;
         %tmp.23 = 60;
         %tmp.24 = mul %tmp.22 %tmp.23;
         %tmp.18 = newc %tmp.21 (%tmp.24);
-        lputv %fivteenMin.2 %tmp.18;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 64 14 ]
+        lputv %skipUpdateBelowSeconds.2 %tmp.18;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 73 14 ]
         %tmp.25 = getm $.Toybox.Time;
         %tmp.26 = getv function %tmp.25 :now;
         %tmp.27 = invoke %tmp.25 %tmp.26();
         %tmp.28 = getv function %tmp.27 :greaterThan;
         %tmp.30 = getv ? :lastUpdate;
         %tmp.31 = getv function %tmp.30 :add;
-        %tmp.33 = lgetv %fivteenMin.2;
+        %tmp.33 = lgetv %skipUpdateBelowSeconds.2;
         %tmp.34 = invoke %tmp.30 %tmp.31(%tmp.33);
         %tmp.35 = invoke %tmp.27 %tmp.28(%tmp.34);
         lputv %readyForUpdate.1 %tmp.35;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_62_31_65_10_stop:
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_62_10_65_10_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_62_10_65_10_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 66 8 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_66_8_68_8_if_stmt:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_71_31_74_10_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_71_10_74_10_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_71_10_74_10_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 75 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_75_8_77_8_if_stmt:
         %tmp.37 = lgetv %readyForUpdate.1;
         %tmp.38 = false;
         %tmp.39 = eq %tmp.37 %tmp.38;
-        bf %tmp.39 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_66_8_68_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_66_8_68_8_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_66_36_68_8_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 67 10 ]
+        bf %tmp.39 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_75_8_77_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_75_8_77_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_75_36_77_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 76 10 ]
         ret ?;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_66_36_68_8_stop:
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_66_8_68_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_66_8_68_8_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 69 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_stop" ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_75_36_77_8_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_75_8_77_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_75_8_77_8_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 78 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_stop" ]
         %options.3 = local;
         %tmp.40 = newd 2;
         %tmp.42 = const :responseType;
@@ -365,8 +398,8 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance
         %tmp.55 = dup %tmp.46;
         %tmp.56 = aputv %tmp.55 %tmp.48 %tmp.54;
         lputv %options.3 %tmp.56;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 75 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_stop" ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 84 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_stop" ]
         %today.4 = local;
         %tmp.57 = getm $.Toybox.Time.Gregorian;
         %tmp.58 = getv function %tmp.57 :info;
@@ -377,8 +410,8 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance
         %tmp.63 = getv %tmp.62 :FORMAT_SHORT;
         %tmp.64 = invoke %tmp.57 %tmp.58(%tmp.61, %tmp.63);
         lputv %today.4 %tmp.64;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 76 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_stop" ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 85 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_stop" ]
         %dateString.5 = local;
         %tmp.65 = getm $.Toybox.Lang;
         %tmp.66 = getv function %tmp.65 :format;
@@ -421,8 +454,8 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance
         %tmp.103 = aputv %tmp.102 4 %tmp.101;
         %tmp.104 = invoke %tmp.65 %tmp.66(%tmp.67, %tmp.103);
         lputv %dateString.5 %tmp.104;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 86 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_stop" ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 95 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_stop" ]
         %myRequest.6 = local;
         %tmp.105 = getm $.Toybox.Lang;
         %tmp.106 = getv function %tmp.105 :format;
@@ -452,12 +485,12 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance
         %tmp.135 = aputv %tmp.134 4 %tmp.133;
         %tmp.136 = invoke %tmp.105 %tmp.106(%tmp.107, %tmp.135);
         lputv %myRequest.6 %tmp.136;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 89 8 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 98 8 ]
         %tmp.137 = getm $.Toybox.System;
         %tmp.138 = getv function %tmp.137 :println;
         %tmp.140 = lgetv %myRequest.6;
         invoke %tmp.137 %tmp.138(%tmp.140);
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 90 8 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 99 8 ]
         %tmp.141 = getm $.Toybox.Communications;
         %tmp.142 = getv function %tmp.141 :makeWebRequest;
         %tmp.144 = lgetv %myRequest.6;
@@ -468,82 +501,395 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance
         %tmp.151 = const :onReceive;
         %tmp.152 = invoke %tmp.148 %tmp.149(%tmp.151);
         invoke %tmp.141 %tmp.142(%tmp.144, %tmp.145, %tmp.147, %tmp.152);
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_53_96_8_stop:
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_8_96_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_60_8_96_8_if_end:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_58_60_97_4_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_53_105_8_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_8_105_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_69_8_105_8_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_67_106_106_4_stop:
+    }
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 107; ]
+    function drawColorBar(dc) {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 108 6 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.4 = getv ? :Graphics;
+        %tmp.5 = getv %tmp.4 :COLOR_LT_GRAY;
+        %tmp.7 = getv ? :Graphics;
+        %tmp.8 = getv %tmp.7 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.5, %tmp.8);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 109 6 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_stop" ]
+        %totalWidth.1 = local;
+        %tmp.9 = lgetv %dc;
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %totalWidth.1 %tmp.11;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 110 6 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_stop" ]
+        %barWidth.2 = local;
+        %tmp.13 = lgetv %totalWidth.1;
+        %tmp.14 = 6.0;
+        %tmp.15 = div %tmp.13 %tmp.14;
+        lputv %barWidth.2 %tmp.15;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 111 6 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_stop" ]
+        %delta.3 = local;
+        %tmp.17 = lgetv %barWidth.2;
+        %tmp.18 = 15.0;
+        %tmp.19 = div %tmp.17 %tmp.18;
+        lputv %delta.3 %tmp.19;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 112 6 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_stop" ]
+        %height.4 = local;
+        %tmp.20 = lgetv %dc;
+        %tmp.21 = getv function %tmp.20 :getHeight;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = 0.1;
+        %tmp.24 = mul %tmp.22 %tmp.23;
+        lputv %height.4 %tmp.24;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 113 6 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_stop" ]
+        %heightHighlight.5 = local;
+        %tmp.25 = lgetv %dc;
+        %tmp.26 = getv function %tmp.25 :getHeight;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = 0.15;
+        %tmp.29 = mul %tmp.27 %tmp.28;
+        lputv %heightHighlight.5 %tmp.29;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 114 6 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_stop" ]
+        %heightMarker.6 = local;
+        %tmp.30 = lgetv %dc;
+        %tmp.31 = getv function %tmp.30 :getHeight;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = 0.25;
+        %tmp.34 = mul %tmp.32 %tmp.33;
+        lputv %heightMarker.6 %tmp.34;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 115 6 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_stop" ]
+        %widthMarker.7 = local;
+        %tmp.36 = lgetv %barWidth.2;
+        %tmp.37 = 8.0;
+        %tmp.38 = div %tmp.36 %tmp.37;
+        lputv %widthMarker.7 %tmp.38;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 116 6 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_stop" ]
+        %center.8 = local;
+        %tmp.39 = lgetv %dc;
+        %tmp.40 = getv function %tmp.39 :getHeight;
+        %tmp.41 = invoke %tmp.39 %tmp.40();
+        %tmp.42 = 2.0;
+        %tmp.43 = div %tmp.41 %tmp.42;
+        lputv %center.8 %tmp.43;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 118 6 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_stop" ]
+        %colorHighlight.9 = local;
+        %tmp.44 = self;
+        %tmp.45 = getv function %tmp.44 :getColor;
+        %tmp.47 = getv ? :temperature;
+        %tmp.48 = invoke %tmp.44 %tmp.45(%tmp.47);
+        lputv %colorHighlight.9 %tmp.48;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 119 6 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_stop" ]
+        %colorTmp.10 = local;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 120 6 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_120_6_149_6_if_stmt:
+        %tmp.50 = getv ? :temperature;
+        %tmp.51 = null;
+        %tmp.52 = ne %tmp.50 %tmp.51;
+        bf %tmp.52 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_120_6_149_6_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_120_6_149_6_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_120_30_149_6_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 122 8 ]
+        for @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_test @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_incr @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_init:
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_begin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_end" ]
+        %i.11 = local;
+        %tmp.53 = 0;
+        lputv %i.11 %tmp.53;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_test:
+        %tmp.55 = lgetv %i.11;
+        %tmp.56 = 6;
+        %tmp.57 = lt %tmp.55 %tmp.56;
+        bf %tmp.57 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_begin:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_36_132_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 123 12 ]
+        %tmp.58 = self;
+        %tmp.59 = getv function %tmp.58 :getColorByIdx;
+        %tmp.61 = lgetv %i.11;
+        %tmp.62 = invoke %tmp.58 %tmp.59(%tmp.61);
+        lputv %colorTmp.10 %tmp.62;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 124 12 ]
+        %tmp.63 = lgetv %dc;
+        %tmp.64 = getv function %tmp.63 :setColor;
+        %tmp.66 = lgetv %colorTmp.10;
+        %tmp.68 = getv ? :Graphics;
+        %tmp.69 = getv %tmp.68 :COLOR_TRANSPARENT;
+        invoke %tmp.63 %tmp.64(%tmp.66, %tmp.69);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 125 12 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_125_12_130_12_if_stmt:
+        %tmp.71 = lgetv %colorTmp.10;
+        %tmp.73 = lgetv %colorHighlight.9;
+        %tmp.74 = eq %tmp.71 %tmp.73;
+        bf %tmp.74 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_125_12_130_12_if_false;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_125_12_130_12_if_true:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_125_12_130_12_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_125_12_130_12_if_false:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_127_17_130_12_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 128 14 ]
+        %tmp.75 = lgetv %dc;
+        %tmp.76 = getv function %tmp.75 :fillRectangle;
+        %tmp.78 = lgetv %i.11;
+        %tmp.80 = lgetv %barWidth.2;
+        %tmp.81 = mul %tmp.78 %tmp.80;
+        %tmp.83 = lgetv %delta.3;
+        %tmp.84 = 2.0;
+        %tmp.85 = div %tmp.83 %tmp.84;
+        %tmp.86 = add %tmp.81 %tmp.85;
+        %tmp.87 = lgetv %dc;
+        %tmp.88 = getv function %tmp.87 :getHeight;
+        %tmp.89 = invoke %tmp.87 %tmp.88();
+        %tmp.90 = 2.0;
+        %tmp.91 = div %tmp.89 %tmp.90;
+        %tmp.93 = lgetv %height.4;
+        %tmp.94 = 2.0;
+        %tmp.95 = div %tmp.93 %tmp.94;
+        %tmp.96 = sub %tmp.91 %tmp.95;
+        %tmp.98 = lgetv %barWidth.2;
+        %tmp.100 = lgetv %delta.3;
+        %tmp.101 = sub %tmp.98 %tmp.100;
+        %tmp.103 = lgetv %height.4;
+        invoke %tmp.75 %tmp.76(%tmp.86, %tmp.96, %tmp.101, %tmp.103);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_127_17_130_12_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_125_12_130_12_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_36_132_8_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_incr:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 122 ]
+        %tmp.106 = lgetv %i.11;
+        %tmp.107 = add %tmp.106 1;
+        lputv %i.11 %tmp.107;
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_test;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_122_8_132_8_for_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 134 8 ]
+        for @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_test @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_incr @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_init:
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_begin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_end" ]
+        %i.12 = local;
+        %tmp.108 = 0;
+        lputv %i.12 %tmp.108;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_test:
+        %tmp.110 = lgetv %i.12;
+        %tmp.111 = 6;
+        %tmp.112 = lt %tmp.110 %tmp.111;
+        bf %tmp.112 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_begin:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_36_144_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 135 12 ]
+        %tmp.113 = self;
+        %tmp.114 = getv function %tmp.113 :getColorByIdx;
+        %tmp.116 = lgetv %i.12;
+        %tmp.117 = invoke %tmp.113 %tmp.114(%tmp.116);
+        lputv %colorTmp.10 %tmp.117;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 136 12 ]
+        %tmp.118 = lgetv %dc;
+        %tmp.119 = getv function %tmp.118 :setColor;
+        %tmp.121 = lgetv %colorTmp.10;
+        %tmp.123 = getv ? :Graphics;
+        %tmp.124 = getv %tmp.123 :COLOR_TRANSPARENT;
+        invoke %tmp.118 %tmp.119(%tmp.121, %tmp.124);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 137 12 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_137_12_142_12_if_stmt:
+        %tmp.126 = lgetv %colorTmp.10;
+        %tmp.128 = lgetv %colorHighlight.9;
+        %tmp.129 = eq %tmp.126 %tmp.128;
+        bf %tmp.129 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_137_12_142_12_if_false;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_137_12_142_12_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_137_43_139_12_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 138 14 ]
+        %tmp.130 = lgetv %dc;
+        %tmp.131 = getv function %tmp.130 :fillRectangle;
+        %tmp.133 = lgetv %i.12;
+        %tmp.135 = lgetv %barWidth.2;
+        %tmp.136 = mul %tmp.133 %tmp.135;
+        %tmp.138 = lgetv %delta.3;
+        %tmp.139 = 2.0;
+        %tmp.140 = div %tmp.138 %tmp.139;
+        %tmp.141 = add %tmp.136 %tmp.140;
+        %tmp.142 = lgetv %dc;
+        %tmp.143 = getv function %tmp.142 :getHeight;
+        %tmp.144 = invoke %tmp.142 %tmp.143();
+        %tmp.145 = 2.0;
+        %tmp.146 = div %tmp.144 %tmp.145;
+        %tmp.148 = lgetv %heightHighlight.5;
+        %tmp.149 = 2.0;
+        %tmp.150 = div %tmp.148 %tmp.149;
+        %tmp.151 = sub %tmp.146 %tmp.150;
+        %tmp.153 = lgetv %barWidth.2;
+        %tmp.155 = lgetv %delta.3;
+        %tmp.156 = sub %tmp.153 %tmp.155;
+        %tmp.158 = lgetv %heightHighlight.5;
+        invoke %tmp.130 %tmp.131(%tmp.141, %tmp.151, %tmp.156, %tmp.158);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_137_43_139_12_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_137_12_142_12_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_137_12_142_12_if_false:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_137_12_142_12_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_36_144_8_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_incr:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 134 ]
+        %tmp.161 = lgetv %i.12;
+        %tmp.162 = add %tmp.161 1;
+        lputv %i.12 %tmp.162;
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_test;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_134_8_144_8_for_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 145 8 ]
+        %tmp.163 = lgetv %dc;
+        %tmp.164 = getv function %tmp.163 :setColor;
+        %tmp.166 = getv ? :Graphics;
+        %tmp.167 = getv %tmp.166 :COLOR_BLACK;
+        %tmp.169 = getv ? :Graphics;
+        %tmp.170 = getv %tmp.169 :COLOR_TRANSPARENT;
+        invoke %tmp.163 %tmp.164(%tmp.167, %tmp.170);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 146 8 ]
+        %tmp.171 = lgetv %dc;
+        %tmp.172 = getv function %tmp.171 :fillRectangle;
+        %tmp.173 = self;
+        %tmp.174 = getv function %tmp.173 :getColorPos;
+        %tmp.176 = getv ? :temperature;
+        %tmp.177 = invoke %tmp.173 %tmp.174(%tmp.176);
+        %tmp.178 = lgetv %dc;
+        %tmp.179 = getv function %tmp.178 :getWidth;
+        %tmp.180 = invoke %tmp.178 %tmp.179();
+        %tmp.181 = mul %tmp.177 %tmp.180;
+        %tmp.183 = lgetv %widthMarker.7;
+        %tmp.184 = 0.5;
+        %tmp.185 = mul %tmp.183 %tmp.184;
+        %tmp.186 = sub %tmp.181 %tmp.185;
+        %tmp.188 = lgetv %center.8;
+        %tmp.190 = lgetv %heightMarker.6;
+        %tmp.191 = 2.0;
+        %tmp.192 = div %tmp.190 %tmp.191;
+        %tmp.193 = sub %tmp.188 %tmp.192;
+        %tmp.195 = lgetv %widthMarker.7;
+        %tmp.196 = 2;
+        %tmp.197 = mul %tmp.195 %tmp.196;
+        %tmp.199 = lgetv %heightMarker.6;
+        invoke %tmp.171 %tmp.172(%tmp.186, %tmp.193, %tmp.197, %tmp.199);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 147 8 ]
+        %tmp.200 = lgetv %dc;
+        %tmp.201 = getv function %tmp.200 :setColor;
+        %tmp.203 = getv ? :Graphics;
+        %tmp.204 = getv %tmp.203 :COLOR_WHITE;
+        %tmp.206 = getv ? :Graphics;
+        %tmp.207 = getv %tmp.206 :COLOR_DK_GREEN;
+        invoke %tmp.200 %tmp.201(%tmp.204, %tmp.207);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 148 8 ]
+        %tmp.208 = lgetv %dc;
+        %tmp.209 = getv function %tmp.208 :fillRectangle;
+        %tmp.210 = self;
+        %tmp.211 = getv function %tmp.210 :getColorPos;
+        %tmp.213 = getv ? :temperature;
+        %tmp.214 = invoke %tmp.210 %tmp.211(%tmp.213);
+        %tmp.215 = lgetv %dc;
+        %tmp.216 = getv function %tmp.215 :getWidth;
+        %tmp.217 = invoke %tmp.215 %tmp.216();
+        %tmp.218 = mul %tmp.214 %tmp.217;
+        %tmp.220 = lgetv %center.8;
+        %tmp.222 = lgetv %heightMarker.6;
+        %tmp.223 = 2;
+        %tmp.224 = div %tmp.222 %tmp.223;
+        %tmp.225 = sub %tmp.220 %tmp.224;
+        %tmp.227 = lgetv %widthMarker.7;
+        %tmp.229 = lgetv %heightMarker.6;
+        invoke %tmp.208 %tmp.209(%tmp.218, %tmp.225, %tmp.227, %tmp.229);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_120_30_149_6_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_120_6_149_6_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_120_6_149_6_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_107_29_150_4_stop:
     }
     //! Receive the data from the web request
     //! @param responseCode The server response code
     //! @param data Content from a successful request
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 102; ]
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 155; ]
     public
     function onReceive(responseCode as Number, data as Dictionary or String or Null) as Void {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_102_100_116_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 103 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_155_100_170_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 156 8 ]
         %tmp.1 = getm $.Toybox.System;
         %tmp.2 = getv function %tmp.1 :println;
         %tmp.4 = lgetv %responseCode;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 104 8 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_104_8_113_8_if_stmt:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 157 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_157_8_167_8_if_stmt:
         %tmp.6 = lgetv %responseCode;
         %tmp.7 = 200;
         %tmp.8 = eq %tmp.6 %tmp.7;
-        bf %tmp.8 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_104_8_113_8_if_false;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_104_8_113_8_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_104_33_111_8_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 105 12 ]
+        bf %tmp.8 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_157_8_167_8_if_false;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_157_8_167_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_157_33_165_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 158 12 ]
         %tmp.9 = getm $.Toybox.System;
         %tmp.10 = getv function %tmp.9 :println;
         %tmp.12 = lgetv %data;
         invoke %tmp.9 %tmp.10(%tmp.12);
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 106 12 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 159 12 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_159_12_163_12_if_stmt:
         %tmp.14 = lgetv %data;
-        %tmp.15 = "temperature";
-        %tmp.16 = agetv %tmp.14 %tmp.15;
-        %tmp.17 = "data";
-        %tmp.18 = agetv %tmp.16 %tmp.17;
-        %tmp.19 = 0;
-        %tmp.20 = agetv %tmp.18 %tmp.19;
-        putv self :temperature %tmp.20;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 107 12 ]
-        %tmp.21 = getm $.Toybox.Application.Storage;
-        %tmp.22 = getv function %tmp.21 :setValue;
-        %tmp.23 = "glanceTemperature";
-        %tmp.25 = getv ? :temperature;
-        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.25);
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 108 12 ]
-        %tmp.26 = getm $.Toybox.Application.Storage;
-        %tmp.27 = getv function %tmp.26 :setValue;
-        %tmp.28 = "glanceLastUpdate";
-        %tmp.29 = getm $.Toybox.Time;
-        %tmp.30 = getv function %tmp.29 :now;
-        %tmp.31 = invoke %tmp.29 %tmp.30();
-        %tmp.32 = getv function %tmp.31 :value;
-        %tmp.33 = invoke %tmp.31 %tmp.32();
-        invoke %tmp.26 %tmp.27(%tmp.28, %tmp.33);
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 110 12 ]
-        %tmp.34 = "Sucessful";
-        putv self :response_info %tmp.34;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_104_33_111_8_stop:
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_104_8_113_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_104_8_113_8_if_false:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_111_15_113_8_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 112 12 ]
-        %tmp.35 = "Failed to load\nError: ";
-        %tmp.36 = lgetv %responseCode;
-        %tmp.37 = getv function %tmp.36 :toString;
-        %tmp.38 = invoke %tmp.36 %tmp.37();
-        %tmp.39 = add %tmp.35 %tmp.38;
-        putv self :response_info %tmp.39;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_111_15_113_8_stop:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_104_8_113_8_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 114 8 ]
-        %tmp.40 = self;
-        %tmp.41 = getv function %tmp.40 :requestUpdate;
-        invoke %tmp.40 %tmp.41();
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_102_100_116_4_stop:
+        %tmp.16 = getv ? :Dictionary;
+        %tmp.17 = isa %tmp.14 %tmp.16;
+        bf %tmp.17 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_159_12_163_12_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_159_12_163_12_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_159_43_163_12_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 160 14 ]
+        %tmp.19 = lgetv %data;
+        %tmp.20 = as %tmp.19 { (Dictionary) };
+        %tmp.21 = "temperature";
+        %tmp.22 = agetv %tmp.20 %tmp.21;
+        %tmp.23 = "data";
+        %tmp.24 = agetv %tmp.22 %tmp.23;
+        %tmp.25 = 0;
+        %tmp.26 = agetv %tmp.24 %tmp.25;
+        putv self :temperature %tmp.26;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 161 14 ]
+        %tmp.27 = getm $.Toybox.Application.Storage;
+        %tmp.28 = getv function %tmp.27 :setValue;
+        %tmp.29 = "favouriteTemperature";
+        %tmp.31 = getv ? :temperature;
+        invoke %tmp.27 %tmp.28(%tmp.29, %tmp.31);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 162 14 ]
+        %tmp.32 = getm $.Toybox.Application.Storage;
+        %tmp.33 = getv function %tmp.32 :setValue;
+        %tmp.34 = "glanceLastUpdate";
+        %tmp.35 = getm $.Toybox.Time;
+        %tmp.36 = getv function %tmp.35 :now;
+        %tmp.37 = invoke %tmp.35 %tmp.36();
+        %tmp.38 = getv function %tmp.37 :value;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        invoke %tmp.32 %tmp.33(%tmp.34, %tmp.39);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_159_43_163_12_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_159_12_163_12_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_159_12_163_12_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 164 12 ]
+        %tmp.40 = "Sucessful";
+        putv self :response_info %tmp.40;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_157_33_165_8_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_157_8_167_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_157_8_167_8_if_false:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_165_15_167_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 166 12 ]
+        %tmp.41 = "Failed to load\nError: ";
+        %tmp.42 = lgetv %responseCode;
+        %tmp.43 = getv function %tmp.42 :toString;
+        %tmp.44 = invoke %tmp.42 %tmp.43();
+        %tmp.45 = add %tmp.41 %tmp.44;
+        putv self :response_info %tmp.45;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_165_15_167_8_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_157_8_167_8_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc" 168 8 ]
+        %tmp.46 = self;
+        %tmp.47 = getv function %tmp.46 :requestUpdate;
+        invoke %tmp.46 %tmp.47();
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesGlance_mc_155_100_170_4_stop:
     }
 }
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesGlance.mc"; @line = 1; ]

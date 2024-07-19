@@ -2,24 +2,26 @@ import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
 import Toybox.Activity;
+using Toybox.Application.Storage;
+
 
 class TwelveLakesApp extends Application.AppBase {
-    var favouriteLake as String = "geneva";
-    var favouritePosition as [Float, Float]= [46.210417, 6.154484];
+
 
 
     function initialize() {
         AppBase.initialize();
-
     }
+    
     function getGlanceView() {
-        return [ new WidgetGlanceView(favouriteLake,favouritePosition) ];
+        return [ new WidgetGlanceView() ];
     }
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        var view = new TwelveLakesView(favouriteLake,favouritePosition);        
-        return [view];
+        var view = new TwelveLakesView();        
+        var delegate = new MyBehaviorDelegate(view);
+        return [view, delegate];
     }
 
 }

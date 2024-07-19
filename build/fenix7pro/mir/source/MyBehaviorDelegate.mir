@@ -1,0 +1,222 @@
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 1; ]
+using Toybox.System;
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 3; ]
+using Toybox.Application.Storage;
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 5; ]
+enum {
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 7; @position = 4; ]
+    GPS,
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 8; @position = 4; ]
+    CREDITS
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 11; ]
+class MyActionMenuDelegate extends WatchUi.ActionMenuDelegate{
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 11; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 11; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 12; @position = 8; ]
+    var view as TwelveLakesView;
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 14; ]
+    function initialize(view as TwelveLakesView) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_14_49_17_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 15 8 ]
+        %tmp.2 = getv ? :ActionMenuDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 16 8 ]
+        %tmp.5 = lgetv %view;
+        putv self :view %tmp.5;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_14_49_17_4_stop:
+    }
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 19; ]
+    function onSelect(item as WatchUi.ActionMenuItem) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_19_61_34_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 20 8 ]
+        %tmp.1 = lgetv %item;
+        %tmp.2 = getv function %tmp.1 :getId;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        push %tmp.3;
+        switch %tmp.3 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtEnd;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtBegin:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 21 12 ]
+        %tmp.4 = dup %tmp.3;
+        %tmp.6 = getv ? :GPS;
+        %tmp.7 = getv function %tmp.4 :equals;
+        %tmp.8 = invoke %tmp.4 %tmp.7 (%tmp.6);
+        bt %tmp.8 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_21_12_29_21_switchCase;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 30 12 ]
+        %tmp.9 = dup %tmp.3;
+        %tmp.11 = getv ? :CREDITS;
+        %tmp.12 = getv function %tmp.9 :equals;
+        %tmp.13 = invoke %tmp.9 %tmp.12 (%tmp.11);
+        bt %tmp.13 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_30_12_32_21_switchCase;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtDefault:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_defaultCodeBegin;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_21_12_29_21_switchCase:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 22 16 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtBegin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtEnd" ]
+        %position_lat_long.1 = local;
+        %tmp.14 = self;
+        %tmp.15 = getv function %tmp.14 :getPosition;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        lputv %position_lat_long.1 %tmp.16;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 23 16 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtBegin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtEnd" ]
+        %lakeFinder.2 = local;
+        %tmp.20 = getv ? :MyLakeFinder;
+        %tmp.17 = newc %tmp.20 ();
+        lputv %lakeFinder.2 %tmp.17;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 24 16 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtBegin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtEnd" ]
+        %newFavouriteLake.3 = local;
+        %tmp.21 = lgetv %lakeFinder.2;
+        %tmp.22 = getv function %tmp.21 :getClosesLake;
+        %tmp.24 = lgetv %position_lat_long.1;
+        %tmp.25 = invoke %tmp.21 %tmp.22(%tmp.24);
+        lputv %newFavouriteLake.3 %tmp.25;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 25 16 ]
+        %tmp.26 = getm $.Toybox.Application.Storage;
+        %tmp.27 = getv function %tmp.26 :setValue;
+        %tmp.28 = "favouritePosition";
+        %tmp.30 = lgetv %position_lat_long.1;
+        invoke %tmp.26 %tmp.27(%tmp.28, %tmp.30);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 26 16 ]
+        %tmp.31 = getm $.Toybox.Application.Storage;
+        %tmp.32 = getv function %tmp.31 :setValue;
+        %tmp.33 = "favouriteLake";
+        %tmp.35 = lgetv %newFavouriteLake.3;
+        invoke %tmp.31 %tmp.32(%tmp.33, %tmp.35);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 27 16 ]
+        %tmp.36 = getm $.Toybox.WatchUi;
+        %tmp.37 = getv function %tmp.36 :showToast;
+        %tmp.39 = lgetv %newFavouriteLake.3;
+        %tmp.40 = null;
+        invoke %tmp.36 %tmp.37(%tmp.39, %tmp.40);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 28 16 ]
+        %tmp.41 = lgetv %self;
+        %tmp.42 = getv %tmp.41 :view;
+        %tmp.43 = getv function %tmp.42 :notifyFavUpdate;
+        invoke %tmp.42 %tmp.43();
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 29 16 ]
+        goto break @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtEnd;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_30_12_32_21_switchCase:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 31 16 ]
+        %tmp.44 = getm $.Toybox.WatchUi;
+        %tmp.45 = getv function %tmp.44 :showToast;
+        %tmp.46 = "Thanks Alplakes.ch";
+        %tmp.47 = null;
+        invoke %tmp.44 %tmp.45(%tmp.46, %tmp.47);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 32 16 ]
+        goto break @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtEnd;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_defaultCodeBegin:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_20_8_33_8_switchStmtEnd:
+        pop;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_19_61_34_4_stop:
+    }
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 37; ]
+class MyBehaviorDelegate extends WatchUi.BehaviorDelegate{
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 37; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 37; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 38; @position = 8; ]
+    var view as TwelveLakesView;
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 39; ]
+    function initialize(view as TwelveLakesView) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_39_48_42_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 40 8 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 41 8 ]
+        %tmp.5 = lgetv %view;
+        putv self :view %tmp.5;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_39_48_42_4_stop:
+    }
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 44; ]
+    function onSelect() {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 45 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_stop" ]
+        %options.1 = local;
+        %tmp.1 = newd 1;
+        %tmp.3 = const :theme;
+        %tmp.4 = getm $.Toybox.WatchUi;
+        %tmp.5 = getv %tmp.4 :ACTION_MENU_THEME_LIGHT;
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 %tmp.3 %tmp.5;
+        lputv %options.1 %tmp.7;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 46 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_stop" ]
+        %myMenu.2 = local;
+        %tmp.11 = getv ? :ActionMenu;
+        %tmp.13 = lgetv %options.1;
+        %tmp.8 = newc %tmp.11 (%tmp.13);
+        lputv %myMenu.2 %tmp.8;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 47 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_stop" ]
+        %item1.3 = local;
+        %tmp.17 = getv ? :ActionMenuItem;
+        %tmp.18 = newd 1;
+        %tmp.20 = const :label;
+        %tmp.21 = "GPS as Fav.";
+        %tmp.22 = dup %tmp.18;
+        %tmp.23 = aputv %tmp.22 %tmp.20 %tmp.21;
+        %tmp.25 = getv ? :GPS;
+        %tmp.14 = newc %tmp.17 (%tmp.23, %tmp.25);
+        lputv %item1.3 %tmp.14;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 48 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_stop" ]
+        %item2.4 = local;
+        %tmp.29 = getv ? :ActionMenuItem;
+        %tmp.30 = newd 1;
+        %tmp.32 = const :label;
+        %tmp.33 = "Credits";
+        %tmp.34 = dup %tmp.30;
+        %tmp.35 = aputv %tmp.34 %tmp.32 %tmp.33;
+        %tmp.37 = getv ? :CREDITS;
+        %tmp.26 = newc %tmp.29 (%tmp.35, %tmp.37);
+        lputv %item2.4 %tmp.26;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 49 8 ]
+        %tmp.38 = lgetv %myMenu.2;
+        %tmp.39 = getv function %tmp.38 :addItem;
+        %tmp.41 = lgetv %item1.3;
+        invoke %tmp.38 %tmp.39(%tmp.41);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 50 8 ]
+        %tmp.42 = lgetv %myMenu.2;
+        %tmp.43 = getv function %tmp.42 :addItem;
+        %tmp.45 = lgetv %item2.4;
+        invoke %tmp.42 %tmp.43(%tmp.45);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 51 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_stop" ]
+        %delegate.5 = local;
+        %tmp.49 = getv ? :MyActionMenuDelegate;
+        %tmp.50 = lgetv %self;
+        %tmp.51 = getv %tmp.50 :view;
+        %tmp.46 = newc %tmp.49 (%tmp.51);
+        lputv %delegate.5 %tmp.46;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 52 8 ]
+        %tmp.52 = self;
+        %tmp.53 = getv function %tmp.52 :showActionMenu;
+        %tmp.55 = lgetv %myMenu.2;
+        %tmp.57 = lgetv %delegate.5;
+        invoke %tmp.52 %tmp.53(%tmp.55, %tmp.57);
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 53 8 ]
+        %tmp.58 = false;
+        ret %tmp.58;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_44_23_54_4_stop:
+    }
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 1; ]
+<init> {
+}

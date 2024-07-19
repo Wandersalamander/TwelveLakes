@@ -6,81 +6,76 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 4; ]
 import Toybox.Activity;
-[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 6; ]
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 5; ]
+using Toybox.Application.Storage;
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 8; ]
 class TwelveLakesApp extends Application.AppBase{
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 6; ]
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 8; ]
     <init> {
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 8 8 ]
-        %tmp.1 = newa 2;
-        %tmp.2 = 46.210417;
-        %tmp.3 = dup %tmp.1;
-        %tmp.4 = aputv %tmp.3 0 %tmp.2;
-        %tmp.5 = 6.154484;
-        %tmp.6 = dup %tmp.4;
-        %tmp.7 = aputv %tmp.6 1 %tmp.5;
-        putv self :favouritePosition %tmp.7;
     }
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 6; ]
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 8; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 7; @position = 8; ]
-    var favouriteLake = "geneva";
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 8; @position = 8; ]
-    var favouritePosition;
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 11; ]
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 12; ]
     function initialize() as Void {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_11_26_14_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 12 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_12_26_14_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 13 8 ]
         %tmp.2 = getv ? :AppBase;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_11_26_14_4_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_12_26_14_4_stop:
     }
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 15; ]
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 16; ]
     function getGlanceView() {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_15_29_17_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 16 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_16_29_18_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 17 8 ]
         %tmp.1 = newa 1;
         %tmp.5 = getv ? :WidgetGlanceView;
-        %tmp.7 = getv ? :favouriteLake;
-        %tmp.9 = getv ? :favouritePosition;
-        %tmp.2 = newc %tmp.5 (%tmp.7, %tmp.9);
-        %tmp.10 = dup %tmp.1;
-        %tmp.11 = aputv %tmp.10 0 %tmp.2;
-        ret %tmp.11;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_15_29_17_4_stop:
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_16_29_18_4_stop:
     }
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 20; ]
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 21; ]
     function getInitialView() as [Views] or [Views, InputDelegates] {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_20_68_23_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 21 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_20_68_23_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_20_68_23_4_stop" ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_21_68_25_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 22 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_21_68_25_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_21_68_25_4_stop" ]
         %view.1 = local;
         %tmp.4 = getv ? :TwelveLakesView;
-        %tmp.6 = getv ? :favouriteLake;
-        %tmp.8 = getv ? :favouritePosition;
-        %tmp.1 = newc %tmp.4 (%tmp.6, %tmp.8);
+        %tmp.1 = newc %tmp.4 ();
         lputv %view.1 %tmp.1;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 22 8 ]
-        %tmp.9 = newa 1;
-        %tmp.11 = lgetv %view.1;
-        %tmp.12 = dup %tmp.9;
-        %tmp.13 = aputv %tmp.12 0 %tmp.11;
-        ret %tmp.13;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_20_68_23_4_stop:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 23 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_21_68_25_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_21_68_25_4_stop" ]
+        %delegate.2 = local;
+        %tmp.8 = getv ? :MyBehaviorDelegate;
+        %tmp.10 = lgetv %view.1;
+        %tmp.5 = newc %tmp.8 (%tmp.10);
+        lputv %delegate.2 %tmp.5;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 24 8 ]
+        %tmp.11 = newa 2;
+        %tmp.13 = lgetv %view.1;
+        %tmp.14 = dup %tmp.11;
+        %tmp.15 = aputv %tmp.14 0 %tmp.13;
+        %tmp.17 = lgetv %delegate.2;
+        %tmp.18 = dup %tmp.15;
+        %tmp.19 = aputv %tmp.18 1 %tmp.17;
+        ret %tmp.19;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_21_68_25_4_stop:
     }
 }
-[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 27; ]
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 29; ]
 function getApp() as TwelveLakesApp {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_27_36_29_0_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 28 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_29_36_31_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc" 30 4 ]
     %tmp.1 = getm $.Toybox.Application;
     %tmp.2 = getv function %tmp.1 :getApp;
     %tmp.3 = invoke %tmp.1 %tmp.2();
     %tmp.4 = as %tmp.3 TwelveLakesApp;
     ret %tmp.4;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_27_36_29_0_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_TwelveLakesApp_mc_29_36_31_0_stop:
 }
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\TwelveLakesApp.mc"; @line = 1; ]
 <init> {

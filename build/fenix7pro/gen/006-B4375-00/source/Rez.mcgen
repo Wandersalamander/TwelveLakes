@@ -6,20 +6,31 @@ using Toybox.Graphics as Gfx;
 
 module Rez {
     module Drawables {
-        (:initialized) var id_monkey as ResourceId;
+        (:initialized) var actionMenu as ResourceId;
         (:initialized) var LauncherIcon as ResourceId;
     } // Drawables
 
     module Layouts {
         function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
-            var rez_cmp_local_bitmap_id_monkey = new WatchUi.Bitmap({:identifier=>"id_monkey", :rezId=>$.Rez.Drawables.id_monkey, :locX=>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
-            rez_cmp_local_bitmap_id_monkey.setLocation(((260 - rez_cmp_local_bitmap_id_monkey.width) * 0.5), ((260 - rez_cmp_local_bitmap_id_monkey.height) * 0.5));
+            var rez_cmp_local_bitmap_actionMenu = new WatchUi.Bitmap({:identifier=>"actionMenu", :rezId=>$.Rez.Drawables.actionMenu, :locX=>225, :locY=>48});
 
-            return [rez_cmp_local_bitmap_id_monkey] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_bitmap_actionMenu] as Array<WatchUi.Drawable>;
         }
     } // Layouts
 
+    module Menus {
+        class ActionMenu extends WatchUi.ActionMenu {
+            function initialize() {
+                ActionMenu.initialize({:theme=>WatchUi.ACTION_MENU_THEME_DARK});
+                addItem(new WatchUi.ActionMenuItem({:label=>$.Rez.Strings.edit}, :edit));
+                addItem(new WatchUi.ActionMenuItem({:label=>$.Rez.Strings.dismiss}, :dismiss));
+            }
+        }
+    } // Menus
+
     module Strings {
+        (:initialized) var edit as ResourceId;
+        (:initialized) var dismiss as ResourceId;
         (:initialized) var AppName as ResourceId;
     } // Strings
 

@@ -1,3 +1,7 @@
 <layout id="MainLayout">
-    <bitmap id="id_monkey" x="center" y="center" filename="../drawables/monkey.png" />
+    <!-- ActionMenu hint -->
+    <bitmap id="actionMenu" personality="
+        system_icon_dark__hint_action_menu
+        system_loc__hint_action_menu" />
+
 </layout>

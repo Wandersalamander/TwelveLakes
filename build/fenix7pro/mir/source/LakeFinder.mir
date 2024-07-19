@@ -3,10 +3,12 @@ using Toybox.Position;
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 2; ]
 import Toybox.Activity;
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 3; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 5; ]
 class MyLakeFinder{
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 3; ]
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 5; ]
     <init> {
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 4 15 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 6 17 ]
         %tmp.1 = newa 12;
         %tmp.2 = "geneva";
         %tmp.3 = dup %tmp.1;
@@ -45,7 +47,7 @@ class MyLakeFinder{
         %tmp.36 = dup %tmp.34;
         %tmp.37 = aputv %tmp.36 11 %tmp.35;
         putv self :available_lakes %tmp.37;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 19 16 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 21 18 ]
         %tmp.38 = newd 12;
         %tmp.39 = "greifensee";
         %tmp.40 = newa 2;
@@ -169,120 +171,55 @@ class MyLakeFinder{
         %tmp.158 = aputv %tmp.157 %tmp.149 %tmp.156;
         putv self :lakePositions %tmp.158;
     }
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 3; ]
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 5; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 4; @position = 15; ]
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 6; @position = 17; ]
     public
-    var available_lakes;
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 19; @position = 16; ]
+    const available_lakes as Array<String>;
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 21; @position = 18; ]
     private
-    var lakePositions;
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 35; ]
-    function getPosition() {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_35_26_48_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 36 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_35_26_48_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_35_26_48_4_stop" ]
-        %myPos.1 = local;
-        %tmp.1 = null;
-        lputv %myPos.1 %tmp.1;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 37 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_35_26_48_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_35_26_48_4_stop" ]
-        %info.2 = local;
-        %tmp.2 = getm $.Toybox.Position;
-        %tmp.3 = getv function %tmp.2 :getInfo;
-        %tmp.4 = invoke %tmp.2 %tmp.3();
-        lputv %info.2 %tmp.4;
+    const lakePositions as Dictionary<String, [Float, Float]>;
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 38; ]
+    function getClosesLake(position_lat_long as [Double, Double] or Null) as String or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_38_92_61_4_start:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 39 8 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_39_8_44_12_if_stmt:
-        %tmp.6 = lgetv %info.2;
-        %tmp.7 = null;
-        %tmp.8 = ne %tmp.6 %tmp.7;
-        bf %tmp.8 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_39_8_44_12_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_39_8_44_12_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_39_25_44_12_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 40 12 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_39_25_44_12_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_39_25_44_12_stop" ]
-        %position.3 = local;
-        %tmp.9 = lgetv %info.2;
-        %tmp.10 = as %tmp.9 { (!Null) };
-        %tmp.11 = getv %tmp.10 :position;
-        lputv %position.3 %tmp.11;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 41 12 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_41_12_43_16_if_stmt:
-        %tmp.13 = lgetv %position.3;
-        %tmp.14 = null;
-        %tmp.15 = ne %tmp.13 %tmp.14;
-        bf %tmp.15 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_41_12_43_16_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_41_12_43_16_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_41_33_43_16_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 42 16 ]
-        %tmp.16 = lgetv %position.3;
-        %tmp.17 = as %tmp.16 { (!Null) };
-        %tmp.18 = getv function %tmp.17 :toDegrees;
-        %tmp.19 = invoke %tmp.17 %tmp.18();
-        lputv %myPos.1 %tmp.19;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_41_33_43_16_stop:
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_41_12_43_16_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_41_12_43_16_if_end:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_39_25_44_12_stop:
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_39_8_44_12_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_39_8_44_12_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 45 8 ]
-        %tmp.21 = getv ? :System;
-        %tmp.22 = getv function %tmp.21 :println;
-        %tmp.23 = "myPos";
-        invoke %tmp.21 %tmp.22(%tmp.23);
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 46 8 ]
-        %tmp.25 = getv ? :System;
-        %tmp.26 = getv function %tmp.25 :println;
-        %tmp.28 = lgetv %myPos.1;
-        invoke %tmp.25 %tmp.26(%tmp.28);
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 47 8 ]
-        %tmp.30 = lgetv %myPos.1;
-        ret %tmp.30;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_35_26_48_4_stop:
-    }
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 49; ]
-    function getClosesLake(position_lat_long) {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_49_45_72_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 50 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_49_45_72_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_49_45_72_4_stop" ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_38_92_61_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_38_92_61_4_stop" ]
         %minDistVal.1 = local;
         %tmp.1 = 666;
         lputv %minDistVal.1 %tmp.1;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 51 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_49_45_72_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_49_45_72_4_stop" ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 40 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_38_92_61_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_38_92_61_4_stop" ]
         %minDistIdx.2 = local;
         %tmp.2 = null;
         lputv %minDistIdx.2 %tmp.2;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 53 8 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_53_8_70_8_if_stmt:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 42 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_42_8_59_8_if_stmt:
         %tmp.4 = lgetv %position_lat_long;
         %tmp.5 = null;
         %tmp.6 = ne %tmp.4 %tmp.5;
-        bf %tmp.6 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_53_8_70_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_53_8_70_8_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_53_38_70_8_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 54 12 ]
-        for @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_test @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_incr @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_init:
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_begin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_end" ]
+        bf %tmp.6 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_42_8_59_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_42_8_59_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_42_38_59_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 43 12 ]
+        for @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_test @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_incr @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_init:
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_begin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_end" ]
         %i.3 = local;
         %tmp.7 = 0;
         lputv %i.3 %tmp.7;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_test:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_test:
         %tmp.9 = lgetv %i.3;
         %tmp.11 = getv ? :available_lakes;
         %tmp.12 = getv function %tmp.11 :size;
         %tmp.13 = invoke %tmp.11 %tmp.12();
         %tmp.14 = lt %tmp.9 %tmp.13;
-        bf %tmp.14 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_begin:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_62_67_12_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 56 16 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_62_67_12_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_62_67_12_stop" ]
+        bf %tmp.14 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_begin:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_62_56_12_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 45 16 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_62_56_12_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_62_56_12_stop" ]
         %lakePos.4 = local;
         %tmp.16 = getv ? :lakePositions;
         %tmp.18 = getv ? :available_lakes;
@@ -290,8 +227,8 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_
         %tmp.21 = agetv %tmp.18 %tmp.20;
         %tmp.22 = agetv %tmp.16 %tmp.21;
         lputv %lakePos.4 %tmp.22;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 58 16 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_62_67_12_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_62_67_12_stop" ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 47 16 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_62_56_12_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_62_56_12_stop" ]
         %dx.5 = local;
         %tmp.24 = lgetv %lakePos.4;
         %tmp.25 = 0;
@@ -302,8 +239,8 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_
         %tmp.31 = agetv %tmp.29 %tmp.30;
         %tmp.32 = sub %tmp.26 %tmp.31;
         lputv %dx.5 %tmp.32;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 59 16 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_62_67_12_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_62_67_12_stop" ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 48 16 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_62_56_12_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_62_56_12_stop" ]
         %dy.6 = local;
         %tmp.34 = lgetv %lakePos.4;
         %tmp.35 = 1;
@@ -314,8 +251,8 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_
         %tmp.41 = agetv %tmp.39 %tmp.40;
         %tmp.42 = sub %tmp.36 %tmp.41;
         lputv %dy.6 %tmp.42;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 61 16 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_62_67_12_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_62_67_12_stop" ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 50 16 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_62_56_12_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_62_56_12_stop" ]
         %distance.7 = local;
         %tmp.44 = getv ? :Math;
         %tmp.45 = getv function %tmp.44 :sqrt;
@@ -328,62 +265,117 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_
         %tmp.56 = add %tmp.50 %tmp.55;
         %tmp.57 = invoke %tmp.44 %tmp.45(%tmp.56);
         lputv %distance.7 %tmp.57;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 63 16 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_63_16_66_16_if_stmt:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 52 16 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_52_16_55_16_if_stmt:
         %tmp.59 = lgetv %distance.7;
         %tmp.61 = lgetv %minDistVal.1;
         %tmp.62 = lt %tmp.59 %tmp.61;
-        bf %tmp.62 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_63_16_66_16_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_63_16_66_16_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_63_42_66_16_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 64 20 ]
+        bf %tmp.62 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_52_16_55_16_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_52_16_55_16_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_52_42_55_16_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 53 20 ]
         %tmp.64 = lgetv %distance.7;
         lputv %minDistVal.1 %tmp.64;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 65 20 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 54 20 ]
         %tmp.66 = lgetv %i.3;
         lputv %minDistIdx.2 %tmp.66;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_63_42_66_16_stop:
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_63_16_66_16_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_63_16_66_16_if_end:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_62_67_12_stop:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_incr:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 54 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_52_42_55_16_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_52_16_55_16_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_52_16_55_16_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_62_56_12_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_incr:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 43 ]
         %tmp.69 = lgetv %i.3;
         %tmp.70 = add %tmp.69 1;
         lputv %i.3 %tmp.70;
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_test;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_54_12_67_12_for_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 68 12 ]
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_test;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_43_12_56_12_for_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 57 12 ]
         %tmp.72 = getv ? :available_lakes;
         %tmp.74 = lgetv %minDistIdx.2;
         %tmp.75 = agetv %tmp.72 %tmp.74;
         ret %tmp.75;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_53_38_70_8_stop:
-        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_53_8_70_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_53_8_70_8_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 71 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_42_38_59_8_stop:
+        goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_42_8_59_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_42_8_59_8_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 60 8 ]
         %tmp.76 = null;
         ret %tmp.76;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_49_45_72_4_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_38_92_61_4_stop:
     }
-    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 74; ]
+    [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 63; ]
     function getLakeByGPS() {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_74_27_78_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 75 8 ]
-        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_74_27_78_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_74_27_78_4_stop" ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_63_27_67_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 64 8 ]
+        [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_63_27_67_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_63_27_67_4_stop" ]
         %position_lat_long.1 = local;
         %tmp.1 = self;
         %tmp.2 = getv function %tmp.1 :getPosition;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %position_lat_long.1 %tmp.3;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 76 8 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 65 8 ]
         %tmp.4 = self;
         %tmp.5 = getv function %tmp.4 :getClosesLake;
         %tmp.7 = lgetv %position_lat_long.1;
         %tmp.8 = invoke %tmp.4 %tmp.5(%tmp.7);
         ret %tmp.8;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_74_27_78_4_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_63_27_67_4_stop:
     }
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 71; ]
+function getPosition() as [Double, Double] or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_71_50_82_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 72 8 ]
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_71_50_82_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_71_50_82_4_stop" ]
+    %myPos.1 = local;
+    %tmp.1 = null;
+    lputv %myPos.1 %tmp.1;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 73 8 ]
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_71_50_82_4_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_71_50_82_4_stop" ]
+    %info.2 = local;
+    %tmp.2 = getm $.Toybox.Position;
+    %tmp.3 = getv function %tmp.2 :getInfo;
+    %tmp.4 = invoke %tmp.2 %tmp.3();
+    lputv %info.2 %tmp.4;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 75 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_75_8_80_12_if_stmt:
+    %tmp.6 = lgetv %info.2;
+    %tmp.7 = null;
+    %tmp.8 = ne %tmp.6 %tmp.7;
+    bf %tmp.8 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_75_8_80_12_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_75_8_80_12_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_75_25_80_12_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 76 12 ]
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_75_25_80_12_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_75_25_80_12_stop" ]
+    %position.3 = local;
+    %tmp.9 = lgetv %info.2;
+    %tmp.10 = as %tmp.9 { (!Null) };
+    %tmp.11 = getv %tmp.10 :position;
+    lputv %position.3 %tmp.11;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 77 12 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_77_12_79_16_if_stmt:
+    %tmp.13 = lgetv %position.3;
+    %tmp.14 = null;
+    %tmp.15 = ne %tmp.13 %tmp.14;
+    bf %tmp.15 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_77_12_79_16_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_77_12_79_16_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_77_33_79_16_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 78 16 ]
+    %tmp.16 = lgetv %position.3;
+    %tmp.17 = as %tmp.16 { (!Null) };
+    %tmp.18 = getv function %tmp.17 :toDegrees;
+    %tmp.19 = invoke %tmp.17 %tmp.18();
+    lputv %myPos.1 %tmp.19;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_77_33_79_16_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_77_12_79_16_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_77_12_79_16_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_75_25_80_12_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_75_8_80_12_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_75_8_80_12_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc" 81 8 ]
+    %tmp.21 = lgetv %myPos.1;
+    ret %tmp.21;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_LakeFinder_mc_71_50_82_4_stop:
 }
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\LakeFinder.mc"; @line = 1; ]
 <init> {

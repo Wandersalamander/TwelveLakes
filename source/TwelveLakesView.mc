@@ -13,38 +13,38 @@ using Toybox.Time.Gregorian;
 using Toybox.Application.Storage;
 
 class TwelveLakesView extends WatchUi.View {
+    // Closest Lake
     public var currentLake as String or Null = null;
     public var currentPosition as [Double,Double] or Null = null;
     public var currentTemperature as Float or Null = null;
     public var currentDistance as Float or Null= null;
 
+    // Favourite lake
     public var favouriteLake as String or Null= null;
     public var favouritePosition as Array<Double> or Null= null;
     public var favouriteTemperature as Float or Null = null;
-
     public var favouriteTemperatureArray as Array<Float> or Null = null;
     public var favouriteTimeArray as Array<String> or Null= null;
     
 
-    var response_info as String = "init";
     var lastUpdateFav as Time.Moment or Null = null;
     var lastUpdateProx as Time.Moment or Null = null;
 
-    function initialize(favouriteLake,favouritePosition) {
+    function initialize() {
         View.initialize();
 
-        if (lastUpdateFav != Storage.getValue("viewLastUpdateFav")){
+        if (Storage.getValue("viewLastUpdateFav") != null){
             lastUpdateFav = new Time.Moment(Storage.getValue("viewLastUpdateFav"));
         }
-        if (lastUpdateProx != Storage.getValue("viewLastUpdateProx")){
+        if (Storage.getValue("viewLastUpdateProx") != null){
             lastUpdateProx = new Time.Moment(Storage.getValue("viewLastUpdateProx"));
         }
-        self.favouriteLake = favouriteLake;
-        self.favouritePosition = favouritePosition;
+
+        updateFavourites();
         
 
         var lakeFinder = new MyLakeFinder();
-        self.currentPosition = lakeFinder.getPosition();
+        self.currentPosition = getPosition();
         if (currentPosition != null){
             self.currentLake = lakeFinder.getClosesLake(currentPosition);
         }
@@ -57,40 +57,82 @@ class TwelveLakesView extends WatchUi.View {
         currentDistance = Storage.getValue("currentDistance");
 
 
-        makeRequest();
+        makeRequest(false);
 
+    }
+
+    function notifyFavUpdate(){
+        updateFavourites();
+        makeRequest(true);
+        System.println("notifyFavUpdate");
+    }
+
+    function updateFavourites(){
+        var pos = Storage.getValue("favouritePosition");
+        var name = Storage.getValue("favouriteLake");
+        if (pos != null && name != null){
+            self.favouritePosition = [pos[0].toDouble(), pos[1].toDouble()];
+            self.favouriteLake = name;
+        }
+        else{
+            // todo toast 
+            self.favouriteLake = "geneva";
+            self.favouritePosition = [46.210417.toDouble(), 6.154484.toDouble()];
+        }
+    }
+
+    function onLayout(dc){
+        setLayout( Rez.Layouts.MainLayout( dc ) );
     }
 
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
+        System.println("TwelveLakesView.onUpdate");
         View.onUpdate(dc);
         var offsetX = 0.0 * dc.getWidth();
         var offsetY = (0.5+0.3/2) * dc.getHeight();
-        var spanX = 0.80 * dc.getWidth();
+        var spanX = 0.75 * dc.getWidth();
         var spanY = 0.3 * dc.getHeight();
-        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         if (favouriteLake != null && favouriteTemperature != null){
-            dc.drawText(dc.getWidth()/2, 0.2*dc.getHeight(), Graphics.FONT_MEDIUM, Lang.format("$1$$2$: $3$°C", [favouriteLake.substring(0,1).toUpper(), favouriteLake.substring(1, favouriteLake.length()), favouriteTemperature.format("%.1f")]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
-            dc.drawText(0.5*dc.getWidth(), offsetY, Graphics.FONT_AUX1, Lang.format("$1$", ["Last 48 hours"]), Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth()/2, 0.1*dc.getHeight(), Graphics.FONT_MEDIUM, Lang.format("$1$°C", [favouriteTemperature.format("%.1f")]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth()/2, 0.2*dc.getHeight(), Graphics.FONT_MEDIUM, Lang.format("$1$$2$", [favouriteLake.substring(0,1).toUpper(), favouriteLake.substring(1, favouriteLake.length())]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
         }
         if (currentLake != null && currentTemperature != null and currentDistance != null){
-            dc.drawText(dc.getWidth()/2, 0.825*dc.getHeight(), Graphics.FONT_AUX1, Lang.format("Closest lake ($1$km away)", [(currentDistance/1000.0).format("%d")]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
+            var text;
+            if (currentDistance >= 1000){
+                text = Lang.format("Closest lake ($1$km away)", [(currentDistance/1000.0).format("%d")]);
+            }else{
+                text = Lang.format("Closest lake ($1$m away)", [(currentDistance).format("%d")]);
+
+            }
+            dc.drawText(dc.getWidth()/2, 0.825*dc.getHeight(), Graphics.FONT_AUX1, text, Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
             dc.drawText(dc.getWidth()/2, 0.9*dc.getHeight(), Graphics.FONT_AUX1, Lang.format("$1$$2$: $3$°C", [currentLake.substring(0,1).toUpper(), currentLake.substring(1, currentLake.length()), currentTemperature.format("%.1f")]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
         }
         
         if (favouriteTimeArray != null){
             var widthT = spanX / (favouriteTimeArray.size());
 
-            var hhmm = "9999";
-            for (var i = 0; i < favouriteTimeArray.size(); i++) {
+            var hhmm;
+            var dd;
+            var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+            var todayString = today.day.format("%02d");
+
+            for (var i = 0; i < (favouriteTimeArray.size()); i++) {
+                dd = favouriteTimeArray[i].substring(6, 8);
                 hhmm = favouriteTimeArray[i].substring(8, 8+4);
-                
-                if (hhmm.equals( "0300")){
-                    dc.drawText(offsetX+i * widthT, offsetY-spanY, Graphics.FONT_AUX2, "03:00", Graphics.TEXT_JUSTIFY_CENTER);
+                if (hhmm.equals( "1200")){
+                    if (dd.equals(todayString)){
+                        dc.drawText(offsetX+i * widthT, offsetY-spanY, Graphics.FONT_AUX2, Lang.format("$1$", ["Today"]), Graphics.TEXT_JUSTIFY_CENTER);
+                    }else{
+                        if ((i < favouriteTimeArray.size()-1)){
+                            dc.drawText(offsetX+i * widthT, offsetY-spanY, Graphics.FONT_AUX2, Lang.format("$1$.", [dd]), Graphics.TEXT_JUSTIFY_CENTER);
+                        }
+                    }
                 }
-                if (hhmm.equals("1500")){
-                    dc.drawText(offsetX+i * widthT, offsetY-spanY, Graphics.FONT_AUX2, "15:00", Graphics.TEXT_JUSTIFY_CENTER);
+                if (hhmm.equals("0000")){
+                    dc.drawLine(offsetX+i * widthT, offsetY, offsetX+i * widthT, offsetY-spanY);
                 }
             }
 
@@ -129,25 +171,25 @@ class TwelveLakesView extends WatchUi.View {
                     );
 
             }
-            dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+            dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
             dc.drawRectangle(offsetX, offsetY-spanY, spanX, spanY);
 
        }
     }
-
-
-    public function makeRequest() as Void {
+    public function makeRequest(forceFav as Boolean) as Void {
         System.println("TwelveLakesView.makeRequest");
-        System.println("Executing\nRequest");;
-        
-        var FIVETEEN_MIN    = new Time.Duration(15*60);        
+        makeRequestFav(forceFav);
+        makeRequestProx();
+
+    }
+    public function makeRequestFav(forceFav as Boolean) as Void {
+        var skipUpdateBelowSeconds    = new Time.Duration(60*60);     // 60 min    
         var readyForUpdateFav = true;
         if (lastUpdateFav!=null){
-            readyForUpdateFav = Time.now().greaterThan(lastUpdateFav.add(FIVETEEN_MIN));
+            readyForUpdateFav = Time.now().greaterThan(lastUpdateFav.add(skipUpdateBelowSeconds));
         }
-        var readyForUpdateProx = true;
-        if (lastUpdateProx!=null){
-            readyForUpdateProx = Time.now().greaterThan(lastUpdateProx.add(FIVETEEN_MIN));
+        if (forceFav){
+            readyForUpdateFav = true;
         }
         var options = {
             :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
@@ -155,52 +197,54 @@ class TwelveLakesView extends WatchUi.View {
                 "Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
             }
         };
-        var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        var oneDay     = new Time.Duration(1*24*60*60);
         var twoDays    = new Time.Duration(2*24*60*60);
 
-        var beforeTwoDays = Gregorian.info(Time.now().subtract(twoDays), Time.FORMAT_SHORT);
-        var dateStringStop = Lang.format(
-            "$1$$2$$3$$4$$5$",
-            [
-                today.year.format("%04d"),
-                today.month.format("%02d"),
-                today.day.format("%02d"),
-                today.hour.format("%02d"),
-                today.min.format("%02d"),
-            ]
-        );
-        var dateStringStart = Lang.format(
-            "$1$$2$$3$$4$$5$",
-            [
-                beforeTwoDays.year.format("%04d"),
-                beforeTwoDays.month.format("%02d"),
-                beforeTwoDays.day.format("%02d"),
-                beforeTwoDays.hour.format("%02d"),
-                beforeTwoDays.min.format("%02d"),
-            ]
-        );
-        
+        var inTwoDays = Time.now().add(twoDays);
+        var beforeOneDay = Time.now().subtract(oneDay);
+
         System.println(favouriteLake);
         System.println(favouritePosition);
         if ((favouriteLake != null) && (favouritePosition != null) && readyForUpdateFav){
-            var myRequestFav = Lang.format(
-            "https://alplakes-api.eawag.ch/simulations/point/delft3d-flow/$1$/$2$/$3$/1/$4$/$5$",
-            [favouriteLake,dateStringStart,dateStringStop,favouritePosition[0],favouritePosition[1]]);
-            System.println(myRequestFav);;
+            var myRequestFav = alplakesApiString3DLake(
+                favouriteLake,
+                 beforeOneDay,
+                  inTwoDays,
+                  favouritePosition
+            );
+            System.println(myRequestFav);
             Communications.makeWebRequest(
                 myRequestFav,
                 null,
                 options,
-                method(:onReceiveFav)
+                method(:onReceive3DFav)
             );
         }
+    }
+
+    public function makeRequestProx() as Void {
+        var skipUpdateBelowSeconds2    = new Time.Duration(15*60);     // 60 min    
+        var readyForUpdateProx = true;
+        if (lastUpdateProx!=null){
+            readyForUpdateProx = Time.now().greaterThan(lastUpdateProx.add(skipUpdateBelowSeconds2));
+        }
+        if (currentTemperature == null){
+            readyForUpdateProx = true;   
+        }
+        
+        var options = {
+            :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
+            :headers => {
+                "Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
+            }
+        };
+        var today = Time.now();
+
+        
         System.println(currentLake);
         System.println(currentPosition);
         if ((currentLake != null) && (currentPosition != null) && readyForUpdateProx){
-
-            var myRequestProx = Lang.format(
-            "https://alplakes-api.eawag.ch/simulations/point/delft3d-flow/$1$/$2$/$3$/1/$4$/$5$",
-            [currentLake,dateStringStop,dateStringStop,currentPosition[0],currentPosition[1]]);
+            var myRequestProx = alplakesApiString3DLake(currentLake,today,today,currentPosition);
             System.println(myRequestProx);;
             Communications.makeWebRequest(
                 myRequestProx,
@@ -215,24 +259,28 @@ class TwelveLakesView extends WatchUi.View {
     //! Receive the data from the web request
     //! @param responseCode The server response code
     //! @param data Content from a successful request
-    public function onReceiveFav(responseCode as Number, data as Dictionary or String or Null) as Void {
-        System.println("TwelveLakesView.onReceiveFav");
+    public function onReceive3DFav(responseCode as Number, data as Dictionary or String or Null) as Void {
+        System.println("TwelveLakesView.onReceive3DFav");
         System.println(responseCode);;
         if (responseCode == 200) {
             System.println(data);
             if (data instanceof Dictionary){
+
                 favouriteTimeArray = data["time"]; // YYYYmmddhhmm
                 Storage.setValue("favouriteTimeArray", favouriteTimeArray);
+
                 favouriteTemperatureArray = data["temperature"]["data"];
                 Storage.setValue("favouriteTemperatureArray", favouriteTemperatureArray);
-                favouriteTemperature = favouriteTemperatureArray[favouriteTemperatureArray.size()-1];
+
+                favouriteTemperature = favouriteTemperatureArray[9]; // idx=9 is assumend. better to check with timeArray, but lets skip array operations here
                 Storage.setValue("favouriteTemperature", favouriteTemperature);
-                response_info = "Sucessful";
+
                 Storage.setValue("viewLastUpdateFav", Time.now().value());
             }
         } else {
-            response_info = "Failed to load\nError: " + responseCode.toString();
-            favouriteTemperature = 0.0;
+            System.print("Failed to load\nError: " + responseCode.toString());
+            favouriteTemperature = null;
+
         }
         requestUpdate();
     }
@@ -243,14 +291,16 @@ class TwelveLakesView extends WatchUi.View {
             System.println(data);;
             currentTemperature = data["temperature"]["data"][0];
             Storage.setValue("currentTemperature", currentTemperature);
+
             currentDistance = data["distance"]; // km?
             Storage.setValue("currentDistance", currentDistance);
-            response_info = "Sucessful";
+
             Storage.setValue("viewLastUpdateProx", Time.now().value());
 
+
         } else {
-            response_info = "Failed to load\nError: " + responseCode.toString();
-            currentTemperature = 0.0;
+            System.print("Failed to load\nError: " + responseCode.toString());
+            currentTemperature = null;
         }
         requestUpdate();
     }

@@ -2,502 +2,713 @@
 <debugInfo>
 <manifest filename="C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\manifest.xml"/>
 <pcToLineNum>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="2" parent="globals" pc="268435457" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="4" parent="globals" pc="268435468" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="5" parent="globals" pc="268435473" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="6" parent="globals" pc="268435479" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="7" parent="globals" pc="268435487" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="9" parent="globals" pc="268435492" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="10" parent="globals" pc="268435508" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="12" parent="globals" pc="268435514" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="13" parent="globals" pc="268435530" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="15" parent="globals" pc="268435536" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="16" parent="globals" pc="268435552" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="18" parent="globals" pc="268435558" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="19" parent="globals" pc="268435574" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="21" parent="globals" pc="268435581" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="22" parent="globals" pc="268435589" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="25" parent="globals" pc="268435596" symbol="getColor"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="2" lineNum="12" parent="globals/WidgetGlanceView" pc="268435599" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="3" lineNum="6" parent="globals/TwelveLakesApp" pc="268435611" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="4" lineNum="19" parent="globals/WidgetGlanceView" pc="268435623" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="4" lineNum="20" parent="globals/WidgetGlanceView" pc="268435625" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="4" lineNum="21" parent="globals/WidgetGlanceView" pc="268435637" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="4" lineNum="22" parent="globals/WidgetGlanceView" pc="268435646" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="4" lineNum="23" parent="globals/WidgetGlanceView" pc="268435670" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="4" lineNum="24" parent="globals/WidgetGlanceView" pc="268435694" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="4" lineNum="25" parent="globals/WidgetGlanceView" pc="268435703" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="4" lineNum="27" parent="globals/WidgetGlanceView" pc="268435737" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="5" lineNum="102" parent="globals/WidgetGlanceView" pc="268435751" symbol="onReceive"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="5" lineNum="103" parent="globals/WidgetGlanceView" pc="268435753" symbol="onReceive"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="5" lineNum="104" parent="globals/WidgetGlanceView" pc="268435768" symbol="onReceive"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="5" lineNum="105" parent="globals/WidgetGlanceView" pc="268435777" symbol="onReceive"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="5" lineNum="106" parent="globals/WidgetGlanceView" pc="268435792" symbol="onReceive"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="5" lineNum="107" parent="globals/WidgetGlanceView" pc="268435815" symbol="onReceive"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="5" lineNum="108" parent="globals/WidgetGlanceView" pc="268435838" symbol="onReceive"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="5" lineNum="110" parent="globals/WidgetGlanceView" pc="268435872" symbol="onReceive"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="5" lineNum="112" parent="globals/WidgetGlanceView" pc="268435887" symbol="onReceive"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="5" lineNum="114" parent="globals/WidgetGlanceView" pc="268435907" symbol="onReceive"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="32" parent="globals/WidgetGlanceView" pc="268435915" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="33" parent="globals/WidgetGlanceView" pc="268435918" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="34" parent="globals/WidgetGlanceView" pc="268435934" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="35" parent="globals/WidgetGlanceView" pc="268435943" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="40" parent="globals/WidgetGlanceView" pc="268436046" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="41" parent="globals/WidgetGlanceView" pc="268436055" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="46" parent="globals/WidgetGlanceView" pc="268436125" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="47" parent="globals/WidgetGlanceView" pc="268436144" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="49" parent="globals/WidgetGlanceView" pc="268436182" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="50" parent="globals/WidgetGlanceView" pc="268436191" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="51" parent="globals/WidgetGlanceView" pc="268436206" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="52" parent="globals/WidgetGlanceView" pc="268436227" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="53" parent="globals/WidgetGlanceView" pc="268436254" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="58" parent="globals/WidgetGlanceView" pc="268436292" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="59" parent="globals/WidgetGlanceView" pc="268436295" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="60" parent="globals/WidgetGlanceView" pc="268436313" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="61" parent="globals/WidgetGlanceView" pc="268436325" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="62" parent="globals/WidgetGlanceView" pc="268436328" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="63" parent="globals/WidgetGlanceView" pc="268436337" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="64" parent="globals/WidgetGlanceView" pc="268436364" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="66" parent="globals/WidgetGlanceView" pc="268436399" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="67" parent="globals/WidgetGlanceView" pc="268436406" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="69" parent="globals/WidgetGlanceView" pc="268436407" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="75" parent="globals/WidgetGlanceView" pc="268436432" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="76" parent="globals/WidgetGlanceView" pc="268436457" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="86" parent="globals/WidgetGlanceView" pc="268436590" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="89" parent="globals/WidgetGlanceView" pc="268436643" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="90" parent="globals/WidgetGlanceView" pc="268436658" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="8" lineNum="20" parent="globals/TwelveLakesApp" pc="268436690" symbol="getInitialView"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="8" lineNum="21" parent="globals/TwelveLakesApp" pc="268436693" symbol="getInitialView"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="8" lineNum="22" parent="globals/TwelveLakesApp" pc="268436727" symbol="getInitialView"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="9" lineNum="11" parent="globals/TwelveLakesApp" pc="268436737" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="9" lineNum="12" parent="globals/TwelveLakesApp" pc="268436739" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="10" lineNum="15" parent="globals/TwelveLakesApp" pc="268436752" symbol="getGlanceView"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="10" lineNum="16" parent="globals/TwelveLakesApp" pc="268436754" symbol="getGlanceView"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="11" lineNum="27" parent="globals" pc="268436794" symbol="getApp"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="11" lineNum="28" parent="globals" pc="268436804" symbol="getApp"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="12" lineNum="15" parent="globals/TwelveLakesView" pc="268436815" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="13" lineNum="19" parent="globals/MyLakeFinder" pc="268436827" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="14" lineNum="21" parent="globals" pc="268436972" symbol="mean"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="14" lineNum="22" parent="globals" pc="268436983" symbol="mean"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="14" lineNum="23" parent="globals" pc="268436986" symbol="mean"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="14" lineNum="24" parent="globals" pc="268437002" symbol="mean"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="14" lineNum="26" parent="globals" pc="268437022" symbol="mean"/>
-<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="15" lineNum="7" parent="globals/Rez" pc="268437033" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="16" lineNum="1" parent="globals" pc="268437053" symbol="maximum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="16" lineNum="2" parent="globals" pc="268437064" symbol="maximum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="16" lineNum="3" parent="globals" pc="268437070" symbol="maximum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="16" lineNum="4" parent="globals" pc="268437087" symbol="maximum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="16" lineNum="5" parent="globals" pc="268437098" symbol="maximum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="16" lineNum="8" parent="globals" pc="268437115" symbol="maximum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="17" lineNum="11" parent="globals" pc="268437118" symbol="minimum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="17" lineNum="12" parent="globals" pc="268437129" symbol="minimum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="17" lineNum="13" parent="globals" pc="268437135" symbol="minimum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="17" lineNum="14" parent="globals" pc="268437152" symbol="minimum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="17" lineNum="15" parent="globals" pc="268437163" symbol="minimum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="17" lineNum="18" parent="globals" pc="268437180" symbol="minimum"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="18" lineNum="31" parent="globals" pc="268437183" symbol="span"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="18" lineNum="32" parent="globals" pc="268437193" symbol="span"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="199" parent="globals/TwelveLakesView" pc="268437215" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="200" parent="globals/TwelveLakesView" pc="268437217" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="201" parent="globals/TwelveLakesView" pc="268437235" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="202" parent="globals/TwelveLakesView" pc="268437250" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="203" parent="globals/TwelveLakesView" pc="268437259" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="204" parent="globals/TwelveLakesView" pc="268437274" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="205" parent="globals/TwelveLakesView" pc="268437295" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="206" parent="globals/TwelveLakesView" pc="268437318" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="207" parent="globals/TwelveLakesView" pc="268437345" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="208" parent="globals/TwelveLakesView" pc="268437368" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="209" parent="globals/TwelveLakesView" pc="268437380" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="212" parent="globals/TwelveLakesView" pc="268437417" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="213" parent="globals/TwelveLakesView" pc="268437437" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="19" lineNum="215" parent="globals/TwelveLakesView" pc="268437445" symbol="onReceiveFav"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="217" parent="globals/TwelveLakesView" pc="268437453" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="218" parent="globals/TwelveLakesView" pc="268437455" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="219" parent="globals/TwelveLakesView" pc="268437473" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="220" parent="globals/TwelveLakesView" pc="268437488" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="221" parent="globals/TwelveLakesView" pc="268437497" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="222" parent="globals/TwelveLakesView" pc="268437512" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="223" parent="globals/TwelveLakesView" pc="268437535" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="224" parent="globals/TwelveLakesView" pc="268437558" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="225" parent="globals/TwelveLakesView" pc="268437573" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="226" parent="globals/TwelveLakesView" pc="268437596" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="227" parent="globals/TwelveLakesView" pc="268437608" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="230" parent="globals/TwelveLakesView" pc="268437645" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="231" parent="globals/TwelveLakesView" pc="268437665" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="20" lineNum="233" parent="globals/TwelveLakesView" pc="268437673" symbol="onReceiveProx"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="120" parent="globals/TwelveLakesView" pc="268437681" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="121" parent="globals/TwelveLakesView" pc="268437684" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="122" parent="globals/TwelveLakesView" pc="268437702" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="124" parent="globals/TwelveLakesView" pc="268437720" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="125" parent="globals/TwelveLakesView" pc="268437747" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="126" parent="globals/TwelveLakesView" pc="268437750" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="127" parent="globals/TwelveLakesView" pc="268437759" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="129" parent="globals/TwelveLakesView" pc="268437794" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="130" parent="globals/TwelveLakesView" pc="268437797" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="131" parent="globals/TwelveLakesView" pc="268437806" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="133" parent="globals/TwelveLakesView" pc="268437841" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="139" parent="globals/TwelveLakesView" pc="268437866" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="140" parent="globals/TwelveLakesView" pc="268437891" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="142" parent="globals/TwelveLakesView" pc="268437919" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="143" parent="globals/TwelveLakesView" pc="268437954" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="153" parent="globals/TwelveLakesView" pc="268438087" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="164" parent="globals/TwelveLakesView" pc="268438220" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="165" parent="globals/TwelveLakesView" pc="268438238" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="166" parent="globals/TwelveLakesView" pc="268438256" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="167" parent="globals/TwelveLakesView" pc="268438279" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="170" parent="globals/TwelveLakesView" pc="268438341" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="171" parent="globals/TwelveLakesView" pc="268438356" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="178" parent="globals/TwelveLakesView" pc="268438387" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="179" parent="globals/TwelveLakesView" pc="268438405" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="180" parent="globals/TwelveLakesView" pc="268438423" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="182" parent="globals/TwelveLakesView" pc="268438446" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="185" parent="globals/TwelveLakesView" pc="268438508" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="21" lineNum="186" parent="globals/TwelveLakesView" pc="268438523" symbol="makeRequest"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="31" parent="globals/TwelveLakesView" pc="268438555" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="32" parent="globals/TwelveLakesView" pc="268438558" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="34" parent="globals/TwelveLakesView" pc="268438570" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="35" parent="globals/TwelveLakesView" pc="268438594" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="36" parent="globals/TwelveLakesView" pc="268438618" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="37" parent="globals/TwelveLakesView" pc="268438627" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="39" parent="globals/TwelveLakesView" pc="268438661" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="40" parent="globals/TwelveLakesView" pc="268438670" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="42" parent="globals/TwelveLakesView" pc="268438704" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="43" parent="globals/TwelveLakesView" pc="268438713" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="46" parent="globals/TwelveLakesView" pc="268438722" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="47" parent="globals/TwelveLakesView" pc="268438746" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="48" parent="globals/TwelveLakesView" pc="268438760" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="49" parent="globals/TwelveLakesView" pc="268438769" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="52" parent="globals/TwelveLakesView" pc="268438790" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="53" parent="globals/TwelveLakesView" pc="268438814" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="54" parent="globals/TwelveLakesView" pc="268438838" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="55" parent="globals/TwelveLakesView" pc="268438862" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="22" lineNum="58" parent="globals/TwelveLakesView" pc="268438886" symbol="initialize"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="64" parent="globals/TwelveLakesView" pc="268438894" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="65" parent="globals/TwelveLakesView" pc="268438897" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="66" parent="globals/TwelveLakesView" pc="268438913" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="67" parent="globals/TwelveLakesView" pc="268438924" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="68" parent="globals/TwelveLakesView" pc="268438939" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="69" parent="globals/TwelveLakesView" pc="268438954" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="70" parent="globals/TwelveLakesView" pc="268438969" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="71" parent="globals/TwelveLakesView" pc="268438985" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="72" parent="globals/TwelveLakesView" pc="268439003" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="73" parent="globals/TwelveLakesView" pc="268439136" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="75" parent="globals/TwelveLakesView" pc="268439187" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="76" parent="globals/TwelveLakesView" pc="268439214" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="77" parent="globals/TwelveLakesView" pc="268439299" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="79" parent="globals/TwelveLakesView" pc="268439432" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="82" parent="globals/TwelveLakesView" pc="268439441" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="83" parent="globals/TwelveLakesView" pc="268439457" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="84" parent="globals/TwelveLakesView" pc="268439472" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="85" parent="globals/TwelveLakesView" pc="268439496" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="86" parent="globals/TwelveLakesView" pc="268439520" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="87" parent="globals/TwelveLakesView" pc="268439527" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="88" parent="globals/TwelveLakesView" pc="268439538" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="89" parent="globals/TwelveLakesView" pc="268439545" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="90" parent="globals/TwelveLakesView" pc="268439558" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="93" parent="globals/TwelveLakesView" pc="268439571" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="97" parent="globals/TwelveLakesView" pc="268439626" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="101" parent="globals/TwelveLakesView" pc="268439684" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="102" parent="globals/TwelveLakesView" pc="268439687" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="103" parent="globals/TwelveLakesView" pc="268439707" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="104" parent="globals/TwelveLakesView" pc="268439726" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="105" parent="globals/TwelveLakesView" pc="268439756" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="113" parent="globals/TwelveLakesView" pc="268439799" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="23" lineNum="114" parent="globals/TwelveLakesView" pc="268439815" symbol="onUpdate"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="24" lineNum="74" parent="globals/MyLakeFinder" pc="268439837" symbol="getLakeByGPS"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="24" lineNum="75" parent="globals/MyLakeFinder" pc="268439840" symbol="getLakeByGPS"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="24" lineNum="76" parent="globals/MyLakeFinder" pc="268439848" symbol="getLakeByGPS"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="25" lineNum="35" parent="globals/MyLakeFinder" pc="268439859" symbol="getPosition"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="25" lineNum="36" parent="globals/MyLakeFinder" pc="268439862" symbol="getPosition"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="25" lineNum="37" parent="globals/MyLakeFinder" pc="268439865" symbol="getPosition"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="25" lineNum="39" parent="globals/MyLakeFinder" pc="268439877" symbol="getPosition"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="25" lineNum="40" parent="globals/MyLakeFinder" pc="268439883" symbol="getPosition"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="25" lineNum="41" parent="globals/MyLakeFinder" pc="268439892" symbol="getPosition"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="25" lineNum="42" parent="globals/MyLakeFinder" pc="268439898" symbol="getPosition"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="25" lineNum="45" parent="globals/MyLakeFinder" pc="268439908" symbol="getPosition"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="25" lineNum="46" parent="globals/MyLakeFinder" pc="268439927" symbol="getPosition"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="25" lineNum="47" parent="globals/MyLakeFinder" pc="268439943" symbol="getPosition"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="49" parent="globals/MyLakeFinder" pc="268439946" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="50" parent="globals/MyLakeFinder" pc="268439949" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="51" parent="globals/MyLakeFinder" pc="268439954" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="53" parent="globals/MyLakeFinder" pc="268439957" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="54" parent="globals/MyLakeFinder" pc="268439963" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="56" parent="globals/MyLakeFinder" pc="268439983" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="58" parent="globals/MyLakeFinder" pc="268439999" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="59" parent="globals/MyLakeFinder" pc="268440010" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="61" parent="globals/MyLakeFinder" pc="268440023" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="63" parent="globals/MyLakeFinder" pc="268440049" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="64" parent="globals/MyLakeFinder" pc="268440057" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="65" parent="globals/MyLakeFinder" pc="268440061" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="68" parent="globals/MyLakeFinder" pc="268440075" symbol="getClosesLake"/>
-<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="26" lineNum="71" parent="globals/MyLakeFinder" pc="268440084" symbol="getClosesLake"/>
-<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="28" lineNum="14" parent="globals/Rez/Layouts" pc="268440086" symbol="MainLayout"/>
-<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="28" lineNum="15" parent="globals/Rez/Layouts" pc="268440097" symbol="MainLayout"/>
-<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="28" lineNum="16" parent="globals/Rez/Layouts" pc="268440184" symbol="MainLayout"/>
-<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="28" lineNum="18" parent="globals/Rez/Layouts" pc="268440226" symbol="MainLayout"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="4" parent="globals" pc="268435457" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="6" parent="globals" pc="268435468" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="7" parent="globals" pc="268435474" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="8" parent="globals" pc="268435480" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="9" parent="globals" pc="268435488" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="11" parent="globals" pc="268435493" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="12" parent="globals" pc="268435509" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="14" parent="globals" pc="268435515" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="15" parent="globals" pc="268435531" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="17" parent="globals" pc="268435537" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="18" parent="globals" pc="268435553" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="20" parent="globals" pc="268435559" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="21" parent="globals" pc="268435575" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="23" parent="globals" pc="268435582" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="24" parent="globals" pc="268435590" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="1" lineNum="27" parent="globals" pc="268435597" symbol="getColor"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="50" parent="globals" pc="268435600" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="52" parent="globals" pc="268435611" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="53" parent="globals" pc="268435617" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="54" parent="globals" pc="268435624" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="56" parent="globals" pc="268435639" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="57" parent="globals" pc="268435647" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="59" parent="globals" pc="268435662" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="60" parent="globals" pc="268435670" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="62" parent="globals" pc="268435685" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="63" parent="globals" pc="268435693" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="65" parent="globals" pc="268435708" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="66" parent="globals" pc="268435716" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="68" parent="globals" pc="268435731" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="69" parent="globals" pc="268435739" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="2" lineNum="71" parent="globals" pc="268435754" symbol="getColorByIdx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="3" lineNum="30" parent="globals" pc="268435757" symbol="getColorPos"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="3" lineNum="32" parent="globals" pc="268435768" symbol="getColorPos"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="3" lineNum="38" parent="globals" pc="268435771" symbol="getColorPos"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="3" lineNum="41" parent="globals" pc="268435787" symbol="getColorPos"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="3" lineNum="42" parent="globals" pc="268435794" symbol="getColorPos"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="3" lineNum="44" parent="globals" pc="268435797" symbol="getColorPos"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="3" lineNum="45" parent="globals" pc="268435808" symbol="getColorPos"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\Colors.mc" id="3" lineNum="47" parent="globals" pc="268435815" symbol="getColorPos"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="4" lineNum="12" parent="globals/WidgetGlanceView" pc="268435818" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="5" lineNum="8" parent="globals/TwelveLakesApp" pc="268435830" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="34" parent="globals/WidgetGlanceView" pc="268435842" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="35" parent="globals/WidgetGlanceView" pc="268435845" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="36" parent="globals/WidgetGlanceView" pc="268435864" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="37" parent="globals/WidgetGlanceView" pc="268435883" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="38" parent="globals/WidgetGlanceView" pc="268435895" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="39" parent="globals/WidgetGlanceView" pc="268435933" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="43" parent="globals/WidgetGlanceView" pc="268435943" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="6" lineNum="44" parent="globals/WidgetGlanceView" pc="268435955" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="107" parent="globals/WidgetGlanceView" pc="268435995" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="108" parent="globals/WidgetGlanceView" pc="268435998" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="109" parent="globals/WidgetGlanceView" pc="268436015" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="110" parent="globals/WidgetGlanceView" pc="268436024" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="111" parent="globals/WidgetGlanceView" pc="268436034" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="112" parent="globals/WidgetGlanceView" pc="268436044" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="113" parent="globals/WidgetGlanceView" pc="268436059" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="114" parent="globals/WidgetGlanceView" pc="268436074" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="115" parent="globals/WidgetGlanceView" pc="268436089" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="116" parent="globals/WidgetGlanceView" pc="268436099" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="118" parent="globals/WidgetGlanceView" pc="268436114" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="120" parent="globals/WidgetGlanceView" pc="268436129" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="122" parent="globals/WidgetGlanceView" pc="268436138" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="123" parent="globals/WidgetGlanceView" pc="268436149" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="124" parent="globals/WidgetGlanceView" pc="268436161" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="125" parent="globals/WidgetGlanceView" pc="268436175" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="128" parent="globals/WidgetGlanceView" pc="268436186" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="134" parent="globals/WidgetGlanceView" pc="268436249" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="135" parent="globals/WidgetGlanceView" pc="268436260" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="136" parent="globals/WidgetGlanceView" pc="268436272" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="137" parent="globals/WidgetGlanceView" pc="268436286" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="138" parent="globals/WidgetGlanceView" pc="268436294" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="145" parent="globals/WidgetGlanceView" pc="268436360" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="146" parent="globals/WidgetGlanceView" pc="268436373" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="147" parent="globals/WidgetGlanceView" pc="268436431" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="7" lineNum="148" parent="globals/WidgetGlanceView" pc="268436450" symbol="drawColorBar"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="8" lineNum="20" parent="globals/WidgetGlanceView" pc="268436494" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="8" lineNum="21" parent="globals/WidgetGlanceView" pc="268436496" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="8" lineNum="22" parent="globals/WidgetGlanceView" pc="268436508" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="8" lineNum="23" parent="globals/WidgetGlanceView" pc="268436515" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="8" lineNum="24" parent="globals/WidgetGlanceView" pc="268436539" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="8" lineNum="25" parent="globals/WidgetGlanceView" pc="268436560" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="8" lineNum="27" parent="globals/WidgetGlanceView" pc="268436606" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="8" lineNum="28" parent="globals/WidgetGlanceView" pc="268436624" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="9" lineNum="155" parent="globals/WidgetGlanceView" pc="268436644" symbol="onReceive"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="9" lineNum="156" parent="globals/WidgetGlanceView" pc="268436646" symbol="onReceive"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="9" lineNum="157" parent="globals/WidgetGlanceView" pc="268436661" symbol="onReceive"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="9" lineNum="158" parent="globals/WidgetGlanceView" pc="268436670" symbol="onReceive"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="9" lineNum="159" parent="globals/WidgetGlanceView" pc="268436685" symbol="onReceive"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="9" lineNum="160" parent="globals/WidgetGlanceView" pc="268436700" symbol="onReceive"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="9" lineNum="161" parent="globals/WidgetGlanceView" pc="268436723" symbol="onReceive"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="9" lineNum="162" parent="globals/WidgetGlanceView" pc="268436746" symbol="onReceive"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="9" lineNum="164" parent="globals/WidgetGlanceView" pc="268436780" symbol="onReceive"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="9" lineNum="166" parent="globals/WidgetGlanceView" pc="268436795" symbol="onReceive"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="9" lineNum="168" parent="globals/WidgetGlanceView" pc="268436815" symbol="onReceive"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="10" lineNum="48" parent="globals/WidgetGlanceView" pc="268436823" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="10" lineNum="49" parent="globals/WidgetGlanceView" pc="268436825" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="10" lineNum="50" parent="globals/WidgetGlanceView" pc="268436832" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="10" lineNum="51" parent="globals/WidgetGlanceView" pc="268436849" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="10" lineNum="52" parent="globals/WidgetGlanceView" pc="268436858" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="10" lineNum="57" parent="globals/WidgetGlanceView" pc="268436905" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="10" lineNum="58" parent="globals/WidgetGlanceView" pc="268436914" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="10" lineNum="63" parent="globals/WidgetGlanceView" pc="268437038" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="67" parent="globals/WidgetGlanceView" pc="268437050" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="68" parent="globals/WidgetGlanceView" pc="268437053" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="69" parent="globals/WidgetGlanceView" pc="268437071" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="70" parent="globals/WidgetGlanceView" pc="268437083" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="71" parent="globals/WidgetGlanceView" pc="268437086" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="72" parent="globals/WidgetGlanceView" pc="268437095" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="73" parent="globals/WidgetGlanceView" pc="268437122" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="75" parent="globals/WidgetGlanceView" pc="268437157" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="76" parent="globals/WidgetGlanceView" pc="268437164" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="78" parent="globals/WidgetGlanceView" pc="268437165" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="84" parent="globals/WidgetGlanceView" pc="268437190" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="85" parent="globals/WidgetGlanceView" pc="268437215" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="95" parent="globals/WidgetGlanceView" pc="268437348" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="98" parent="globals/WidgetGlanceView" pc="268437401" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesGlance.mc" id="11" lineNum="99" parent="globals/WidgetGlanceView" pc="268437416" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="12" lineNum="21" parent="globals/TwelveLakesApp" pc="268437448" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="12" lineNum="22" parent="globals/TwelveLakesApp" pc="268437451" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="12" lineNum="23" parent="globals/TwelveLakesApp" pc="268437475" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="12" lineNum="24" parent="globals/TwelveLakesApp" pc="268437501" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="13" lineNum="12" parent="globals/TwelveLakesApp" pc="268437516" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="13" lineNum="13" parent="globals/TwelveLakesApp" pc="268437518" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="14" lineNum="16" parent="globals/TwelveLakesApp" pc="268437531" symbol="getGlanceView"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="14" lineNum="17" parent="globals/TwelveLakesApp" pc="268437533" symbol="getGlanceView"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="15" lineNum="29" parent="globals" pc="268437563" symbol="getApp"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesApp.mc" id="15" lineNum="30" parent="globals" pc="268437573" symbol="getApp"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="16" lineNum="15" parent="globals/TwelveLakesView" pc="268437584" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="17" lineNum="37" parent="globals/MyBehaviorDelegate" pc="268437596" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="18" lineNum="21" parent="globals/MyLakeFinder" pc="268437608" symbol="&lt;init&gt;"/>
+<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="19" lineNum="7" parent="globals/Rez" pc="268437753" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="20" lineNum="11" parent="globals/MyActionMenuDelegate" pc="268437773" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="21" lineNum="71" parent="globals" pc="268437785" symbol="getPosition"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="21" lineNum="72" parent="globals" pc="268437796" symbol="getPosition"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="21" lineNum="73" parent="globals" pc="268437799" symbol="getPosition"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="21" lineNum="75" parent="globals" pc="268437811" symbol="getPosition"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="21" lineNum="76" parent="globals" pc="268437817" symbol="getPosition"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="21" lineNum="77" parent="globals" pc="268437826" symbol="getPosition"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="21" lineNum="78" parent="globals" pc="268437832" symbol="getPosition"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="21" lineNum="81" parent="globals" pc="268437842" symbol="getPosition"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="22" lineNum="23" parent="globals" pc="268437845" symbol="mean"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="22" lineNum="24" parent="globals" pc="268437856" symbol="mean"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="22" lineNum="25" parent="globals" pc="268437859" symbol="mean"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="22" lineNum="26" parent="globals" pc="268437875" symbol="mean"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="22" lineNum="28" parent="globals" pc="268437901" symbol="mean"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="23" lineNum="3" parent="globals" pc="268437918" symbol="maximum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="23" lineNum="4" parent="globals" pc="268437929" symbol="maximum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="23" lineNum="5" parent="globals" pc="268437935" symbol="maximum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="23" lineNum="6" parent="globals" pc="268437952" symbol="maximum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="23" lineNum="7" parent="globals" pc="268437963" symbol="maximum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="23" lineNum="10" parent="globals" pc="268437980" symbol="maximum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="24" lineNum="13" parent="globals" pc="268437983" symbol="minimum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="24" lineNum="14" parent="globals" pc="268437994" symbol="minimum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="24" lineNum="15" parent="globals" pc="268438000" symbol="minimum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="24" lineNum="16" parent="globals" pc="268438017" symbol="minimum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="24" lineNum="17" parent="globals" pc="268438028" symbol="minimum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="24" lineNum="20" parent="globals" pc="268438045" symbol="minimum"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="25" lineNum="33" parent="globals" pc="268438048" symbol="span"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyMath.mc" id="25" lineNum="34" parent="globals" pc="268438058" symbol="span"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="275" parent="globals/TwelveLakesView" pc="268438080" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="276" parent="globals/TwelveLakesView" pc="268438082" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="277" parent="globals/TwelveLakesView" pc="268438100" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="278" parent="globals/TwelveLakesView" pc="268438115" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="279" parent="globals/TwelveLakesView" pc="268438124" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="280" parent="globals/TwelveLakesView" pc="268438139" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="281" parent="globals/TwelveLakesView" pc="268438154" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="282" parent="globals/TwelveLakesView" pc="268438169" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="283" parent="globals/TwelveLakesView" pc="268438192" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="284" parent="globals/TwelveLakesView" pc="268438213" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="285" parent="globals/TwelveLakesView" pc="268438236" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="286" parent="globals/TwelveLakesView" pc="268438251" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="287" parent="globals/TwelveLakesView" pc="268438274" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="288" parent="globals/TwelveLakesView" pc="268438286" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="291" parent="globals/TwelveLakesView" pc="268438323" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="292" parent="globals/TwelveLakesView" pc="268438343" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="26" lineNum="294" parent="globals/TwelveLakesView" pc="268438351" symbol="onReceiveFav"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="296" parent="globals/TwelveLakesView" pc="268438359" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="297" parent="globals/TwelveLakesView" pc="268438361" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="298" parent="globals/TwelveLakesView" pc="268438379" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="299" parent="globals/TwelveLakesView" pc="268438394" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="300" parent="globals/TwelveLakesView" pc="268438403" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="301" parent="globals/TwelveLakesView" pc="268438418" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="302" parent="globals/TwelveLakesView" pc="268438441" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="303" parent="globals/TwelveLakesView" pc="268438464" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="304" parent="globals/TwelveLakesView" pc="268438479" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="305" parent="globals/TwelveLakesView" pc="268438502" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="306" parent="globals/TwelveLakesView" pc="268438514" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="309" parent="globals/TwelveLakesView" pc="268438551" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="310" parent="globals/TwelveLakesView" pc="268438571" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="27" lineNum="312" parent="globals/TwelveLakesView" pc="268438579" symbol="onReceiveProx"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="28" lineNum="84" parent="globals/TwelveLakesView" pc="268438587" symbol="onLayout"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="28" lineNum="85" parent="globals/TwelveLakesView" pc="268438589" symbol="onLayout"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="29" lineNum="64" parent="globals/TwelveLakesView" pc="268438623" symbol="notifyFavUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="29" lineNum="65" parent="globals/TwelveLakesView" pc="268438625" symbol="notifyFavUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="29" lineNum="66" parent="globals/TwelveLakesView" pc="268438632" symbol="notifyFavUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="29" lineNum="67" parent="globals/TwelveLakesView" pc="268438642" symbol="notifyFavUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="181" parent="globals/TwelveLakesView" pc="268438661" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="182" parent="globals/TwelveLakesView" pc="268438664" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="183" parent="globals/TwelveLakesView" pc="268438682" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="185" parent="globals/TwelveLakesView" pc="268438700" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="186" parent="globals/TwelveLakesView" pc="268438727" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="187" parent="globals/TwelveLakesView" pc="268438730" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="188" parent="globals/TwelveLakesView" pc="268438739" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="190" parent="globals/TwelveLakesView" pc="268438774" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="191" parent="globals/TwelveLakesView" pc="268438777" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="192" parent="globals/TwelveLakesView" pc="268438786" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="194" parent="globals/TwelveLakesView" pc="268438821" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="195" parent="globals/TwelveLakesView" pc="268438826" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="197" parent="globals/TwelveLakesView" pc="268438829" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="203" parent="globals/TwelveLakesView" pc="268438854" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="204" parent="globals/TwelveLakesView" pc="268438879" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="205" parent="globals/TwelveLakesView" pc="268438907" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="207" parent="globals/TwelveLakesView" pc="268438935" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="208" parent="globals/TwelveLakesView" pc="268438970" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="209" parent="globals/TwelveLakesView" pc="268439005" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="219" parent="globals/TwelveLakesView" pc="268439138" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="229" parent="globals/TwelveLakesView" pc="268439271" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="240" parent="globals/TwelveLakesView" pc="268439404" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="241" parent="globals/TwelveLakesView" pc="268439422" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="242" parent="globals/TwelveLakesView" pc="268439440" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="243" parent="globals/TwelveLakesView" pc="268439463" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="246" parent="globals/TwelveLakesView" pc="268439525" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="247" parent="globals/TwelveLakesView" pc="268439540" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="254" parent="globals/TwelveLakesView" pc="268439571" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="255" parent="globals/TwelveLakesView" pc="268439589" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="256" parent="globals/TwelveLakesView" pc="268439607" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="258" parent="globals/TwelveLakesView" pc="268439630" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="261" parent="globals/TwelveLakesView" pc="268439692" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="30" lineNum="262" parent="globals/TwelveLakesView" pc="268439707" symbol="makeRequest"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="31" lineNum="70" parent="globals/TwelveLakesView" pc="268439739" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="31" lineNum="71" parent="globals/TwelveLakesView" pc="268439742" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="31" lineNum="72" parent="globals/TwelveLakesView" pc="268439761" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="31" lineNum="73" parent="globals/TwelveLakesView" pc="268439780" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="31" lineNum="74" parent="globals/TwelveLakesView" pc="268439792" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="31" lineNum="75" parent="globals/TwelveLakesView" pc="268439830" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="31" lineNum="79" parent="globals/TwelveLakesView" pc="268439840" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="31" lineNum="80" parent="globals/TwelveLakesView" pc="268439852" symbol="updateFavourites"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="33" parent="globals/TwelveLakesView" pc="268439892" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="34" parent="globals/TwelveLakesView" pc="268439895" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="36" parent="globals/TwelveLakesView" pc="268439907" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="37" parent="globals/TwelveLakesView" pc="268439933" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="39" parent="globals/TwelveLakesView" pc="268439979" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="40" parent="globals/TwelveLakesView" pc="268440005" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="43" parent="globals/TwelveLakesView" pc="268440051" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="46" parent="globals/TwelveLakesView" pc="268440058" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="47" parent="globals/TwelveLakesView" pc="268440082" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="48" parent="globals/TwelveLakesView" pc="268440095" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="49" parent="globals/TwelveLakesView" pc="268440104" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="52" parent="globals/TwelveLakesView" pc="268440125" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="53" parent="globals/TwelveLakesView" pc="268440149" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="55" parent="globals/TwelveLakesView" pc="268440173" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="56" parent="globals/TwelveLakesView" pc="268440197" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="57" parent="globals/TwelveLakesView" pc="268440221" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="32" lineNum="60" parent="globals/TwelveLakesView" pc="268440245" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="90" parent="globals/TwelveLakesView" pc="268440256" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="91" parent="globals/TwelveLakesView" pc="268440259" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="92" parent="globals/TwelveLakesView" pc="268440277" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="93" parent="globals/TwelveLakesView" pc="268440284" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="94" parent="globals/TwelveLakesView" pc="268440300" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="95" parent="globals/TwelveLakesView" pc="268440311" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="96" parent="globals/TwelveLakesView" pc="268440326" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="97" parent="globals/TwelveLakesView" pc="268440341" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="98" parent="globals/TwelveLakesView" pc="268440356" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="99" parent="globals/TwelveLakesView" pc="268440373" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="100" parent="globals/TwelveLakesView" pc="268440391" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="104" parent="globals/TwelveLakesView" pc="268440524" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="106" parent="globals/TwelveLakesView" pc="268440551" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="107" parent="globals/TwelveLakesView" pc="268440563" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="109" parent="globals/TwelveLakesView" pc="268440616" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="112" parent="globals/TwelveLakesView" pc="268440660" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="113" parent="globals/TwelveLakesView" pc="268440699" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="116" parent="globals/TwelveLakesView" pc="268440832" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="117" parent="globals/TwelveLakesView" pc="268440841" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="121" parent="globals/TwelveLakesView" pc="268440857" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="122" parent="globals/TwelveLakesView" pc="268440882" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="124" parent="globals/TwelveLakesView" pc="268440903" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="125" parent="globals/TwelveLakesView" pc="268440923" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="126" parent="globals/TwelveLakesView" pc="268440945" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="127" parent="globals/TwelveLakesView" pc="268440967" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="128" parent="globals/TwelveLakesView" pc="268440984" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="129" parent="globals/TwelveLakesView" pc="268440998" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="131" parent="globals/TwelveLakesView" pc="268441050" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="134" parent="globals/TwelveLakesView" pc="268441103" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="135" parent="globals/TwelveLakesView" pc="268441120" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="140" parent="globals/TwelveLakesView" pc="268441163" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="143" parent="globals/TwelveLakesView" pc="268441172" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="144" parent="globals/TwelveLakesView" pc="268441188" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="145" parent="globals/TwelveLakesView" pc="268441203" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="146" parent="globals/TwelveLakesView" pc="268441227" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="147" parent="globals/TwelveLakesView" pc="268441251" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="148" parent="globals/TwelveLakesView" pc="268441258" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="149" parent="globals/TwelveLakesView" pc="268441269" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="150" parent="globals/TwelveLakesView" pc="268441276" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="151" parent="globals/TwelveLakesView" pc="268441289" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="154" parent="globals/TwelveLakesView" pc="268441302" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="158" parent="globals/TwelveLakesView" pc="268441357" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="162" parent="globals/TwelveLakesView" pc="268441415" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="163" parent="globals/TwelveLakesView" pc="268441418" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="164" parent="globals/TwelveLakesView" pc="268441438" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="165" parent="globals/TwelveLakesView" pc="268441457" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="166" parent="globals/TwelveLakesView" pc="268441487" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="174" parent="globals/TwelveLakesView" pc="268441530" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\TwelveLakesView.mc" id="33" lineNum="175" parent="globals/TwelveLakesView" pc="268441547" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="34" lineNum="39" parent="globals/MyBehaviorDelegate" pc="268441569" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="34" lineNum="40" parent="globals/MyBehaviorDelegate" pc="268441571" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="34" lineNum="41" parent="globals/MyBehaviorDelegate" pc="268441583" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="35" lineNum="44" parent="globals/MyBehaviorDelegate" pc="268441593" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="35" lineNum="45" parent="globals/MyBehaviorDelegate" pc="268441596" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="35" lineNum="46" parent="globals/MyBehaviorDelegate" pc="268441611" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="35" lineNum="47" parent="globals/MyBehaviorDelegate" pc="268441633" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="35" lineNum="48" parent="globals/MyBehaviorDelegate" pc="268441670" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="35" lineNum="49" parent="globals/MyBehaviorDelegate" pc="268441708" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="35" lineNum="50" parent="globals/MyBehaviorDelegate" pc="268441720" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="35" lineNum="51" parent="globals/MyBehaviorDelegate" pc="268441732" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="35" lineNum="52" parent="globals/MyBehaviorDelegate" pc="268441761" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="35" lineNum="53" parent="globals/MyBehaviorDelegate" pc="268441774" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="36" lineNum="63" parent="globals/MyLakeFinder" pc="268441776" symbol="getLakeByGPS"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="36" lineNum="64" parent="globals/MyLakeFinder" pc="268441779" symbol="getLakeByGPS"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="36" lineNum="65" parent="globals/MyLakeFinder" pc="268441787" symbol="getLakeByGPS"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="38" parent="globals/MyLakeFinder" pc="268441798" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="39" parent="globals/MyLakeFinder" pc="268441801" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="40" parent="globals/MyLakeFinder" pc="268441806" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="42" parent="globals/MyLakeFinder" pc="268441809" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="43" parent="globals/MyLakeFinder" pc="268441815" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="45" parent="globals/MyLakeFinder" pc="268441835" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="47" parent="globals/MyLakeFinder" pc="268441851" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="48" parent="globals/MyLakeFinder" pc="268441862" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="50" parent="globals/MyLakeFinder" pc="268441875" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="52" parent="globals/MyLakeFinder" pc="268441901" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="53" parent="globals/MyLakeFinder" pc="268441909" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="54" parent="globals/MyLakeFinder" pc="268441913" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="57" parent="globals/MyLakeFinder" pc="268441927" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\LakeFinder.mc" id="37" lineNum="60" parent="globals/MyLakeFinder" pc="268441936" symbol="getClosesLake"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="39" lineNum="14" parent="globals/MyActionMenuDelegate" pc="268441938" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="39" lineNum="15" parent="globals/MyActionMenuDelegate" pc="268441940" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="39" lineNum="16" parent="globals/MyActionMenuDelegate" pc="268441952" symbol="initialize"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="19" parent="globals/MyActionMenuDelegate" pc="268441962" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="20" parent="globals/MyActionMenuDelegate" pc="268441965" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="21" parent="globals/MyActionMenuDelegate" pc="268441972" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="30" parent="globals/MyActionMenuDelegate" pc="268441987" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="22" parent="globals/MyActionMenuDelegate" pc="268442006" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="23" parent="globals/MyActionMenuDelegate" pc="268442014" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="24" parent="globals/MyActionMenuDelegate" pc="268442038" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="25" parent="globals/MyActionMenuDelegate" pc="268442051" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="26" parent="globals/MyActionMenuDelegate" pc="268442071" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="27" parent="globals/MyActionMenuDelegate" pc="268442091" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="28" parent="globals/MyActionMenuDelegate" pc="268442107" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="29" parent="globals/MyActionMenuDelegate" pc="268442119" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="31" parent="globals/MyActionMenuDelegate" pc="268442122" symbol="onSelect"/>
+<entry filename="C:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\source\\MyBehaviorDelegate.mc" id="40" lineNum="32" parent="globals/MyActionMenuDelegate" pc="268442141" symbol="onSelect"/>
+<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="41" lineNum="14" parent="globals/Rez/Layouts" pc="268442146" symbol="MainLayout"/>
+<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="41" lineNum="15" parent="globals/Rez/Layouts" pc="268442157" symbol="MainLayout"/>
+<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="41" lineNum="17" parent="globals/Rez/Layouts" pc="268442239" symbol="MainLayout"/>
+<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="42" lineNum="22" parent="globals/Rez/Menus/ActionMenu" pc="268442249" symbol="&lt;init&gt;"/>
+<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="43" lineNum="23" parent="globals/Rez/Menus/ActionMenu" pc="268442261" symbol="initialize"/>
+<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="43" lineNum="24" parent="globals/Rez/Menus/ActionMenu" pc="268442263" symbol="initialize"/>
+<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="43" lineNum="25" parent="globals/Rez/Menus/ActionMenu" pc="268442289" symbol="initialize"/>
+<entry filename="c:\\Users\\Lauber\\Documents\\Garmin\\TwelveLakes\\TwelveLakes\\build\\fenix7pro\\gen\\006-B4375-00\\source\\Rez.mcgen" id="43" lineNum="26" parent="globals/Rez/Menus/ActionMenu" pc="268442355" symbol="initialize"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388639" module="true" symbol="Graphics"/>
 <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
-<entry id="9" object="true" symbol="WidgetGlanceView"/>
-<entry field="true" id="19" symbol="favouriteLake"/>
+<entry id="12" object="true" symbol="WidgetGlanceView"/>
+<entry id="7" object="true" symbol="MyActionMenuDelegate"/>
+<entry id="5" module="true" symbol="globals/Rez/Menus"/>
+<entry field="true" id="48" symbol="actionMenu"/>
+<entry field="true" id="21" symbol="favouriteLake"/>
 <entry id="8391212" method="true" symbol="mean"/>
-<entry id="39" method="true" symbol="MainLayout"/>
-<entry field="true" id="28" symbol="lastUpdateProx"/>
-<entry field="true" id="20" symbol="favouritePosition"/>
-<entry id="12" method="true" symbol="minimum"/>
+<entry id="8" object="true" symbol="MyBehaviorDelegate"/>
+<entry id="49" method="true" symbol="MainLayout"/>
+<entry field="true" id="36" symbol="lastUpdateProx"/>
+<entry field="true" id="22" symbol="favouritePosition"/>
+<entry id="18" method="true" symbol="minimum"/>
+<entry id="27" method="true" symbol="updateFavourites"/>
 <entry id="8390424" module="true" symbol="Storage"/>
-<entry id="29" method="true" symbol="onReceiveFav"/>
-<entry id="33" method="true" symbol="getLakeByGPS"/>
+<entry id="38" method="true" symbol="onReceiveFav"/>
+<entry id="8391941" symbol="theme"/>
+<entry id="43" method="true" symbol="getLakeByGPS"/>
 <entry id="8388924" module="true" symbol="Gregorian"/>
 <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-<entry field="true" id="15" symbol="lastUpdate"/>
+<entry field="true" id="23" symbol="lastUpdate"/>
 <entry field="true" id="8388962" symbol="temperature"/>
-<entry field="true" id="40" symbol="AppName"/>
-<entry id="13" method="true" symbol="span"/>
-<entry id="5" module="true" symbol="globals/Rez/Strings"/>
+<entry field="true" id="50" symbol="AppName"/>
+<entry id="19" method="true" symbol="span"/>
+<entry id="6" module="true" symbol="globals/Rez/Strings"/>
 <entry id="8389594" symbol="headers"/>
 <entry id="8389345" symbol="rezId"/>
 <entry id="8388631" module="true" symbol="Activity"/>
 <entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="8391935" object="true" symbol="ActionMenu"/>
+<entry field="true" id="8389138" symbol="label"/>
 <entry id="2" module="true" symbol="globals/Rez"/>
-<entry field="true" id="38" symbol="id_monkey"/>
-<entry field="true" id="21" symbol="currentDistance"/>
-<entry id="11" method="true" symbol="maximum"/>
+<entry field="true" id="28" symbol="currentDistance"/>
+<entry id="17" method="true" symbol="maximum"/>
 <entry id="8389124" method="true" symbol="onUpdate"/>
-<entry field="true" id="25" symbol="favouriteTemperature"/>
+<entry field="true" id="32" symbol="favouriteTemperature"/>
 <entry field="true" id="8389065" symbol="locY"/>
 <entry field="true" id="8389064" symbol="locX"/>
-<entry id="6" object="true" symbol="MyLakeFinder"/>
+<entry id="9" object="true" symbol="MyLakeFinder"/>
 <entry id="8388771" module="true" object="true" symbol="Drawables"/>
-<entry field="true" id="27" symbol="lastUpdateFav"/>
-<entry id="30" method="true" symbol="onReceiveProx"/>
+<entry field="true" id="35" symbol="lastUpdateFav"/>
+<entry id="39" method="true" symbol="onReceiveProx"/>
+<entry id="46" module="true" symbol="Menus"/>
 <entry id="8389275" method="true" symbol="getApp"/>
 <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
-<entry id="34" method="true" symbol="getPosition"/>
+<entry id="16" method="true" symbol="getPosition"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
 <entry field="true" id="8389063" symbol="identifier"/>
-<entry id="16" method="true" symbol="makeRequest"/>
-<entry field="true" id="18" symbol="response_info"/>
-<entry field="true" id="14" symbol="lake"/>
+<entry id="24" method="true" symbol="makeRequest"/>
+<entry field="true" id="26" symbol="response_info"/>
 <entry id="8388637" module="true" symbol="Communications"/>
+<entry id="20" method="true" symbol="drawColorBar"/>
+<entry id="14" method="true" symbol="getColorByIdx"/>
 <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-<entry id="7" object="true" symbol="TwelveLakesApp"/>
+<entry id="10" object="true" symbol="TwelveLakesApp"/>
 <entry id="8389844" symbol="responseType"/>
-<entry id="8" object="true" symbol="TwelveLakesView"/>
-<entry field="true" id="35" symbol="&lt;globals/MyLakeFinder/&lt;&gt;lakePositions&gt;"/>
+<entry id="11" object="true" symbol="TwelveLakesView"/>
+<entry field="true" id="44" symbol="&lt;globals/MyLakeFinder/&lt;&gt;lakePositions&gt;"/>
+<entry field="true" id="51" symbol="dismiss"/>
 <entry id="8388644" module="true" symbol="System"/>
+<entry id="8389619" method="true" symbol="onSelect"/>
 <entry id="8388645" module="true" symbol="Time"/>
 <entry id="8388769" module="true" object="true" symbol="Rez"/>
-<entry id="17" method="true" symbol="onReceive"/>
+<entry id="25" method="true" symbol="onReceive"/>
 <entry id="8388640" module="true" symbol="Lang"/>
-<entry field="true" id="37" symbol="LauncherIcon"/>
+<entry field="true" id="47" symbol="LauncherIcon"/>
 <entry id="8388610" symbol="statics"/>
 <entry id="8389350" module="true" symbol="globals"/>
-<entry id="10" method="true" symbol="getColor"/>
-<entry id="31" symbol="available_lakes"/>
+<entry id="13" method="true" symbol="getColor"/>
+<entry id="41" symbol="available_lakes"/>
 <entry id="8388770" module="true" object="true" symbol="Strings"/>
 <entry id="8388702" method="true" symbol="initialize"/>
-<entry field="true" id="22" symbol="currentLake"/>
+<entry field="true" id="40" symbol="view"/>
+<entry field="true" id="29" symbol="currentLake"/>
 <entry id="8389280" method="true" symbol="getInitialView"/>
-<entry field="true" id="24" symbol="currentTemperature"/>
-<entry id="32" method="true" symbol="getClosesLake"/>
-<entry id="36" module="true" symbol="Layouts"/>
-<entry field="true" id="26" symbol="favouriteTemperatureArray"/>
+<entry field="true" id="31" symbol="currentTemperature"/>
+<entry id="42" method="true" symbol="getClosesLake"/>
+<entry id="15" method="true" symbol="getColorPos"/>
+<entry field="true" id="34" symbol="favouriteTimeArray"/>
+<entry id="45" module="true" symbol="Layouts"/>
+<entry field="true" id="33" symbol="favouriteTemperatureArray"/>
 <entry id="8388642" module="true" symbol="Position"/>
 <entry id="8391457" method="true" symbol="getGlanceView"/>
-<entry field="true" id="23" symbol="currentPosition"/>
+<entry id="37" method="true" symbol="notifyFavUpdate"/>
+<entry field="true" id="30" symbol="currentPosition"/>
 <entry id="8388635" module="true" symbol="Application"/>
+<entry field="true" id="52" symbol="edit"/>
 </symbolTable>
 <localVars>
-<entry arg="true" endPc="268435598" name="temperature" stackId="1" startPc="268435457"/>
-<entry arg="true" endPc="268435750" name="lakeName" stackId="1" startPc="268435623"/>
-<entry arg="true" endPc="268435750" name="position" stackId="2" startPc="268435623"/>
-<entry arg="true" endPc="268435914" name="responseCode" stackId="1" startPc="268435751"/>
-<entry arg="true" endPc="268435914" name="data" stackId="2" startPc="268435751"/>
-<entry arg="true" endPc="268436291" name="dc" stackId="1" startPc="268435915"/>
-<entry endPc="268436290" name="height" stackId="2" startPc="268436191"/>
-<entry endPc="268436290" name="width" stackId="3" startPc="268436191"/>
-<entry arg="true" endPc="268436689" name="lakeName" stackId="1" startPc="268436292"/>
-<entry arg="true" endPc="268436689" name="position" stackId="2" startPc="268436292"/>
-<entry endPc="268436688" name="readyForUpdate" stackId="3" startPc="268436325"/>
-<entry endPc="268436398" name="fivteenMin" stackId="4" startPc="268436337"/>
-<entry endPc="268436688" name="options" stackId="5" startPc="268436325"/>
-<entry endPc="268436688" name="today" stackId="6" startPc="268436325"/>
-<entry endPc="268436688" name="dateString" stackId="7" startPc="268436325"/>
-<entry endPc="268436688" name="myRequest" stackId="8" startPc="268436325"/>
-<entry arg="true" endPc="268437032" name="a" stackId="1" startPc="268436972"/>
-<entry endPc="268437021" name="i" stackId="3" startPc="268437002"/>
-<entry arg="true" endPc="268437117" name="a" stackId="1" startPc="268437053"/>
-<entry endPc="268437114" name="i" stackId="3" startPc="268437087"/>
-<entry arg="true" endPc="268437182" name="a" stackId="1" startPc="268437118"/>
-<entry endPc="268437179" name="i" stackId="3" startPc="268437152"/>
-<entry arg="true" endPc="268437214" name="a" stackId="1" startPc="268437183"/>
-<entry arg="true" endPc="268437452" name="responseCode" stackId="1" startPc="268437215"/>
-<entry arg="true" endPc="268437452" name="data" stackId="2" startPc="268437215"/>
-<entry arg="true" endPc="268437680" name="responseCode" stackId="1" startPc="268437453"/>
-<entry arg="true" endPc="268437680" name="data" stackId="2" startPc="268437453"/>
-<entry endPc="268438553" name="FIVETEEN_MIN" stackId="1" startPc="268437684"/>
-<entry endPc="268438553" name="readyForUpdateFav" stackId="2" startPc="268437684"/>
-<entry endPc="268438553" name="readyForUpdateProx" stackId="3" startPc="268437684"/>
-<entry endPc="268438553" name="options" stackId="4" startPc="268437684"/>
-<entry endPc="268438553" name="today" stackId="5" startPc="268437684"/>
-<entry endPc="268438553" name="twoDays" stackId="6" startPc="268437684"/>
-<entry endPc="268438553" name="beforeTwoDays" stackId="7" startPc="268437684"/>
-<entry endPc="268438553" name="dateStringStop" stackId="8" startPc="268437684"/>
-<entry endPc="268438553" name="dateStringStart" stackId="9" startPc="268437684"/>
-<entry endPc="268438386" name="myRequestFav" stackId="10" startPc="268438279"/>
-<entry endPc="268438553" name="myRequestProx" stackId="11" startPc="268438446"/>
-<entry arg="true" endPc="268438893" name="favouriteLake" stackId="1" startPc="268438555"/>
-<entry arg="true" endPc="268438893" name="favouritePosition" stackId="2" startPc="268438555"/>
-<entry endPc="268438892" name="lakeFinder" stackId="3" startPc="268438558"/>
-<entry arg="true" endPc="268439836" name="dc" stackId="1" startPc="268438894"/>
-<entry endPc="268439835" name="offsetX" stackId="2" startPc="268438897"/>
-<entry endPc="268439835" name="offsetY" stackId="3" startPc="268438897"/>
-<entry endPc="268439835" name="spanX" stackId="4" startPc="268438897"/>
-<entry endPc="268439835" name="spanY" stackId="5" startPc="268438897"/>
-<entry endPc="268439835" name="width" stackId="6" startPc="268439441"/>
-<entry endPc="268439835" name="tempMean" stackId="7" startPc="268439441"/>
-<entry endPc="268439835" name="tempMin" stackId="8" startPc="268439441"/>
-<entry endPc="268439835" name="tempMax" stackId="9" startPc="268439441"/>
-<entry endPc="268439835" name="tempSpan" stackId="10" startPc="268439441"/>
-<entry endPc="268439835" name="barHeight" stackId="11" startPc="268439441"/>
-<entry endPc="268439798" name="i" stackId="12" startPc="268439707"/>
-<entry endPc="268439907" name="position" stackId="3" startPc="268439883"/>
-<entry arg="true" endPc="268440085" name="position_lat_long" stackId="1" startPc="268439946"/>
-<entry endPc="268440074" name="i" stackId="4" startPc="268439983"/>
-<entry endPc="268440064" name="lakePos" stackId="5" startPc="268439983"/>
-<entry endPc="268440064" name="dx" stackId="6" startPc="268439983"/>
-<entry endPc="268440064" name="dy" stackId="7" startPc="268439983"/>
-<entry endPc="268440064" name="distance" stackId="8" startPc="268439983"/>
-<entry arg="true" endPc="268440235" name="dc" stackId="1" startPc="268440086"/>
+<entry arg="true" endPc="268435599" name="temperature" stackId="1" startPc="268435457"/>
+<entry arg="true" endPc="268435756" name="idx" stackId="1" startPc="268435600"/>
+<entry arg="true" endPc="268435817" name="temperature" stackId="1" startPc="268435757"/>
+<entry endPc="268435993" name="pos" stackId="1" startPc="268435845"/>
+<entry endPc="268435993" name="name" stackId="2" startPc="268435845"/>
+<entry arg="true" endPc="268436493" name="dc" stackId="1" startPc="268435995"/>
+<entry endPc="268436492" name="totalWidth" stackId="2" startPc="268435998"/>
+<entry endPc="268436492" name="barWidth" stackId="3" startPc="268435998"/>
+<entry endPc="268436492" name="delta" stackId="4" startPc="268435998"/>
+<entry endPc="268436492" name="height" stackId="5" startPc="268435998"/>
+<entry endPc="268436492" name="heightHighlight" stackId="6" startPc="268435998"/>
+<entry endPc="268436492" name="heightMarker" stackId="7" startPc="268435998"/>
+<entry endPc="268436492" name="widthMarker" stackId="8" startPc="268435998"/>
+<entry endPc="268436492" name="center" stackId="9" startPc="268435998"/>
+<entry endPc="268436492" name="colorHighlight" stackId="10" startPc="268435998"/>
+<entry endPc="268436492" name="colorTmp" stackId="11" startPc="268435998"/>
+<entry endPc="268436248" name="i" stackId="12" startPc="268436149"/>
+<entry endPc="268436359" name="i" stackId="13" startPc="268436260"/>
+<entry arg="true" endPc="268436822" name="responseCode" stackId="1" startPc="268436644"/>
+<entry arg="true" endPc="268436822" name="data" stackId="2" startPc="268436644"/>
+<entry arg="true" endPc="268437049" name="dc" stackId="1" startPc="268436823"/>
+<entry arg="true" endPc="268437447" name="lakeName" stackId="1" startPc="268437050"/>
+<entry arg="true" endPc="268437447" name="position" stackId="2" startPc="268437050"/>
+<entry endPc="268437446" name="readyForUpdate" stackId="3" startPc="268437083"/>
+<entry endPc="268437156" name="skipUpdateBelowSeconds" stackId="4" startPc="268437095"/>
+<entry endPc="268437446" name="options" stackId="5" startPc="268437083"/>
+<entry endPc="268437446" name="today" stackId="6" startPc="268437083"/>
+<entry endPc="268437446" name="dateString" stackId="7" startPc="268437083"/>
+<entry endPc="268437446" name="myRequest" stackId="8" startPc="268437083"/>
+<entry endPc="268437841" name="position" stackId="3" startPc="268437817"/>
+<entry arg="true" endPc="268437917" name="a" stackId="1" startPc="268437845"/>
+<entry endPc="268437900" name="i" stackId="3" startPc="268437875"/>
+<entry arg="true" endPc="268437982" name="a" stackId="1" startPc="268437918"/>
+<entry endPc="268437979" name="i" stackId="3" startPc="268437952"/>
+<entry arg="true" endPc="268438047" name="a" stackId="1" startPc="268437983"/>
+<entry endPc="268438044" name="i" stackId="3" startPc="268438017"/>
+<entry arg="true" endPc="268438079" name="a" stackId="1" startPc="268438048"/>
+<entry arg="true" endPc="268438358" name="responseCode" stackId="1" startPc="268438080"/>
+<entry arg="true" endPc="268438358" name="data" stackId="2" startPc="268438080"/>
+<entry arg="true" endPc="268438586" name="responseCode" stackId="1" startPc="268438359"/>
+<entry arg="true" endPc="268438586" name="data" stackId="2" startPc="268438359"/>
+<entry arg="true" endPc="268438622" name="dc" stackId="1" startPc="268438587"/>
+<entry arg="true" endPc="268439738" name="forceFav" stackId="1" startPc="268438661"/>
+<entry endPc="268439737" name="skipUpdateBelowSeconds" stackId="2" startPc="268438664"/>
+<entry endPc="268439737" name="readyForUpdateFav" stackId="3" startPc="268438664"/>
+<entry endPc="268439737" name="readyForUpdateProx" stackId="4" startPc="268438664"/>
+<entry endPc="268439737" name="options" stackId="5" startPc="268438664"/>
+<entry endPc="268439737" name="today" stackId="6" startPc="268438664"/>
+<entry endPc="268439737" name="oneDays" stackId="7" startPc="268438664"/>
+<entry endPc="268439737" name="twoDays" stackId="8" startPc="268438664"/>
+<entry endPc="268439737" name="inTwoDays" stackId="9" startPc="268438664"/>
+<entry endPc="268439737" name="beforeOneDay" stackId="10" startPc="268438664"/>
+<entry endPc="268439737" name="dateStringStop" stackId="11" startPc="268438664"/>
+<entry endPc="268439737" name="dateStringStart" stackId="12" startPc="268438664"/>
+<entry endPc="268439737" name="dateStringNow" stackId="13" startPc="268438664"/>
+<entry endPc="268439570" name="myRequestFav" stackId="14" startPc="268439463"/>
+<entry endPc="268439737" name="myRequestProx" stackId="15" startPc="268439630"/>
+<entry endPc="268439890" name="pos" stackId="1" startPc="268439742"/>
+<entry endPc="268439890" name="name" stackId="2" startPc="268439742"/>
+<entry endPc="268440254" name="lakeFinder" stackId="1" startPc="268439895"/>
+<entry arg="true" endPc="268441568" name="dc" stackId="1" startPc="268440256"/>
+<entry endPc="268441567" name="offsetX" stackId="2" startPc="268440259"/>
+<entry endPc="268441567" name="offsetY" stackId="3" startPc="268440259"/>
+<entry endPc="268441567" name="spanX" stackId="4" startPc="268440259"/>
+<entry endPc="268441567" name="spanY" stackId="5" startPc="268440259"/>
+<entry endPc="268440831" name="text" stackId="6" startPc="268440551"/>
+<entry endPc="268441567" name="width" stackId="13" startPc="268441172"/>
+<entry endPc="268441567" name="tempMean" stackId="14" startPc="268441172"/>
+<entry endPc="268441567" name="tempMin" stackId="15" startPc="268441172"/>
+<entry endPc="268441567" name="tempMax" stackId="16" startPc="268441172"/>
+<entry endPc="268441567" name="tempSpan" stackId="17" startPc="268441172"/>
+<entry endPc="268441567" name="barHeight" stackId="18" startPc="268441172"/>
+<entry endPc="268441529" name="i" stackId="19" startPc="268441438"/>
+<entry arg="true" endPc="268441592" name="view" stackId="1" startPc="268441569"/>
+<entry arg="true" endPc="268441937" name="position_lat_long" stackId="1" startPc="268441798"/>
+<entry endPc="268441926" name="i" stackId="4" startPc="268441835"/>
+<entry endPc="268441916" name="lakePos" stackId="5" startPc="268441835"/>
+<entry endPc="268441916" name="dx" stackId="6" startPc="268441835"/>
+<entry endPc="268441916" name="dy" stackId="7" startPc="268441835"/>
+<entry endPc="268441916" name="distance" stackId="8" startPc="268441835"/>
+<entry arg="true" endPc="268441961" name="view" stackId="1" startPc="268441938"/>
+<entry arg="true" endPc="268442145" name="item" stackId="1" startPc="268441962"/>
+<entry endPc="268442143" name="position_lat_long" stackId="2" startPc="268441972"/>
+<entry endPc="268442143" name="lakeFinder" stackId="3" startPc="268441972"/>
+<entry endPc="268442143" name="newFavouriteLake" stackId="4" startPc="268441972"/>
+<entry arg="true" endPc="268442248" name="dc" stackId="1" startPc="268442146"/>
 </localVars>
 <deviceInfo deviceVersion="4866e5192c0c99025597cd8e6e841f3d774b64f7" partNumber="006-B4375-00"/>
 <annotations>
 <annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="onUpdate"/>
 <annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="temperature"/>
 <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="drawColorBar"/>
 <annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="lastUpdate"/>
 <annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="response_info"/>
+<annotationEntry annotation="glance" class="globals" module="" symbol="getColorPos"/>
 <annotationEntry annotation="glance" class="TwelveLakesApp" module="globals" symbol="initialize"/>
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="dismiss"/>
+<annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="favouriteLake"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="edit"/>
+<annotationEntry annotation="glance" class="globals" module="" symbol="getColorByIdx"/>
 <annotationEntry annotation="glance" class="globals" module="" symbol="getColor"/>
-<annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="lake"/>
-<annotationEntry annotation="glance" class="TwelveLakesApp" module="globals" symbol="favouritePosition"/>
 <annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="makeRequest"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="actionMenu"/>
 <annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="onReceive"/>
-<annotationEntry annotation="glance" class="TwelveLakesApp" module="globals" symbol="favouriteLake"/>
+<annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="favouritePosition"/>
+<annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="updateFavourites"/>
 <annotationEntry annotation="glance" class="TwelveLakesApp" module="globals" symbol="getInitialView"/>
 <annotationEntry annotation="glance" class="TwelveLakesApp" module="globals" symbol="getGlanceView"/>
 <annotationEntry annotation="glance" class="WidgetGlanceView" module="globals" symbol="initialize"/>
-<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="id_monkey"/>
 </annotations>
 <dataEntryOffsetMappings>
-<dataEntry label="globals" offset="58" parentId="" symbolId="globals" type="module"/>
-<dataEntry label="globals/WidgetGlanceView" offset="188" parentId="globals" symbolId="WidgetGlanceView" type="class"/>
-<dataEntry label="globals/TwelveLakesApp" offset="295" parentId="globals" symbolId="TwelveLakesApp" type="class"/>
-<dataEntry label="globals/TwelveLakesView" offset="747" parentId="globals" symbolId="TwelveLakesView" type="class"/>
-<dataEntry label="globals/MyLakeFinder" offset="926" parentId="globals" symbolId="MyLakeFinder" type="class"/>
-<dataEntry label="globals/Rez" offset="1015" parentId="globals" symbolId="Rez" type="module"/>
-<dataEntry label="globals/Rez/Drawables" offset="1068" parentId="Rez" symbolId="Drawables" type="module"/>
-<dataEntry label="globals/Rez/Layouts" offset="1112" parentId="Rez" symbolId="Layouts" type="module"/>
-<dataEntry label="globals/Rez/Strings" offset="1147" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/WidgetGlanceView" offset="242" parentId="globals" symbolId="WidgetGlanceView" type="class"/>
+<dataEntry label="globals/TwelveLakesApp" offset="376" parentId="globals" symbolId="TwelveLakesApp" type="class"/>
+<dataEntry label="globals/TwelveLakesView" offset="839" parentId="globals" symbolId="TwelveLakesView" type="class"/>
+<dataEntry label="globals/MyBehaviorDelegate" offset="1054" parentId="globals" symbolId="MyBehaviorDelegate" type="class"/>
+<dataEntry label="globals/MyLakeFinder" offset="1116" parentId="globals" symbolId="MyLakeFinder" type="class"/>
+<dataEntry label="globals/Rez" offset="1196" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/MyActionMenuDelegate" offset="1258" parentId="globals" symbolId="MyActionMenuDelegate" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="1320" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="1364" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Menus" offset="1399" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="1434" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/Rez/Menus/ActionMenu" offset="1487" parentId="Menus" symbolId="ActionMenu" type="class"/>
 </dataEntryOffsetMappings>
 <functions>
-<functionEntry accessMode="public" endPc="268435598" name="getColor" startPc="268435457">
+<functionEntry accessMode="public" endPc="268435599" name="getColor" startPc="268435457">
 <param id="temperature"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435610" name="&lt;init&gt;" parent="WidgetGlanceView" startPc="268435599">
+<functionEntry accessMode="public" endPc="268435756" name="getColorByIdx" startPc="268435600">
+<param id="idx"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435622" name="&lt;init&gt;" parent="TwelveLakesApp" startPc="268435611">
+<functionEntry accessMode="public" endPc="268435817" name="getColorPos" startPc="268435757">
+<param id="temperature"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435750" name="initialize" parent="WidgetGlanceView" startPc="268435623">
-<param id="lakeName"/>
-<param id="position"/>
+<functionEntry accessMode="public" endPc="268435829" name="&lt;init&gt;" parent="WidgetGlanceView" startPc="268435818">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435914" name="onReceive" parent="WidgetGlanceView" startPc="268435751">
+<functionEntry accessMode="public" endPc="268435841" name="&lt;init&gt;" parent="TwelveLakesApp" startPc="268435830">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435994" name="updateFavourites" parent="WidgetGlanceView" startPc="268435842">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436493" name="drawColorBar" parent="WidgetGlanceView" startPc="268435995">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436643" name="initialize" parent="WidgetGlanceView" startPc="268436494">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436822" name="onReceive" parent="WidgetGlanceView" startPc="268436644">
 <param id="responseCode"/>
 <param id="data"/>
 <documentation><![CDATA[<div class="description"> Receive the data from the web request<br/> <div class="param"> responseCode The server response code</div><br/> <div class="param"> data Content from a successful request</div><br/></div>]]></documentation>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436291" name="onUpdate" parent="WidgetGlanceView" startPc="268435915">
+<functionEntry accessMode="public" endPc="268437049" name="onUpdate" parent="WidgetGlanceView" startPc="268436823">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436689" name="makeRequest" parent="WidgetGlanceView" startPc="268436292">
+<functionEntry accessMode="public" endPc="268437447" name="makeRequest" parent="WidgetGlanceView" startPc="268437050">
 <param id="lakeName"/>
 <param id="position"/>
 <documentation><![CDATA[<div class="description"> Make the web request<br/></div>]]></documentation>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436736" name="getInitialView" parent="TwelveLakesApp" startPc="268436690">
+<functionEntry accessMode="public" endPc="268437515" name="getInitialView" parent="TwelveLakesApp" startPc="268437448">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436751" name="initialize" parent="TwelveLakesApp" startPc="268436737">
+<functionEntry accessMode="public" endPc="268437530" name="initialize" parent="TwelveLakesApp" startPc="268437516">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436793" name="getGlanceView" parent="TwelveLakesApp" startPc="268436752">
+<functionEntry accessMode="public" endPc="268437562" name="getGlanceView" parent="TwelveLakesApp" startPc="268437531">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436814" name="getApp" startPc="268436794">
+<functionEntry accessMode="public" endPc="268437583" name="getApp" startPc="268437563">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436826" name="&lt;init&gt;" parent="TwelveLakesView" startPc="268436815">
+<functionEntry accessMode="public" endPc="268437595" name="&lt;init&gt;" parent="TwelveLakesView" startPc="268437584">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436971" name="&lt;init&gt;" parent="MyLakeFinder" startPc="268436827">
+<functionEntry accessMode="public" endPc="268437607" name="&lt;init&gt;" parent="MyBehaviorDelegate" startPc="268437596">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437032" name="mean" startPc="268436972">
+<functionEntry accessMode="public" endPc="268437752" name="&lt;init&gt;" parent="MyLakeFinder" startPc="268437608">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437772" name="&lt;init&gt;" parent="Rez" startPc="268437753">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437784" name="&lt;init&gt;" parent="MyActionMenuDelegate" startPc="268437773">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437844" name="getPosition" startPc="268437785">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437917" name="mean" startPc="268437845">
 <param id="a"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437052" name="&lt;init&gt;" parent="Rez" startPc="268437033">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" endPc="268437117" name="maximum" startPc="268437053">
+<functionEntry accessMode="public" endPc="268437982" name="maximum" startPc="268437918">
 <param id="a"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437182" name="minimum" startPc="268437118">
+<functionEntry accessMode="public" endPc="268438047" name="minimum" startPc="268437983">
 <param id="a"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437214" name="span" startPc="268437183">
+<functionEntry accessMode="public" endPc="268438079" name="span" startPc="268438048">
 <param id="a"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437452" name="onReceiveFav" parent="TwelveLakesView" startPc="268437215">
+<functionEntry accessMode="public" endPc="268438358" name="onReceiveFav" parent="TwelveLakesView" startPc="268438080">
 <param id="responseCode"/>
 <param id="data"/>
 <documentation><![CDATA[<div class="description"> Receive the data from the web request<br/> <div class="param"> responseCode The server response code</div><br/> <div class="param"> data Content from a successful request</div><br/></div>]]></documentation>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437680" name="onReceiveProx" parent="TwelveLakesView" startPc="268437453">
+<functionEntry accessMode="public" endPc="268438586" name="onReceiveProx" parent="TwelveLakesView" startPc="268438359">
 <param id="responseCode"/>
 <param id="data"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438554" name="makeRequest" parent="TwelveLakesView" startPc="268437681">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" endPc="268438893" name="initialize" parent="TwelveLakesView" startPc="268438555">
-<param id="favouriteLake"/>
-<param id="favouritePosition"/>
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" endPc="268439836" name="onUpdate" parent="TwelveLakesView" startPc="268438894">
+<functionEntry accessMode="public" endPc="268438622" name="onLayout" parent="TwelveLakesView" startPc="268438587">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268439858" name="getLakeByGPS" parent="MyLakeFinder" startPc="268439837">
+<functionEntry accessMode="public" endPc="268438660" name="notifyFavUpdate" parent="TwelveLakesView" startPc="268438623">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268439945" name="getPosition" parent="MyLakeFinder" startPc="268439859">
+<functionEntry accessMode="public" endPc="268439738" name="makeRequest" parent="TwelveLakesView" startPc="268438661">
+<param id="forceFav"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268440085" name="getClosesLake" parent="MyLakeFinder" startPc="268439946">
+<functionEntry accessMode="public" endPc="268439891" name="updateFavourites" parent="TwelveLakesView" startPc="268439739">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440255" name="initialize" parent="TwelveLakesView" startPc="268439892">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441568" name="onUpdate" parent="TwelveLakesView" startPc="268440256">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441592" name="initialize" parent="MyBehaviorDelegate" startPc="268441569">
+<param id="view"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441775" name="onSelect" parent="MyBehaviorDelegate" startPc="268441593">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441797" name="getLakeByGPS" parent="MyLakeFinder" startPc="268441776">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441937" name="getClosesLake" parent="MyLakeFinder" startPc="268441798">
 <param id="position_lat_long"/>
 <documentation/>
 </functionEntry>
@@ -510,11 +721,28 @@
 <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
 <documentation/>
 </functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+<documentation/>
+</functionEntry>
 <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268440235" name="MainLayout" parent="Layouts" startPc="268440086">
+<functionEntry accessMode="public" endPc="268441961" name="initialize" parent="MyActionMenuDelegate" startPc="268441938">
+<param id="view"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442145" name="onSelect" parent="MyActionMenuDelegate" startPc="268441962">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442248" name="MainLayout" parent="Layouts" startPc="268442146">
 <param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442260" name="&lt;init&gt;" parent="ActionMenu" startPc="268442249">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442421" name="initialize" parent="ActionMenu" startPc="268442261">
 <documentation/>
 </functionEntry>
 </functions>

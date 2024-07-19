@@ -1,164 +1,330 @@
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc"; @line = 1; ]
 import Toybox.Graphics;
-[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc"; @line = 2; glance = true; ]
-function getColor(temperature) {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_3_30_26_0_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 4 4 ]
-    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_3_30_26_0_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_3_30_26_0_stop" ]
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc"; @line = 4; glance = true; ]
+function getColor(temperature as Float or Null) as Lang.Number or Graphics.ColorValue {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_5_85_28_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 6 4 ]
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_5_85_28_0_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_5_85_28_0_stop" ]
     %color.1 = local;
     %tmp.1 = getm $.Toybox.Graphics;
-    %tmp.2 = getv %tmp.1 :COLOR_DK_BLUE;
+    %tmp.2 = getv %tmp.1 :COLOR_DK_GRAY;
     lputv %color.1 %tmp.2;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 5 4 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_5_4_24_4_if_stmt:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 7 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_7_4_26_4_if_stmt:
     %tmp.4 = lgetv %temperature;
     %tmp.5 = null;
     %tmp.6 = ne %tmp.4 %tmp.5;
-    bf %tmp.6 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_5_4_24_4_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_5_4_24_4_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_5_28_24_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 6 8 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_6_8_8_8_if_stmt:
+    bf %tmp.6 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_7_4_26_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_7_4_26_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_7_28_26_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 8 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_8_8_10_8_if_stmt:
     %tmp.8 = lgetv %temperature;
     %tmp.9 = as %tmp.8 { (!Null) };
     %tmp.10 = 10;
     %tmp.11 = lt %tmp.9 %tmp.10;
-    bf %tmp.11 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_6_8_8_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_6_8_8_8_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_6_29_8_8_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 7 12 ]
+    bf %tmp.11 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_8_8_10_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_8_8_10_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_8_29_10_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 9 12 ]
     %tmp.12 = getm $.Toybox.Graphics;
     %tmp.13 = getv %tmp.12 :COLOR_DK_BLUE;
     lputv %color.1 %tmp.13;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_6_29_8_8_stop:
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_6_8_8_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_6_8_8_8_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 9 8 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_8_11_8_if_stmt:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_12_9_47_begin:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_8_29_10_8_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_8_8_10_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_8_8_10_8_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 11 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_8_13_8_if_stmt:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_12_11_47_begin:
     %tmp.15 = lgetv %temperature;
     %tmp.16 = as %tmp.15 { (!Null) };
     %tmp.17 = 10;
     %tmp.18 = gte %tmp.16 %tmp.17;
-    bf %tmp.18 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_8_11_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_33_9_47_true:
+    bf %tmp.18 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_8_13_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_33_11_47_true:
     %tmp.20 = lgetv %temperature;
     %tmp.21 = as %tmp.20 { (!Null) };
     %tmp.22 = 15;
     %tmp.23 = lt %tmp.21 %tmp.22;
     push %tmp.23;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_33_9_47_end:
-    %tmp.24 = phi [%tmp.18 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_12_9_47_begin] [%tmp.23 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_33_9_47_true] [%tmp.24 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_33_9_47_end];
-    bf %tmp.24 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_8_11_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_8_11_8_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_50_11_8_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 10 12 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_33_11_47_end:
+    %tmp.24 = phi [%tmp.18 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_12_11_47_begin] [%tmp.23 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_33_11_47_true] [%tmp.24 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_33_11_47_end];
+    bf %tmp.24 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_8_13_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_8_13_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_50_13_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 12 12 ]
     %tmp.25 = getm $.Toybox.Graphics;
     %tmp.26 = getv %tmp.25 :COLOR_BLUE;
     lputv %color.1 %tmp.26;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_50_11_8_stop:
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_8_11_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_9_8_11_8_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 12 8 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_8_14_8_if_stmt:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_12_12_47_begin:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_50_13_8_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_8_13_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_11_8_13_8_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 14 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_8_16_8_if_stmt:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_12_14_47_begin:
     %tmp.28 = lgetv %temperature;
     %tmp.29 = as %tmp.28 { (!Null) };
     %tmp.30 = 15;
     %tmp.31 = gte %tmp.29 %tmp.30;
-    bf %tmp.31 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_8_14_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_33_12_47_true:
+    bf %tmp.31 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_8_16_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_33_14_47_true:
     %tmp.33 = lgetv %temperature;
     %tmp.34 = as %tmp.33 { (!Null) };
     %tmp.35 = 18;
     %tmp.36 = lt %tmp.34 %tmp.35;
     push %tmp.36;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_33_12_47_end:
-    %tmp.37 = phi [%tmp.31 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_12_12_47_begin] [%tmp.36 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_33_12_47_true] [%tmp.37 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_33_12_47_end];
-    bf %tmp.37 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_8_14_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_8_14_8_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_50_14_8_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 13 12 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_33_14_47_end:
+    %tmp.37 = phi [%tmp.31 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_12_14_47_begin] [%tmp.36 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_33_14_47_true] [%tmp.37 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_33_14_47_end];
+    bf %tmp.37 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_8_16_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_8_16_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_50_16_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 15 12 ]
     %tmp.38 = 0x00FFFF;
     lputv %color.1 %tmp.38;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_50_14_8_stop:
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_8_14_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_12_8_14_8_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 15 8 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_8_17_8_if_stmt:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_12_15_47_begin:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_50_16_8_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_8_16_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_14_8_16_8_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 17 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_8_19_8_if_stmt:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_12_17_47_begin:
     %tmp.40 = lgetv %temperature;
     %tmp.41 = as %tmp.40 { (!Null) };
     %tmp.42 = 18;
     %tmp.43 = gte %tmp.41 %tmp.42;
-    bf %tmp.43 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_8_17_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_33_15_47_true:
+    bf %tmp.43 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_8_19_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_33_17_47_true:
     %tmp.45 = lgetv %temperature;
     %tmp.46 = as %tmp.45 { (!Null) };
     %tmp.47 = 21;
     %tmp.48 = lt %tmp.46 %tmp.47;
     push %tmp.48;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_33_15_47_end:
-    %tmp.49 = phi [%tmp.43 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_12_15_47_begin] [%tmp.48 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_33_15_47_true] [%tmp.49 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_33_15_47_end];
-    bf %tmp.49 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_8_17_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_8_17_8_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_50_17_8_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 16 12 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_33_17_47_end:
+    %tmp.49 = phi [%tmp.43 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_12_17_47_begin] [%tmp.48 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_33_17_47_true] [%tmp.49 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_33_17_47_end];
+    bf %tmp.49 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_8_19_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_8_19_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_50_19_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 18 12 ]
     %tmp.50 = getm $.Toybox.Graphics;
     %tmp.51 = getv %tmp.50 :COLOR_GREEN;
     lputv %color.1 %tmp.51;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_50_17_8_stop:
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_8_17_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_15_8_17_8_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 18 8 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_8_20_8_if_stmt:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_12_18_47_begin:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_50_19_8_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_8_19_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_17_8_19_8_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 20 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_8_22_8_if_stmt:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_12_20_47_begin:
     %tmp.53 = lgetv %temperature;
     %tmp.54 = as %tmp.53 { (!Null) };
     %tmp.55 = 21;
     %tmp.56 = gte %tmp.54 %tmp.55;
-    bf %tmp.56 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_8_20_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_33_18_47_true:
+    bf %tmp.56 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_8_22_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_33_20_47_true:
     %tmp.58 = lgetv %temperature;
     %tmp.59 = as %tmp.58 { (!Null) };
     %tmp.60 = 24;
     %tmp.61 = lt %tmp.59 %tmp.60;
     push %tmp.61;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_33_18_47_end:
-    %tmp.62 = phi [%tmp.56 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_12_18_47_begin] [%tmp.61 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_33_18_47_true] [%tmp.62 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_33_18_47_end];
-    bf %tmp.62 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_8_20_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_8_20_8_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_50_20_8_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 19 12 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_33_20_47_end:
+    %tmp.62 = phi [%tmp.56 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_12_20_47_begin] [%tmp.61 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_33_20_47_true] [%tmp.62 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_33_20_47_end];
+    bf %tmp.62 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_8_22_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_8_22_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_50_22_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 21 12 ]
     %tmp.63 = getm $.Toybox.Graphics;
     %tmp.64 = getv %tmp.63 :COLOR_YELLOW;
     lputv %color.1 %tmp.64;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_50_20_8_stop:
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_8_20_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_18_8_20_8_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 21 8 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_21_8_23_8_if_stmt:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_50_22_8_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_8_22_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_20_8_22_8_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 23 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_23_8_25_8_if_stmt:
     %tmp.66 = lgetv %temperature;
     %tmp.67 = as %tmp.66 { (!Null) };
     %tmp.68 = 24;
     %tmp.69 = gte %tmp.67 %tmp.68;
-    bf %tmp.69 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_21_8_23_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_21_8_23_8_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_21_30_23_8_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 22 12 ]
+    bf %tmp.69 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_23_8_25_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_23_8_25_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_23_30_25_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 24 12 ]
     %tmp.70 = getm $.Toybox.Graphics;
     %tmp.71 = getv %tmp.70 :COLOR_ORANGE;
     lputv %color.1 %tmp.71;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_21_30_23_8_stop:
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_21_8_23_8_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_21_8_23_8_if_end:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_5_28_24_4_stop:
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_5_4_24_4_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_5_4_24_4_if_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 25 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_23_30_25_8_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_23_8_25_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_23_8_25_8_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_7_28_26_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_7_4_26_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_7_4_26_4_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 27 4 ]
     %tmp.73 = lgetv %color.1;
     ret %tmp.73;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_3_30_26_0_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_5_85_28_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc"; @line = 30; glance = true; ]
+function getColorPos(temperature as Float or Null) as Float {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_31_60_48_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 32 4 ]
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_31_60_48_0_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_31_60_48_0_stop" ]
+    %pos.1 = local;
+    %tmp.1 = 0.0;
+    lputv %pos.1 %tmp.1;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 38 4 ]
+    %tmp.3 = lgetv %temperature;
+    %tmp.4 = 7.0;
+    %tmp.5 = sub %tmp.3 %tmp.4;
+    %tmp.6 = 20.0;
+    %tmp.7 = div %tmp.5 %tmp.6;
+    lputv %pos.1 %tmp.7;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 41 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_41_4_43_4_if_stmt:
+    %tmp.9 = lgetv %pos.1;
+    %tmp.10 = 0.0;
+    %tmp.11 = lt %tmp.9 %tmp.10;
+    bf %tmp.11 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_41_4_43_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_41_4_43_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_41_20_43_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 42 8 ]
+    %tmp.12 = 0.0;
+    lputv %pos.1 %tmp.12;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_41_20_43_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_41_4_43_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_41_4_43_4_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 44 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_44_4_46_4_if_stmt:
+    %tmp.14 = lgetv %pos.1;
+    %tmp.15 = 1.0;
+    %tmp.16 = gt %tmp.14 %tmp.15;
+    bf %tmp.16 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_44_4_46_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_44_4_46_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_44_20_46_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 45 8 ]
+    %tmp.17 = 1.0;
+    lputv %pos.1 %tmp.17;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_44_20_46_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_44_4_46_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_44_4_46_4_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 47 4 ]
+    %tmp.19 = lgetv %pos.1;
+    ret %tmp.19;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_31_60_48_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc"; @line = 50; glance = true; ]
+function getColorByIdx(idx as Number) as Lang.Number or Graphics.ColorValue {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_51_75_72_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 52 4 ]
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_51_75_72_0_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_51_75_72_0_stop" ]
+    %color.1 = local;
+    %tmp.1 = getm $.Toybox.Graphics;
+    %tmp.2 = getv %tmp.1 :COLOR_DK_GRAY;
+    lputv %color.1 %tmp.2;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 53 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_53_4_55_4_if_stmt:
+    %tmp.4 = lgetv %idx;
+    %tmp.5 = 0;
+    %tmp.6 = eq %tmp.4 %tmp.5;
+    bf %tmp.6 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_53_4_55_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_53_4_55_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_53_17_55_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 54 8 ]
+    %tmp.7 = self;
+    %tmp.8 = getv function %tmp.7 :getColor;
+    %tmp.9 = 9.0;
+    %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+    lputv %color.1 %tmp.10;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_53_17_55_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_53_4_55_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_53_4_55_4_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 56 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_56_4_58_4_if_stmt:
+    %tmp.12 = lgetv %idx;
+    %tmp.13 = 1;
+    %tmp.14 = eq %tmp.12 %tmp.13;
+    bf %tmp.14 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_56_4_58_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_56_4_58_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_56_17_58_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 57 8 ]
+    %tmp.15 = self;
+    %tmp.16 = getv function %tmp.15 :getColor;
+    %tmp.17 = 10.0;
+    %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+    lputv %color.1 %tmp.18;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_56_17_58_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_56_4_58_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_56_4_58_4_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 59 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_59_4_61_4_if_stmt:
+    %tmp.20 = lgetv %idx;
+    %tmp.21 = 2;
+    %tmp.22 = eq %tmp.20 %tmp.21;
+    bf %tmp.22 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_59_4_61_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_59_4_61_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_59_17_61_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 60 8 ]
+    %tmp.23 = self;
+    %tmp.24 = getv function %tmp.23 :getColor;
+    %tmp.25 = 15.0;
+    %tmp.26 = invoke %tmp.23 %tmp.24(%tmp.25);
+    lputv %color.1 %tmp.26;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_59_17_61_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_59_4_61_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_59_4_61_4_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 62 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_62_4_64_4_if_stmt:
+    %tmp.28 = lgetv %idx;
+    %tmp.29 = 3;
+    %tmp.30 = eq %tmp.28 %tmp.29;
+    bf %tmp.30 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_62_4_64_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_62_4_64_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_62_17_64_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 63 8 ]
+    %tmp.31 = self;
+    %tmp.32 = getv function %tmp.31 :getColor;
+    %tmp.33 = 18.0;
+    %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
+    lputv %color.1 %tmp.34;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_62_17_64_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_62_4_64_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_62_4_64_4_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 65 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_65_4_67_4_if_stmt:
+    %tmp.36 = lgetv %idx;
+    %tmp.37 = 4;
+    %tmp.38 = eq %tmp.36 %tmp.37;
+    bf %tmp.38 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_65_4_67_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_65_4_67_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_65_17_67_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 66 8 ]
+    %tmp.39 = self;
+    %tmp.40 = getv function %tmp.39 :getColor;
+    %tmp.41 = 21.0;
+    %tmp.42 = invoke %tmp.39 %tmp.40(%tmp.41);
+    lputv %color.1 %tmp.42;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_65_17_67_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_65_4_67_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_65_4_67_4_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 68 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_68_4_70_4_if_stmt:
+    %tmp.44 = lgetv %idx;
+    %tmp.45 = 5;
+    %tmp.46 = eq %tmp.44 %tmp.45;
+    bf %tmp.46 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_68_4_70_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_68_4_70_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_68_17_70_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 69 8 ]
+    %tmp.47 = self;
+    %tmp.48 = getv function %tmp.47 :getColor;
+    %tmp.49 = 24.0;
+    %tmp.50 = invoke %tmp.47 %tmp.48(%tmp.49);
+    lputv %color.1 %tmp.50;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_68_17_70_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_68_4_70_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_68_4_70_4_if_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc" 71 4 ]
+    %tmp.52 = lgetv %color.1;
+    ret %tmp.52;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_Colors_mc_51_75_72_0_stop:
 }
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\Colors.mc"; @line = 1; ]
 <init> {
