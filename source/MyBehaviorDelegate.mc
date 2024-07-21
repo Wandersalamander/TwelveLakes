@@ -12,16 +12,17 @@ class MyActionMenuDelegate extends WatchUi.ActionMenuDelegate {
     var view as TwelveLakesView;
 
     function initialize(view as TwelveLakesView) {
+        System.println("MyBehaviorDelegate.initialize");
         ActionMenuDelegate.initialize();
         self.view = view;
     }
 
     function onSelect(item as WatchUi.ActionMenuItem) as Void{
+        System.println("MyBehaviorDelegate.onSelect");
         switch (item.getId()){
             case GPS:
                 var position_lat_long = getPosition();
-                var lakeFinder = new MyLakeFinder();
-                var newFavouriteLake = lakeFinder.getClosesLake(position_lat_long);
+                var newFavouriteLake = getClosesLake(position_lat_long);
                 Storage.setValue("favouritePosition", position_lat_long);
                 Storage.setValue("favouriteLake", newFavouriteLake);
                 WatchUi.showToast(newFavouriteLake, null);
@@ -37,11 +38,13 @@ class MyActionMenuDelegate extends WatchUi.ActionMenuDelegate {
 class MyBehaviorDelegate extends WatchUi.BehaviorDelegate {
     var view as TwelveLakesView;
     function initialize(view as TwelveLakesView){
+        System.println("MyBehaviorDelegate.initialize");
         BehaviorDelegate.initialize();
         self.view = view;
     }
 
     function onSelect(){
+        System.println("MyBehaviorDelegate.onSelect");
         var options = {:theme => WatchUi.ACTION_MENU_THEME_LIGHT};
         var myMenu = new ActionMenu(options);
         var item1 = new ActionMenuItem({:label => "GPS as Fav."}, GPS);

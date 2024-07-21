@@ -31,6 +31,7 @@ class TwelveLakesView extends WatchUi.View {
     var lastUpdateProx as Time.Moment or Null = null;
 
     function initialize() {
+        System.println("TwelveLakesView.initialize");
         View.initialize();
 
         if (Storage.getValue("viewLastUpdateFav") != null){
@@ -43,10 +44,9 @@ class TwelveLakesView extends WatchUi.View {
         updateFavourites();
         
 
-        var lakeFinder = new MyLakeFinder();
         self.currentPosition = getPosition();
         if (currentPosition != null){
-            self.currentLake = lakeFinder.getClosesLake(currentPosition);
+            self.currentLake = getClosesLake(currentPosition);
         }
 
         favouriteTemperatureArray = Storage.getValue("favouriteTemperatureArray");
@@ -62,12 +62,13 @@ class TwelveLakesView extends WatchUi.View {
     }
 
     function notifyFavUpdate(){
+        System.println("TwelveLakesView.notifyFavUpdate");
         updateFavourites();
         makeRequest(true);
-        System.println("notifyFavUpdate");
     }
 
     function updateFavourites(){
+        System.println("TwelveLakesView.updateFavourites");
         var pos = Storage.getValue("favouritePosition");
         var name = Storage.getValue("favouriteLake");
         if (pos != null && name != null){
@@ -82,34 +83,55 @@ class TwelveLakesView extends WatchUi.View {
     }
 
     function onLayout(dc){
+        System.println("TwelveLakesView.onLayout");
         setLayout( Rez.Layouts.MainLayout( dc ) );
     }
 
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
+        System.println(Lang.format("$1$ $2$ $3$ $4$ $5$ $6$ $7$ $8$ $9$", [
+            currentLake,
+            currentPosition,
+            currentTemperature,
+            currentDistance,
+            favouriteLake,
+            favouritePosition,
+            favouriteTemperature,
+            favouriteTemperatureArray,
+            favouriteTimeArray,
+        ]));
         System.println("TwelveLakesView.onUpdate");
         View.onUpdate(dc);
         var offsetX = 0.0 * dc.getWidth();
         var offsetY = (0.5+0.3/2) * dc.getHeight();
         var spanX = 0.75 * dc.getWidth();
         var spanY = 0.3 * dc.getHeight();
+        System.println("TwelveLakesView.onUpdate headline");
+        
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         if (favouriteLake != null && favouriteTemperature != null){
             dc.drawText(dc.getWidth()/2, 0.1*dc.getHeight(), Graphics.FONT_MEDIUM, Lang.format("$1$°C", [favouriteTemperature.format("%.1f")]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
             dc.drawText(dc.getWidth()/2, 0.2*dc.getHeight(), Graphics.FONT_MEDIUM, Lang.format("$1$$2$", [favouriteLake.substring(0,1).toUpper(), favouriteLake.substring(1, favouriteLake.length())]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
         }
-        if (currentLake != null && currentTemperature != null and currentDistance != null){
-            var text;
-            if (currentDistance >= 1000){
-                text = Lang.format("Closest lake ($1$km away)", [(currentDistance/1000.0).format("%d")]);
-            }else{
-                text = Lang.format("Closest lake ($1$m away)", [(currentDistance).format("%d")]);
+        System.println("TwelveLakesView.onUpdate current");
 
+        if (currentLake != null && currentTemperature != null){
+            var text;
+            if (currentDistance != null){
+                if (currentDistance >= 1000){
+                    text = Lang.format("Closest lake ($1$km away)", [(currentDistance/1000.0).format("%d")]);
+                }else{
+                    text = Lang.format("Closest lake ($1$m away)", [(currentDistance).format("%d")]);
+                }
+            }else{
+                text = Lang.format("Closest lake", []);
             }
             dc.drawText(dc.getWidth()/2, 0.825*dc.getHeight(), Graphics.FONT_AUX1, text, Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
+
             dc.drawText(dc.getWidth()/2, 0.9*dc.getHeight(), Graphics.FONT_AUX1, Lang.format("$1$$2$: $3$°C", [currentLake.substring(0,1).toUpper(), currentLake.substring(1, currentLake.length()), currentTemperature.format("%.1f")]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
         }
+        System.println("TwelveLakesView.onUpdate favourite");
         
         if (favouriteTimeArray != null){
             var widthT = spanX / (favouriteTimeArray.size());
@@ -137,6 +159,8 @@ class TwelveLakesView extends WatchUi.View {
             }
 
         }
+        System.println("TwelveLakesView.onUpdate faArray");
+        System.println(favouriteTemperatureArray);
         if (favouriteTemperatureArray != null){
 
 
@@ -145,6 +169,7 @@ class TwelveLakesView extends WatchUi.View {
             var tempMin = tempMean - span(favouriteTemperatureArray) / 2.0;
             var tempMax = tempMean + span(favouriteTemperatureArray) / 2.0;
             var tempSpan = tempMax - tempMin;
+            System.println("output");
             if (tempSpan < 5.0){
                 tempSpan = 5.0;
                 tempMin = tempMean - tempSpan/2.0;
@@ -175,6 +200,7 @@ class TwelveLakesView extends WatchUi.View {
             dc.drawRectangle(offsetX, offsetY-spanY, spanX, spanY);
 
        }
+       System.println("Done!");
     }
     public function makeRequest(forceFav as Boolean) as Void {
         System.println("TwelveLakesView.makeRequest");
@@ -183,6 +209,7 @@ class TwelveLakesView extends WatchUi.View {
 
     }
     public function makeRequestFav(forceFav as Boolean) as Void {
+        System.println("TwelveLakesView.makeRequestFav");
         var skipUpdateBelowSeconds    = new Time.Duration(60*60);     // 60 min    
         var readyForUpdateFav = true;
         if (lastUpdateFav!=null){
@@ -206,7 +233,7 @@ class TwelveLakesView extends WatchUi.View {
         System.println(favouriteLake);
         System.println(favouritePosition);
         if ((favouriteLake != null) && (favouritePosition != null) && readyForUpdateFav){
-            var myRequestFav = alplakesApiString3DLake(
+            var myRequestFav = alplakesApiString(
                 favouriteLake,
                  beforeOneDay,
                   inTwoDays,
@@ -217,12 +244,13 @@ class TwelveLakesView extends WatchUi.View {
                 myRequestFav,
                 null,
                 options,
-                method(:onReceive3DFav)
+                method(:onReceiveFav)
             );
         }
     }
 
     public function makeRequestProx() as Void {
+        System.println("TwelveLakesView.makeRequestProx");
         var skipUpdateBelowSeconds2    = new Time.Duration(15*60);     // 60 min    
         var readyForUpdateProx = true;
         if (lastUpdateProx!=null){
@@ -244,7 +272,7 @@ class TwelveLakesView extends WatchUi.View {
         System.println(currentLake);
         System.println(currentPosition);
         if ((currentLake != null) && (currentPosition != null) && readyForUpdateProx){
-            var myRequestProx = alplakesApiString3DLake(currentLake,today,today,currentPosition);
+            var myRequestProx = alplakesApiString(currentLake,today,today,currentPosition);
             System.println(myRequestProx);;
             Communications.makeWebRequest(
                 myRequestProx,
@@ -259,23 +287,25 @@ class TwelveLakesView extends WatchUi.View {
     //! Receive the data from the web request
     //! @param responseCode The server response code
     //! @param data Content from a successful request
-    public function onReceive3DFav(responseCode as Number, data as Dictionary or String or Null) as Void {
-        System.println("TwelveLakesView.onReceive3DFav");
+    public function onReceiveFav(responseCode as Number, data as Dictionary or String or Null) as Void {
+        System.println("TwelveLakesView.onReceiveFav");
         System.println(responseCode);;
         if (responseCode == 200) {
             System.println(data);
             if (data instanceof Dictionary){
+                var helper = processReceivedData(data); // lake, favouriteTimeArray, favouriteTemperatureArray
+                if (helper[2] != null){
+                    favouriteTimeArray = helper[1]; // YYYYmmddhhmm
+                    Storage.setValue("favouriteTimeArray", favouriteTimeArray);
 
-                favouriteTimeArray = data["time"]; // YYYYmmddhhmm
-                Storage.setValue("favouriteTimeArray", favouriteTimeArray);
+                    favouriteTemperatureArray = helper[2];
+                    Storage.setValue("favouriteTemperatureArray", favouriteTemperatureArray);
 
-                favouriteTemperatureArray = data["temperature"]["data"];
-                Storage.setValue("favouriteTemperatureArray", favouriteTemperatureArray);
+                    favouriteTemperature = favouriteTemperatureArray[9]; // idx=9 is assumend. better to check with timeArray, but lets skip array operations here
+                    Storage.setValue("favouriteTemperature", favouriteTemperature);
 
-                favouriteTemperature = favouriteTemperatureArray[9]; // idx=9 is assumend. better to check with timeArray, but lets skip array operations here
-                Storage.setValue("favouriteTemperature", favouriteTemperature);
-
-                Storage.setValue("viewLastUpdateFav", Time.now().value());
+                    Storage.setValue("viewLastUpdateFav", Time.now().value());
+                }
             }
         } else {
             System.print("Failed to load\nError: " + responseCode.toString());
@@ -288,15 +318,17 @@ class TwelveLakesView extends WatchUi.View {
         System.println("TwelveLakesView.onReceiveProx");
         System.println(responseCode);;
         if (responseCode == 200) {
-            System.println(data);;
-            currentTemperature = data["temperature"]["data"][0];
-            Storage.setValue("currentTemperature", currentTemperature);
+            System.println(data);
+            var helper = processReceivedData(data); // lake, favouriteTimeArray, favouriteTemperatureArray
+            if (helper[2] != null){
+                currentTemperature = helper[2][0];
+                Storage.setValue("currentTemperature", currentTemperature);
 
-            currentDistance = data["distance"]; // km?
-            Storage.setValue("currentDistance", currentDistance);
+                currentDistance = helper[3]; // km?
+                Storage.setValue("currentDistance", currentDistance);
 
-            Storage.setValue("viewLastUpdateProx", Time.now().value());
-
+                Storage.setValue("viewLastUpdateProx", Time.now().value());
+            }
 
         } else {
             System.print("Failed to load\nError: " + responseCode.toString());

@@ -7,8 +7,6 @@ using Toybox.Application.Storage;
 
 class TwelveLakesApp extends Application.AppBase {
 
-
-
     function initialize() {
         AppBase.initialize();
     }
