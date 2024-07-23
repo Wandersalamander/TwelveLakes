@@ -1,11 +1,11 @@
-using Toybox.Position;
+import Toybox.Position;
 import Toybox.Activity;
 import Toybox.Lang;
-using Toybox.Time;
-using Toybox.Time.Gregorian;
-using Toybox.Math;
-using Toybox.System;
-
+import Toybox.Time;
+import Toybox.Time.Gregorian;
+import Toybox.Math;
+import Toybox.System;
+(:glance)
 const LAKES_3D as Array<String> = [
     "geneva",
     "garda",
@@ -22,7 +22,7 @@ const LAKES_3D as Array<String> = [
 ];
 
 
-
+(:glance)
 const POS_LAKES as Dictionary<String, Array<[Float, Float]>>  = {
     // todo add severlal positions for big lakes
     "greifensee"=>[[47.366451, 8.661569],[47.348855, 8.681962],[47.332733, 8.695314]],
@@ -138,17 +138,19 @@ function getClosesLake(position_lat_long as [Double, Double] or Null) as String 
         for(var i = 0; i < keys.size(); i++ ) {
 
             var lakePosArr = POS_LAKES[keys[i]];
-            for(var j = 0; j < lakePosArr.size(); j++ ) {
-                var lakePos = lakePosArr[j];
-                
-                var dx = lakePos[0] - position_lat_long[0];
-                var dy = lakePos[1] - position_lat_long[1];
+            if (lakePosArr != null){
+                for (var j = 0; j < lakePosArr.size(); j++ ) {
+                    var lakePos = lakePosArr[j];
+                    
+                    var dx = lakePos[0] - position_lat_long[0];
+                    var dy = lakePos[1] - position_lat_long[1];
 
-                var distance = Math.sqrt(dx * dx + dy * dy);
+                    var distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < minDistVal){
-                    minDistVal = distance;
-                    minDistName = keys[i];
+                    if (distance < minDistVal){
+                        minDistVal = distance;
+                        minDistName = keys[i];
+                    }
                 }
             }
         }
@@ -158,7 +160,7 @@ function getClosesLake(position_lat_long as [Double, Double] or Null) as String 
     return null;
 }
 
-function getLakeByGPS(){
+function getLakeByGPS() as String or Null {
     System.println("getLakeByGPS");
     var position_lat_long = getPosition();
     return getClosesLake(position_lat_long);
@@ -168,24 +170,26 @@ function getLakeByGPS(){
 
 function getPosition() as [Double, Double] or Null{
     System.println("getPosition");
-    var myPos = null;
     var info = Position.getInfo();
 
-    if (info != null){
-        var position = info.position;
-        if (position != null){
-            myPos = position.toDegrees();
+    // if (info != null){
+        if (info.accuracy >= Position.QUALITY_USABLE){
+            var position = info.position;
+            if (position != null){
+                return position.toDegrees();
             }
         }
-    return myPos;
+    return null;
 }
 
 (:glance)
 function asAlplakeString(time as Time.Moment) as String{
     System.println("asAlplakeString");
-    var twoHours     = new Time.Duration(2*60*60); // from +2 to UTC
-
-    var gregorianInfo = Gregorian.info(time.subtract(twoHours), Time.FORMAT_SHORT);;
+    var twoHours = new Time.Duration(2*60*60); // from +2 to UTC
+    var gregorianInfo = Gregorian.info(
+        time.subtract(twoHours) as Time.Moment,
+        Time.FORMAT_SHORT
+    );
     var result = Lang.format(
         "$1$$2$$3$$4$$5$",
         [
@@ -248,8 +252,8 @@ function alplakesApiString1DLake(
     return Lang.format(
             "https://alplakes-api.eawag.ch/simulations/1d/point/simstrat/$1$/T/$2$/$3$/1",
             [lake,
-            asAlplakeString(start.subtract(oneFiveHour)), // increase timespan
-            asAlplakeString(stop.add(oneFiveHour)) // increase timespan
+            asAlplakeString(start.subtract(oneFiveHour) as Time.Moment), // increase timespan
+            asAlplakeString(stop.add(oneFiveHour) as Time.Moment) // increase timespan
             ]
             );
     
@@ -268,8 +272,9 @@ function processReceivedData(data as Dictionary) as [String, Array<String>, Arra
         }else{
             helper = processReceivedData3D(data);
         }
+        var favouriteTemperatureArray = helper[2];
 
-        if (helper[2].size() != 0){
+        if ((favouriteTemperatureArray != null) && (favouriteTemperatureArray.size() > 0)){
             return helper;
             }
         else{
@@ -279,39 +284,50 @@ function processReceivedData(data as Dictionary) as [String, Array<String>, Arra
 }
 
 (:glance)
-function processReceivedData3D(data as Dictionary) as [String, Array<String>, Array<Float>, Float]{
+function processReceivedData3D(data as Dictionary) as [String, Array<String>, Array<Float>, Float] or [Null, Null, Null, Null]{
     System.println("processReceivedData3D");
-    var favouriteTimeArray = data["time"]; // YYYYmmddhhmm
-    var favouriteTemperatureArray = data["temperature"]["data"];
-    var lake = data["lake"];
-    var distane = data["distance"];
-    return [lake, favouriteTimeArray, favouriteTemperatureArray, distane];
+    var fail = [null, null, null, null];
+    var dataTemperature = data["temperature"];
+    if (dataTemperature instanceof Dictionary){
+        var favouriteTemperatureArray = dataTemperature["data"] as Array<Float>;
+        var lake = data["lake"] as String;
+        var distane = data["distance"] as Float or Double or Number;
+        var favouriteTimeArray = data["time"]  as Array<String>; // YYYYmmddhhmm
+        return [lake, favouriteTimeArray, favouriteTemperatureArray, distane.toFloat()];
+    }else{
+        return fail;
+    }
+
 }
 
 (:glance)
-function processReceivedData1D(data as Dictionary) as [String, Array<String>, Array<Float>, Null]{
+function processReceivedData1D(data as Dictionary) as [String, Array<String>, Array<Float>, Null]  or [Null, Null, Null, Null]{
     System.println("processReceivedData1D");
-    var favouriteTemperatureArray = data["T"];
-    var favouriteTimeArray = data["time"]; // YYYY-mm-ddThh:mm:ss+00:00
-    var lake = data["lake"];
+    var favouriteTemperatureArray = data["T"]  as Array<Float>;
+    var favouriteTimeArray = data["time"] as Array<String>; // YYYY-mm-ddThh:mm:ss+00:00
+    var lake = data["lake"] as String;
 
     // overwrite string with format YYYYmmddhhmm
     var s;
     for( var i = 0; i < favouriteTimeArray.size(); i++ ) {
         s = favouriteTimeArray[i];
+        if (s.length() >= 16){
 
-        var options = {
-            :year   => s.substring(0, 4).toNumber(),
-            :month  => s.substring(5, 7).toNumber() ,
-            :day    => s.substring(8, 10).toNumber(),
-            :hour   => s.substring(11, 13).toNumber(),
-            :minute => s.substring(14, 16).toNumber()
-        };
+            var options = {
+                :year   => s.substring(0, 4).toNumber() as Number,
+                :month  => s.substring(5, 7).toNumber()  as Number,
+                :day    => s.substring(8, 10).toNumber() as Number,
+                :hour   => s.substring(11, 13).toNumber() as Number,
+                :minute => s.substring(14, 16).toNumber() as Number
+            };
 
-        var momentTmp = Gregorian.moment(options);
-        var twoHours     = new Time.Duration(2*60*60); // from +2 to UTC
+            var momentTmp = Gregorian.moment(options);
+            var twoHours     = new Time.Duration(2*60*60); // from +2 to UTC
 
-        favouriteTimeArray[i] = asAlplakeString(momentTmp.add(twoHours)); 
+            favouriteTimeArray[i] = asAlplakeString(momentTmp.add(twoHours));
+        }else{
+            return  [null, null, null, null];
+        }
     }
 
     return [lake, favouriteTimeArray, favouriteTemperatureArray, null];

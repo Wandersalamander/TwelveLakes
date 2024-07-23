@@ -34,43 +34,41 @@ class TwelveLakesView extends WatchUi.View {
         System.println("TwelveLakesView.initialize");
         View.initialize();
 
-        if (Storage.getValue("viewLastUpdateFav") != null){
-            lastUpdateFav = new Time.Moment(Storage.getValue("viewLastUpdateFav"));
-        }
-        if (Storage.getValue("viewLastUpdateProx") != null){
-            lastUpdateProx = new Time.Moment(Storage.getValue("viewLastUpdateProx"));
-        }
+        lastUpdateFav = getViewLastUpdateFav();
+        lastUpdateProx = getViewLastUpdateProx();
 
         updateFavourites();
-        
+        updateCurrent();
 
+        favouriteTemperatureArray = getFavouriteTemperatureArray();
+        favouriteTimeArray = getFavouriteTimeArray();
+        favouriteTemperature = getFavouriteTemperature();
+        
+        currentTemperature = getCurrentTemperature();
+        currentDistance = getCurrentDistance();
+
+
+        makeRequest(false, false);
+
+    }
+    function updateCurrent() as Void{
         self.currentPosition = getPosition();
         if (currentPosition != null){
             self.currentLake = getClosesLake(currentPosition);
         }
-
-        favouriteTemperatureArray = Storage.getValue("favouriteTemperatureArray");
-        favouriteTimeArray = Storage.getValue("favouriteTimeArray");
-
-        favouriteTemperature = Storage.getValue("favouriteTemperature");
-        currentTemperature = Storage.getValue("currentTemperature");
-        currentDistance = Storage.getValue("currentDistance");
-
-
-        makeRequest(false);
-
     }
 
-    function notifyFavUpdate(){
+    function notifyFullUpdate() as Void{
         System.println("TwelveLakesView.notifyFavUpdate");
         updateFavourites();
-        makeRequest(true);
+        updateCurrent();
+        makeRequest(true, true);
     }
 
-    function updateFavourites(){
+    function updateFavourites() as Void{
         System.println("TwelveLakesView.updateFavourites");
-        var pos = Storage.getValue("favouritePosition");
-        var name = Storage.getValue("favouriteLake");
+        var pos = getFavouritePosition();
+        var name = getFavouriteLake();
         if (pos != null && name != null){
             self.favouritePosition = [pos[0].toDouble(), pos[1].toDouble()];
             self.favouriteLake = name;
@@ -110,7 +108,7 @@ class TwelveLakesView extends WatchUi.View {
         System.println("TwelveLakesView.onUpdate headline");
         
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        if (favouriteLake != null && favouriteTemperature != null){
+        if ((favouriteLake != null) && (favouriteTemperature != null)){
             dc.drawText(dc.getWidth()/2, 0.1*dc.getHeight(), Graphics.FONT_MEDIUM, Lang.format("$1$°C", [favouriteTemperature.format("%.1f")]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
             dc.drawText(dc.getWidth()/2, 0.2*dc.getHeight(), Graphics.FONT_MEDIUM, Lang.format("$1$$2$", [favouriteLake.substring(0,1).toUpper(), favouriteLake.substring(1, favouriteLake.length())]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
         }
@@ -163,7 +161,6 @@ class TwelveLakesView extends WatchUi.View {
         System.println(favouriteTemperatureArray);
         if (favouriteTemperatureArray != null){
 
-
             var width = spanX / (favouriteTemperatureArray.size());
             var tempMean = mean(favouriteTemperatureArray);
             var tempMin = tempMean - span(favouriteTemperatureArray) / 2.0;
@@ -202,17 +199,17 @@ class TwelveLakesView extends WatchUi.View {
        }
        System.println("Done!");
     }
-    public function makeRequest(forceFav as Boolean) as Void {
+    public function makeRequest(forceFav as Boolean, forceProx as Boolean) as Void {
         System.println("TwelveLakesView.makeRequest");
         makeRequestFav(forceFav);
-        makeRequestProx();
+        makeRequestProx(forceProx);
 
     }
     public function makeRequestFav(forceFav as Boolean) as Void {
         System.println("TwelveLakesView.makeRequestFav");
-        var skipUpdateBelowSeconds    = new Time.Duration(60*60);     // 60 min    
+        var skipUpdateBelowSeconds  = new Time.Duration(60*60);     // 60 min    
         var readyForUpdateFav = true;
-        if (lastUpdateFav!=null){
+        if (lastUpdateFav != null){
             readyForUpdateFav = Time.now().greaterThan(lastUpdateFav.add(skipUpdateBelowSeconds));
         }
         if (forceFav){
@@ -249,14 +246,17 @@ class TwelveLakesView extends WatchUi.View {
         }
     }
 
-    public function makeRequestProx() as Void {
+    public function makeRequestProx(forceProx as Boolean) as Void {
         System.println("TwelveLakesView.makeRequestProx");
         var skipUpdateBelowSeconds2    = new Time.Duration(15*60);     // 60 min    
         var readyForUpdateProx = true;
-        if (lastUpdateProx!=null){
+        if (lastUpdateProx != null){
             readyForUpdateProx = Time.now().greaterThan(lastUpdateProx.add(skipUpdateBelowSeconds2));
         }
         if (currentTemperature == null){
+            readyForUpdateProx = true;   
+        }
+        if (forceProx){
             readyForUpdateProx = true;   
         }
         
@@ -294,17 +294,17 @@ class TwelveLakesView extends WatchUi.View {
             System.println(data);
             if (data instanceof Dictionary){
                 var helper = processReceivedData(data); // lake, favouriteTimeArray, favouriteTemperatureArray
-                if (helper[2] != null){
-                    favouriteTimeArray = helper[1]; // YYYYmmddhhmm
-                    Storage.setValue("favouriteTimeArray", favouriteTimeArray);
+                var favouriteTimeArray = helper[1];
+                var favouriteTemperatureArray = helper[2];
+                if ((favouriteTimeArray != null) && (favouriteTemperatureArray != null)){
+                    setFavouriteTimeArray(favouriteTimeArray);
 
-                    favouriteTemperatureArray = helper[2];
-                    Storage.setValue("favouriteTemperatureArray", favouriteTemperatureArray);
+                    setFavouriteTemperatureArray(favouriteTemperatureArray);
 
-                    favouriteTemperature = favouriteTemperatureArray[9]; // idx=9 is assumend. better to check with timeArray, but lets skip array operations here
-                    Storage.setValue("favouriteTemperature", favouriteTemperature);
+                    favouriteTemperature = favouriteTemperatureArray[(favouriteTemperatureArray.size()/3).toNumber()]; // idx=9 is assumend. better to check with timeArray, but lets skip array operations here
+                    setFavouriteTemperature(favouriteTemperature);
 
-                    Storage.setValue("viewLastUpdateFav", Time.now().value());
+                    setViewLastUpdateFav();
                 }
             }
         } else {
@@ -320,14 +320,15 @@ class TwelveLakesView extends WatchUi.View {
         if (responseCode == 200) {
             System.println(data);
             var helper = processReceivedData(data); // lake, favouriteTimeArray, favouriteTemperatureArray
-            if (helper[2] != null){
-                currentTemperature = helper[2][0];
-                Storage.setValue("currentTemperature", currentTemperature);
+            var favouriteTemperatureArray = helper[2];
+            if (favouriteTemperatureArray != null){
+                currentTemperature = favouriteTemperatureArray[0];
+                setCurrentTemperature(currentTemperature);
 
                 currentDistance = helper[3]; // km?
-                Storage.setValue("currentDistance", currentDistance);
+                setCurrentDistance(currentDistance);
 
-                Storage.setValue("viewLastUpdateProx", Time.now().value());
+                setViewLastUpdateProx();
             }
 
         } else {

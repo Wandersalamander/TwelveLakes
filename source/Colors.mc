@@ -35,14 +35,16 @@ function getColorPos(temperature as Float or Null)  as Float{
     // interval width = 3;
     // min = 10, max = 24
     // so use 10-3; 24+3 as limits
-    pos = (temperature -7.0) / 20.0;
-    
-    // handle values far out of bounds
-    if (pos < (0.0)){
-        pos = 0.0;
-    }
-    if (pos > (1.0)){
-        pos = 1.0;
+    if (temperature != null){
+        pos = (temperature -7.0) / 20.0;
+        
+        // handle values far out of bounds
+        if (pos < (0.0)){
+            pos = 0.0;
+        }
+        if (pos > (1.0)){
+            pos = 1.0;
+        }
     }
     return pos;
 }

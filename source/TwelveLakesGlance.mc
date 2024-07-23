@@ -19,18 +19,16 @@ class WidgetGlanceView extends Ui.GlanceView {
     function initialize() {
         GlanceView.initialize();
         updateFavourites();
-        temperature = Storage.getValue("favouriteTemperature");
-        if (Storage.getValue("glanceLastUpdate") != null){
-            lastUpdate = new Time.Moment(Storage.getValue("glanceLastUpdate"));
-        }
+        temperature = getFavouriteTemperature();
+        lastUpdate = getGlanceLastUpdate();
         if ((favouriteLake != null) && (favouritePosition != null)){
             makeRequest(favouriteLake, favouritePosition);
         }
     }
 
-    function updateFavourites(){
-        var pos = Storage.getValue("favouritePosition");
-        var name = Storage.getValue("favouriteLake");
+    function updateFavourites() as Void{
+        var pos = getFavouritePosition();
+        var name = getFavouriteLake();
         if (pos != null && name != null){
             self.favouritePosition = [pos[0].toDouble(), pos[1].toDouble()];
             self.favouriteLake = name;
@@ -53,7 +51,7 @@ class WidgetGlanceView extends Ui.GlanceView {
             Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_LEFT
         );
         drawColorBar(dc);
-        if (temperature != null){
+        if ((temperature != null) && (favouriteLake != null)){
             dc.drawText(
                 0,
                 0.8*dc.getHeight(), 
@@ -69,7 +67,7 @@ class WidgetGlanceView extends Ui.GlanceView {
         System.println("Executing\nRequest");
         if ((lakeName != null) && (position != null)){
             var readyForUpdate = true;
-        if (lastUpdate!=null){
+        if (lastUpdate != null){
             var skipUpdateBelowSeconds = new Time.Duration(60 * 60); // 60 min
             readyForUpdate = Time.now().greaterThan(lastUpdate.add(skipUpdateBelowSeconds));
         }
@@ -95,7 +93,7 @@ class WidgetGlanceView extends Ui.GlanceView {
         }
     }
 
-    function drawColorBar(dc){
+    function drawColorBar(dc as Gfx.Dc) as Void{
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         var totalWidth = dc.getWidth();
         var barWidth = totalWidth / 6.0;
