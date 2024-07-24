@@ -61,7 +61,7 @@ function getFavouriteLake() as String {
     if (ret == null){
         return myDefault;
     }else{
-        return ret;
+        return (ret as String);
     }
 }
 
@@ -107,11 +107,11 @@ function getCurrentDistance()  as Float or Null{
 
 
 function getCurrentLake()  as String or Null{
-    return Storage.getValue("currentLake");
+    return Storage.getValue("currentLake") as String or Null;
 
 }
 function getCurrentPosition()  as [Double, Double] or Null{
-    return Storage.getValue("currentPosition");
+    return Storage.getValue("currentPosition") as [Double, Double] or Null;
 
 }
 
@@ -120,6 +120,6 @@ function setCurrentLake(lake as String) as Void{
     Storage.setValue("currentLake", lake);
 
 }
-function setCurrentPosition(position as [Double, Double]){
+function setCurrentPosition(position as [Double, Double]) as Void {
     Storage.setValue("currentPosition", position);
 }

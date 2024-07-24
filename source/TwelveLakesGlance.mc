@@ -41,7 +41,7 @@ class WidgetGlanceView extends Ui.GlanceView {
     }
 
     //! Make the web request
-    public function makeRequest(forceUpdate) as Void {
+    public function makeRequest(forceUpdate as Boolean) as Void {
         System.println("Executing\nRequest");
         var lastUpdate = getGlanceLastUpdate();
         var lakeName = getFavouriteLake();
@@ -133,11 +133,14 @@ class WidgetGlanceView extends Ui.GlanceView {
                 var temperature;
                 if (__favouriteTemperatureArray != null){
                     temperature = __favouriteTemperatureArray[0];
+                    if (temperature != null){
+                        setFavouriteTemperature(temperature);
+                        setGlanceLastUpdate();
+                    }
                 }else{
                     temperature = null;
                 }
-                setFavouriteTemperature(temperature);
-                setGlanceLastUpdate();
+
                 }
         } else {
         }
