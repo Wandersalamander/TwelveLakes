@@ -5,6 +5,7 @@ import Toybox.Time;
 import Toybox.Time.Gregorian;
 import Toybox.Math;
 import Toybox.System;
+
 (:glance)
 const LAKES_3D as Array<String> = [
     "geneva",
@@ -120,7 +121,7 @@ const POS_LAKES as Dictionary<String, Array<[Float, Float]>>  = {
 (:glance)
 function lakeType(lake as String) as String{
     System.println("lakeType");
-    for(var i = 0; i < LAKES_3D.size(); i++ ) {
+    for (var i = 0; i < LAKES_3D.size(); i++ ) {
         if (LAKES_3D[i].equals(lake)){
             return "3D";
         }
@@ -190,16 +191,14 @@ function asAlplakeString(time as Time.Moment) as String{
         time.subtract(twoHours) as Time.Moment,
         Time.FORMAT_SHORT
     );
-    var result = Lang.format(
-        "$1$$2$$3$$4$$5$",
-        [
-            gregorianInfo.year.format("%04d"),
-            gregorianInfo.month.format("%02d"),
-            gregorianInfo.day.format("%02d"),
-            gregorianInfo.hour.format("%02d"),
-            gregorianInfo.min.format("%02d"),
-        ]
-    );
+    var result = 
+        gregorianInfo.year.format("%04d") +
+        (gregorianInfo.month as Number).format("%02d") + // Number because of Time.FORMAT_SHORT
+        gregorianInfo.day.format("%02d") +
+        gregorianInfo.hour.format("%02d") +
+        gregorianInfo.min.format("%02d")
+    ;
+
     return result;
 }
 
@@ -262,12 +261,20 @@ function alplakesApiString1DLake(
 (:glance)
 function processReceivedData(data as Dictionary) as [String, Array<String>, Array<Float>, Float] or [String, Array<String>, Array<Float>, Null] or [Null, Null, Null, Null]{
     System.println("processReceivedData");
-    var lake = data["lake"];
+    var lake;
+    if (data.hasKey("lake")){
+        lake = data["lake"];
+
+    }else{
+        lake = null;
+    }
+
+
     if (lake == null){
         return [null, null, null, null];
     }else{
         var helper;
-        if (lakeType(lake).equals("1D")){
+        if ((lakeType(lake as String)).equals("1D")){
             helper = processReceivedData1D(data);
         }else{
             helper = processReceivedData3D(data);
@@ -314,11 +321,11 @@ function processReceivedData1D(data as Dictionary) as [String, Array<String>, Ar
         if (s.length() >= 16){
 
             var options = {
-                :year   => s.substring(0, 4).toNumber() as Number,
-                :month  => s.substring(5, 7).toNumber()  as Number,
-                :day    => s.substring(8, 10).toNumber() as Number,
-                :hour   => s.substring(11, 13).toNumber() as Number,
-                :minute => s.substring(14, 16).toNumber() as Number
+                :year   => (s.substring(0, 4) as String).toNumber() as Number,
+                :month  => (s.substring(5, 7) as String).toNumber() as Number,
+                :day    => (s.substring(8, 10) as String).toNumber() as Number,
+                :hour   => (s.substring(11, 13) as String).toNumber() as Number,
+                :minute => (s.substring(14, 16) as String).toNumber() as Number
             };
 
             var momentTmp = Gregorian.moment(options);

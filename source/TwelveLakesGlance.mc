@@ -10,34 +10,10 @@ using Toybox.Application.Storage;
 
 (:glance)
 class WidgetGlanceView extends Ui.GlanceView {
-    var response_info as String = "init";
-    public var favouriteLake as String or Null= null;
-    public var favouritePosition as Array<Double> or Null= null;
-    var temperature as Float or Null = null;
-    var lastUpdate as Time.Moment or Null = null;
 
     function initialize() {
         GlanceView.initialize();
-        updateFavourites();
-        temperature = getFavouriteTemperature();
-        lastUpdate = getGlanceLastUpdate();
-        if ((favouriteLake != null) && (favouritePosition != null)){
-            makeRequest(favouriteLake, favouritePosition);
-        }
-    }
-
-    function updateFavourites() as Void{
-        var pos = getFavouritePosition();
-        var name = getFavouriteLake();
-        if (pos != null && name != null){
-            self.favouritePosition = [pos[0].toDouble(), pos[1].toDouble()];
-            self.favouriteLake = name;
-        }
-        else{
-            // todo toast 
-            self.favouriteLake = "geneva";
-            self.favouritePosition = [46.210417.toDouble(), 6.154484.toDouble()];
-        }
+        makeRequest(false);
     }
 
 
@@ -51,7 +27,9 @@ class WidgetGlanceView extends Ui.GlanceView {
             Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_LEFT
         );
         drawColorBar(dc);
-        if ((temperature != null) && (favouriteLake != null)){
+        var temperature = getFavouriteTemperature();
+        var favouriteLake = getFavouriteLake();
+        if (temperature != null && favouriteLake != null){
             dc.drawText(
                 0,
                 0.8*dc.getHeight(), 
@@ -63,13 +41,19 @@ class WidgetGlanceView extends Ui.GlanceView {
     }
 
     //! Make the web request
-    public function makeRequest(lakeName as String, position as [Double,Double] or Array<Double>) as Void {
+    public function makeRequest(forceUpdate) as Void {
         System.println("Executing\nRequest");
+        var lastUpdate = getGlanceLastUpdate();
+        var lakeName = getFavouriteLake();
+        var position = getFavouritePosition();
         if ((lakeName != null) && (position != null)){
             var readyForUpdate = true;
         if (lastUpdate != null){
             var skipUpdateBelowSeconds = new Time.Duration(60 * 60); // 60 min
             readyForUpdate = Time.now().greaterThan(lastUpdate.add(skipUpdateBelowSeconds));
+        }
+        if (forceUpdate){
+            readyForUpdate = true;
         }
         if (readyForUpdate == false){
             return;
@@ -111,7 +95,7 @@ class WidgetGlanceView extends Ui.GlanceView {
             dc.setColor(colorTmp, Graphics.COLOR_TRANSPARENT);
             dc.fillRectangle(i*barWidth+(delta), dc.getHeight()/2.0-height/2.0, barWidth-(2*delta), height);
         }
-
+        var temperature = getFavouriteTemperature();
         if (temperature != null){
 
             var colorHighlight = getColor(temperature);
@@ -145,18 +129,17 @@ class WidgetGlanceView extends Ui.GlanceView {
             System.println(data);
             if (data instanceof Dictionary){
                 var helper = processReceivedData(data); // lake, favouriteTimeArray, favouriteTemperatureArray
-                var favouriteTemperatureArray = helper[2];
-                if (favouriteTemperatureArray != null){
-                    temperature = favouriteTemperatureArray[0];
+                var __favouriteTemperatureArray = helper[2];
+                var temperature;
+                if (__favouriteTemperatureArray != null){
+                    temperature = __favouriteTemperatureArray[0];
                 }else{
                     temperature = null;
                 }
-                Storage.setValue("favouriteTemperature", temperature);
-                Storage.setValue("glanceLastUpdate", Time.now().value());
+                setFavouriteTemperature(temperature);
+                setGlanceLastUpdate();
                 }
-            response_info = "Sucessful";
         } else {
-            response_info = "Failed to load\nError: " + responseCode.toString();
         }
         requestUpdate();
     }

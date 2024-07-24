@@ -27,11 +27,11 @@ function setGlanceLastUpdate() as Void{
     
     Storage.setValue("glanceLastUpdate", Time.now().value() as Number);
 }
-function setViewLastUpdateProx() as Void{
-    Storage.setValue("viewLastUpdateProx", Time.now().value() as Number);
+function setLastUpdateProx() as Void{
+    Storage.setValue("lastUpdateProx", Time.now().value() as Number);
 }
-function setViewLastUpdateFav() as Void{
-    Storage.setValue("viewLastUpdateFav", Time.now().value() as Number);
+function setLastUpdateFav() as Void{
+    Storage.setValue("lastUpdateFav", Time.now().value() as Number);
 }
 
 function setCurrentTemperature(currentTemperature as Float) as Void{
@@ -44,13 +44,27 @@ function setCurrentDistance(currentDistance as Float) as Void{
 
 // Getters
 (:glance)
-function getFavouritePosition() as [Double, Double] or Null {
-    return Storage.getValue("favouritePosition")  as [Double, Double] or Null;
+function getFavouritePosition() as [Double, Double] {
+    var myDefault = [46.287075.toDouble(), 6.169610.toDouble()];
+    var ret =  Storage.getValue("favouritePosition") as [Double, Double] or Null;
+    if (ret == null){
+        return myDefault;
+    }else{
+        return ret;
+    }
 }
+
 (:glance)
-function getFavouriteLake() as String  or Null{
-    return Storage.getValue("favouriteLake") as String  or Null;
+function getFavouriteLake() as String {
+    var myDefault = "geneva";
+    var ret =  Storage.getValue("favouriteLake");
+    if (ret == null){
+        return myDefault;
+    }else{
+        return ret;
+    }
 }
+
 (:glance)
 function getFavouriteTemperature() as Float or Null{
     return Storage.getValue("favouriteTemperature") as Float or Null;
@@ -74,11 +88,12 @@ function _getLastUpdate(name as String)  as Time.Moment or Null{
 function getGlanceLastUpdate() as Time.Moment or Null{
         return _getLastUpdate("glanceLastUpdate");
 }
-function getViewLastUpdateProx() as Time.Moment or Null{
-    return _getLastUpdate("viewLastUpdateProx");
+function getLastUpdateProx() as Time.Moment or Null{
+    return _getLastUpdate("lastUpdateProx");
 }
-function getViewLastUpdateFav() as Time.Moment or Null{
-    return _getLastUpdate("viewLastUpdateFav");
+(:glance)
+function getLastUpdateFav() as Time.Moment or Null{
+    return _getLastUpdate("lastUpdateFav");
 
 }
 
@@ -87,4 +102,24 @@ function getCurrentTemperature()  as Float or Null{
 }
 function getCurrentDistance()  as Float or Null{
     return Storage.getValue("currentDistance")  as Float or Null;
+}
+
+
+
+function getCurrentLake()  as String or Null{
+    return Storage.getValue("currentLake");
+
+}
+function getCurrentPosition()  as [Double, Double] or Null{
+    return Storage.getValue("currentPosition");
+
+}
+
+
+function setCurrentLake(lake as String) as Void{
+    Storage.setValue("currentLake", lake);
+
+}
+function setCurrentPosition(position as [Double, Double]){
+    Storage.setValue("currentPosition", position);
 }

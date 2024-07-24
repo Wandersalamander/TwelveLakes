@@ -3,56 +3,56 @@ import Toybox.Lang;
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc"; @line = 3; ]
 function maximum(a as Array<Float> or Array<Double> or Array<Number>) as Float or Double or Number {
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_3_99_11_0_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 4 2 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 4 4 ]
     [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_3_99_11_0_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_3_99_11_0_stop" ]
     %max.1 = local;
     %tmp.2 = lgetv %a;
     %tmp.3 = 0;
     %tmp.4 = agetv %tmp.2 %tmp.3;
     lputv %max.1 %tmp.4;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 5 2 ]
-    for @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_test @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_incr @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_init:
-    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_begin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_end" ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 5 4 ]
+    for @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_test @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_incr @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_init:
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_begin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_end" ]
     %i.2 = local;
     %tmp.5 = 1;
     lputv %i.2 %tmp.5;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_test:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_test:
     %tmp.7 = lgetv %i.2;
     %tmp.8 = lgetv %a;
     %tmp.9 = getv function %tmp.8 :size;
     %tmp.10 = invoke %tmp.8 %tmp.9();
     %tmp.11 = lt %tmp.7 %tmp.10;
-    bf %tmp.11 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_begin:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_37_9_2_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 6 4 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_4_8_4_if_stmt:
+    bf %tmp.11 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_begin:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_39_9_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 6 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_8_8_8_if_stmt:
     %tmp.13 = lgetv %a;
     %tmp.15 = lgetv %i.2;
     %tmp.16 = agetv %tmp.13 %tmp.15;
     %tmp.18 = lgetv %max.1;
     %tmp.19 = gt %tmp.16 %tmp.18;
-    bf %tmp.19 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_4_8_4_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_4_8_4_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_20_8_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 7 6 ]
+    bf %tmp.19 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_8_8_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_8_8_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_24_8_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 7 12 ]
     %tmp.21 = lgetv %a;
     %tmp.23 = lgetv %i.2;
     %tmp.24 = agetv %tmp.21 %tmp.23;
     lputv %max.1 %tmp.24;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_20_8_4_stop:
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_4_8_4_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_4_8_4_if_end:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_37_9_2_stop:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_incr:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_24_8_8_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_8_8_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_6_8_8_8_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_39_9_4_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_incr:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 5 ]
     %tmp.27 = lgetv %i.2;
     %tmp.28 = add %tmp.27 1;
     lputv %i.2 %tmp.28;
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_test;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_2_9_2_for_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 10 2 ]
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_test;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_5_4_9_4_for_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 10 4 ]
     %tmp.30 = lgetv %max.1;
     ret %tmp.30;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_3_99_11_0_stop:
@@ -60,56 +60,56 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_3_99_11
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc"; @line = 13; ]
 function minimum(a as Array<Float> or Array<Double> or Array<Number>) as Float or Double or Number {
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_13_99_21_0_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 14 2 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 14 4 ]
     [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_13_99_21_0_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_13_99_21_0_stop" ]
     %min.1 = local;
     %tmp.2 = lgetv %a;
     %tmp.3 = 0;
     %tmp.4 = agetv %tmp.2 %tmp.3;
     lputv %min.1 %tmp.4;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 15 2 ]
-    for @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_test @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_incr @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_init:
-    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_begin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_end" ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 15 4 ]
+    for @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_test @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_incr @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_init:
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_begin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_end" ]
     %i.2 = local;
     %tmp.5 = 1;
     lputv %i.2 %tmp.5;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_test:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_test:
     %tmp.7 = lgetv %i.2;
     %tmp.8 = lgetv %a;
     %tmp.9 = getv function %tmp.8 :size;
     %tmp.10 = invoke %tmp.8 %tmp.9();
     %tmp.11 = lt %tmp.7 %tmp.10;
-    bf %tmp.11 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_begin:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_37_19_2_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 16 4 ]
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_4_18_4_if_stmt:
+    bf %tmp.11 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_begin:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_39_19_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 16 8 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_8_18_8_if_stmt:
     %tmp.13 = lgetv %a;
     %tmp.15 = lgetv %i.2;
     %tmp.16 = agetv %tmp.13 %tmp.15;
     %tmp.18 = lgetv %min.1;
     %tmp.19 = lt %tmp.16 %tmp.18;
-    bf %tmp.19 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_4_18_4_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_4_18_4_if_true:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_20_18_4_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 17 6 ]
+    bf %tmp.19 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_8_18_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_8_18_8_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_24_18_8_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 17 12 ]
     %tmp.21 = lgetv %a;
     %tmp.23 = lgetv %i.2;
     %tmp.24 = agetv %tmp.21 %tmp.23;
     lputv %min.1 %tmp.24;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_20_18_4_stop:
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_4_18_4_if_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_4_18_4_if_end:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_37_19_2_stop:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_incr:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_24_18_8_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_8_18_8_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_16_8_18_8_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_39_19_4_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_incr:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 15 ]
     %tmp.27 = lgetv %i.2;
     %tmp.28 = add %tmp.27 1;
     lputv %i.2 %tmp.28;
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_test;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_2_19_2_for_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 20 2 ]
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_test;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_15_4_19_4_for_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 20 4 ]
     %tmp.30 = lgetv %min.1;
     ret %tmp.30;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_13_99_21_0_stop:
@@ -117,28 +117,28 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_13_99_2
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc"; @line = 23; ]
 function mean(a as Array<Float> or Array<Double> or Array<Number>) as Float {
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_23_76_30_0_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 24 2 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 24 4 ]
     [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_23_76_30_0_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_23_76_30_0_stop" ]
     %mean.1 = local;
     %tmp.1 = 0.0;
     lputv %mean.1 %tmp.1;
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 25 2 ]
-    for @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_test @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_incr @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_init:
-    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_begin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_end" ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 25 4 ]
+    for @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_test @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_incr @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_init:
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_begin" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_end" ]
     %i.2 = local;
     %tmp.2 = 0;
     lputv %i.2 %tmp.2;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_test:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_test:
     %tmp.4 = lgetv %i.2;
     %tmp.5 = lgetv %a;
     %tmp.6 = getv function %tmp.5 :size;
     %tmp.7 = invoke %tmp.5 %tmp.6();
     %tmp.8 = lt %tmp.4 %tmp.7;
-    bf %tmp.8 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_end;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_begin:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_37_27_2_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 26 4 ]
+    bf %tmp.8 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_begin:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_39_27_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 26 8 ]
     %tmp.9 = lgetv %mean.1;
     %tmp.11 = lgetv %a;
     %tmp.13 = lgetv %i.2;
@@ -147,15 +147,15 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_37_2
     %tmp.16 = invoke %tmp.14 %tmp.15();
     %tmp.17 = add %tmp.9 %tmp.16;
     lputv %mean.1 %tmp.17;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_37_27_2_stop:
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_incr:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_39_27_4_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_incr:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 25 ]
     %tmp.20 = lgetv %i.2;
     %tmp.21 = add %tmp.20 1;
     lputv %i.2 %tmp.21;
-    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_test;
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_2_27_2_for_end:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 28 2 ]
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_test;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_25_4_27_4_for_end:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 28 4 ]
     %tmp.23 = lgetv %mean.1;
     %tmp.24 = lgetv %a;
     %tmp.25 = getv function %tmp.24 :size;
@@ -169,7 +169,7 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_23_76_3
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc"; @line = 33; ]
 function span(a as Array<Float> or Array<Double> or Array<Number>) as Float or Double or Number {
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyMath_mc_33_96_35_0_start:
-[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 34 2 ]
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyMath.mc" 34 4 ]
     %tmp.1 = self;
     %tmp.2 = getv function %tmp.1 :maximum;
     %tmp.4 = lgetv %a;

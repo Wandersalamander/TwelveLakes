@@ -9,7 +9,6 @@ enum
     UPDATE_ALL,
     CREDITS
 }
-const GPS_COMPLAINT = "GPS quality too low!";
 
 
 class MyActionMenuDelegate extends WatchUi.ActionMenuDelegate {
@@ -31,30 +30,32 @@ class MyActionMenuDelegate extends WatchUi.ActionMenuDelegate {
 
     function onSelect(item as WatchUi.ActionMenuItem) as Void{
         System.println("MyActionMenuDelegate.onSelect");
-        var Id = item.getId();
-        if (Id != null){
-            switch (Id){
-                case GPS:
-                    var position_lat_long = getPosition();
-                    var newFavouriteLake = getClosesLake(position_lat_long);
-                    if (position_lat_long!= null and newFavouriteLake != null){
-                        Storage.setValue("favouritePosition", position_lat_long);
-                        Storage.setValue("favouriteLake", newFavouriteLake);
-                        WatchUi.showToast(newFavouriteLake, null);
+        if (item has :getId){
+            var Id = item.getId();
+            if (Id != null){
+                switch (Id){
+                    case GPS:
+                        var position_lat_long = getPosition();
+                        var newFavouriteLake = getClosesLake(position_lat_long);
+                        if (position_lat_long != null and newFavouriteLake != null){
+                            setFavouritePosition(position_lat_long);
+                            setFavouriteLake(newFavouriteLake);
+                            WatchUi.showToast(newFavouriteLake, null);
+                            self.view.notifyFullUpdate();
+                        }else{
+                            WatchUi.showToast("GPS quality too low", null);
+                        }
+                        break; // mandatory, otherwise next case also executed
+                    case CREDITS:
+                        WatchUi.showToast("Thanks Alplakes.ch", null);
+                        break; // mandatory, otherwise next case also executed
+                    case UPDATE_ALL:
                         self.view.notifyFullUpdate();
-                    }else{
-                        WatchUi.showToast(GPS_COMPLAINT, null);
-                    }
-                    break; // mandatory, otherwise next case also executed
-                case CREDITS:
-                    WatchUi.showToast("Thanks to Alplakes.ch", null);
-                    break; // mandatory, otherwise next case also executed
-                case UPDATE_ALL:
-                    self.view.notifyFullUpdate();
-                    break; // mandatory, otherwise next case also executed
+                        break; // mandatory, otherwise next case also executed
+                }
             }
-        }
         // disable GPS
+        }
         Position.enableLocationEvents(Position.LOCATION_DISABLE, method(:onPosition));
     }
     public function onPosition(info as Info) as Void {

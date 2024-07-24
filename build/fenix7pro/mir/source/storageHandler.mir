@@ -1,0 +1,399 @@
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 2; ]
+import Toybox.Time;
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 3; ]
+import Toybox.Application.Storage;
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 4; ]
+import Toybox.Application;
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 5; glance = true; ]
+function setFavouritePosition(position_lat_long as [Double, Double]) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_6_76_8_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 7 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "favouritePosition";
+    %tmp.5 = lgetv %position_lat_long;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_6_76_8_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 10; ]
+function setFavouriteLake(newFavouriteLake as String) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_10_61_12_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 11 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "favouriteLake";
+    %tmp.5 = lgetv %newFavouriteLake;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_10_61_12_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 13; glance = true; ]
+function setFavouriteTemperature(temperature as Float) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_14_62_16_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 15 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "favouriteTemperature";
+    %tmp.5 = lgetv %temperature;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_14_62_16_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 17; ]
+function setFavouriteTemperatureArray(favouriteTemperatureArray as Array<Float>) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_17_88_19_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 18 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "favouriteTemperatureArray";
+    %tmp.5 = lgetv %favouriteTemperatureArray;
+    %tmp.6 = as %tmp.5 Application.PropertyValueType;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.6);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_17_88_19_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 20; ]
+function setFavouriteTimeArray(favouriteTimeArray as Array<String>) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_20_75_22_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 21 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "favouriteTimeArray";
+    %tmp.5 = lgetv %favouriteTimeArray;
+    %tmp.6 = as %tmp.5 Application.PropertyValueType;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.6);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_20_75_22_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 25; glance = true; ]
+function setGlanceLastUpdate() as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_26_38_29_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 28 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "glanceLastUpdate";
+    %tmp.4 = getm $.Toybox.Time;
+    %tmp.5 = getv function %tmp.4 :now;
+    %tmp.6 = invoke %tmp.4 %tmp.5();
+    %tmp.7 = getv function %tmp.6 :value;
+    %tmp.8 = invoke %tmp.6 %tmp.7();
+    %tmp.9 = as %tmp.8 Number;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_26_38_29_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 30; ]
+function setLastUpdateProx() as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_30_36_32_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 31 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "lastUpdateProx";
+    %tmp.4 = getm $.Toybox.Time;
+    %tmp.5 = getv function %tmp.4 :now;
+    %tmp.6 = invoke %tmp.4 %tmp.5();
+    %tmp.7 = getv function %tmp.6 :value;
+    %tmp.8 = invoke %tmp.6 %tmp.7();
+    %tmp.9 = as %tmp.8 Number;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_30_36_32_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 33; ]
+function setLastUpdateFav() as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_33_35_35_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 34 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "lastUpdateFav";
+    %tmp.4 = getm $.Toybox.Time;
+    %tmp.5 = getv function %tmp.4 :now;
+    %tmp.6 = invoke %tmp.4 %tmp.5();
+    %tmp.7 = getv function %tmp.6 :value;
+    %tmp.8 = invoke %tmp.6 %tmp.7();
+    %tmp.9 = as %tmp.8 Number;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_33_35_35_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 37; ]
+function setCurrentTemperature(currentTemperature as Float) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_37_67_39_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 38 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "currentTemperature";
+    %tmp.5 = lgetv %currentTemperature;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_37_67_39_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 40; ]
+function setCurrentDistance(currentDistance as Float) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_40_61_42_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 41 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "currentDistance";
+    %tmp.5 = lgetv %currentDistance;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_40_61_42_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 46; glance = true; ]
+function getFavouritePosition() as [Double, Double] {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_47_52_55_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 48 4 ]
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_47_52_55_0_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_47_52_55_0_stop" ]
+    %myDefault.1 = local;
+    %tmp.1 = newa 2;
+    %tmp.2 = 46.287075;
+    %tmp.3 = getv function %tmp.2 :toDouble;
+    %tmp.4 = invoke %tmp.2 %tmp.3();
+    %tmp.5 = dup %tmp.1;
+    %tmp.6 = aputv %tmp.5 0 %tmp.4;
+    %tmp.7 = 6.169610;
+    %tmp.8 = getv function %tmp.7 :toDouble;
+    %tmp.9 = invoke %tmp.7 %tmp.8();
+    %tmp.10 = dup %tmp.6;
+    %tmp.11 = aputv %tmp.10 1 %tmp.9;
+    lputv %myDefault.1 %tmp.11;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 49 4 ]
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_47_52_55_0_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_47_52_55_0_stop" ]
+    %ret.2 = local;
+    %tmp.12 = getm $.Toybox.Application.Storage;
+    %tmp.13 = getv function %tmp.12 :getValue;
+    %tmp.14 = "favouritePosition";
+    %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
+    %tmp.16 = as %tmp.15 [Double, Double] or Null;
+    lputv %ret.2 %tmp.16;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 50 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_50_4_54_4_if_stmt:
+    %tmp.18 = lgetv %ret.2;
+    %tmp.19 = null;
+    %tmp.20 = eq %tmp.18 %tmp.19;
+    bf %tmp.20 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_50_4_54_4_if_false;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_50_4_54_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_50_20_52_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 51 8 ]
+    %tmp.22 = lgetv %myDefault.1;
+    ret %tmp.22;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_50_20_52_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_50_4_54_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_50_4_54_4_if_false:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_52_9_54_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 53 8 ]
+    %tmp.24 = lgetv %ret.2;
+    %tmp.25 = as %tmp.24 { (!Null) };
+    ret %tmp.25;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_52_9_54_4_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_50_4_54_4_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_47_52_55_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 57; glance = true; ]
+function getFavouriteLake() as String {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_58_38_66_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 59 4 ]
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_58_38_66_0_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_58_38_66_0_stop" ]
+    %myDefault.1 = local;
+    %tmp.1 = "geneva";
+    lputv %myDefault.1 %tmp.1;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 60 4 ]
+    [ "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_58_38_66_0_start" "C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_58_38_66_0_stop" ]
+    %ret.2 = local;
+    %tmp.2 = getm $.Toybox.Application.Storage;
+    %tmp.3 = getv function %tmp.2 :getValue;
+    %tmp.4 = "favouriteLake";
+    %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+    lputv %ret.2 %tmp.5;
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 61 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_61_4_65_4_if_stmt:
+    %tmp.7 = lgetv %ret.2;
+    %tmp.8 = null;
+    %tmp.9 = eq %tmp.7 %tmp.8;
+    bf %tmp.9 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_61_4_65_4_if_false;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_61_4_65_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_61_20_63_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 62 8 ]
+    %tmp.11 = lgetv %myDefault.1;
+    ret %tmp.11;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_61_20_63_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_61_4_65_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_61_4_65_4_if_false:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_63_9_65_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 64 8 ]
+    %tmp.13 = lgetv %ret.2;
+    %tmp.14 = as %tmp.13 { (!Null) };
+    ret %tmp.14;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_63_9_65_4_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_61_4_65_4_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_58_38_66_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 68; glance = true; ]
+function getFavouriteTemperature() as Float or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_69_51_71_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 70 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :getValue;
+    %tmp.3 = "favouriteTemperature";
+    %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+    %tmp.5 = as %tmp.4 Float or Null;
+    ret %tmp.5;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_69_51_71_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 72; ]
+function getFavouriteTemperatureArray() as Array<Float> or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_72_63_74_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 73 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :getValue;
+    %tmp.3 = "favouriteTemperatureArray";
+    %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+    %tmp.5 = as %tmp.4 Array<Float> or Null;
+    ret %tmp.5;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_72_63_74_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 75; ]
+function getFavouriteTimeArray() as Array<String> or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_75_57_77_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 76 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :getValue;
+    %tmp.3 = "favouriteTimeArray";
+    %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+    %tmp.5 = as %tmp.4 Array<String> or Null;
+    ret %tmp.5;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_75_57_77_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 79; glance = true; ]
+function _getLastUpdate(name as String) as Time.Moment or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_80_63_86_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 81 4 ]
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_81_4_85_4_if_stmt:
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :getValue;
+    %tmp.4 = lgetv %name;
+    %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.4);
+    %tmp.6 = null;
+    %tmp.7 = ne %tmp.5 %tmp.6;
+    bf %tmp.7 @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_81_4_85_4_if_false;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_81_4_85_4_if_true:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_81_39_83_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 82 8 ]
+    %tmp.10 = getm $.Toybox.Time;
+    %tmp.11 = getv function ? %tmp.10 :Moment;
+    %tmp.12 = getm $.Toybox.Application.Storage;
+    %tmp.13 = getv function %tmp.12 :getValue;
+    %tmp.15 = lgetv %name;
+    %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.15);
+    %tmp.17 = as %tmp.16 Number;
+    %tmp.8 = newc %tmp.11 (%tmp.17);
+    ret %tmp.8;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_81_39_83_4_stop:
+    goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_81_4_85_4_if_end;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_81_4_85_4_if_false:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_83_9_85_4_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 84 12 ]
+    %tmp.18 = null;
+    ret %tmp.18;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_83_9_85_4_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_81_4_85_4_if_end:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_80_63_86_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 87; glance = true; ]
+function getGlanceLastUpdate() as Time.Moment or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_88_53_90_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 89 8 ]
+    %tmp.1 = self;
+    %tmp.2 = getv function %tmp.1 :_getLastUpdate;
+    %tmp.3 = "glanceLastUpdate";
+    %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+    ret %tmp.4;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_88_53_90_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 91; ]
+function getLastUpdateProx() as Time.Moment or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_91_51_93_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 92 4 ]
+    %tmp.1 = self;
+    %tmp.2 = getv function %tmp.1 :_getLastUpdate;
+    %tmp.3 = "lastUpdateProx";
+    %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+    ret %tmp.4;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_91_51_93_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 94; glance = true; ]
+function getLastUpdateFav() as Time.Moment or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_95_50_98_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 96 4 ]
+    %tmp.1 = self;
+    %tmp.2 = getv function %tmp.1 :_getLastUpdate;
+    %tmp.3 = "lastUpdateFav";
+    %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+    ret %tmp.4;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_95_50_98_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 100; ]
+function getCurrentTemperature() as Float or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_100_50_102_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 101 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :getValue;
+    %tmp.3 = "currentTemperature";
+    %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+    %tmp.5 = as %tmp.4 Float or Null;
+    ret %tmp.5;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_100_50_102_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 103; ]
+function getCurrentDistance() as Float or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_103_47_105_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 104 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :getValue;
+    %tmp.3 = "currentDistance";
+    %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+    %tmp.5 = as %tmp.4 Float or Null;
+    ret %tmp.5;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_103_47_105_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 109; ]
+function getCurrentLake() as String or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_109_44_112_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 110 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :getValue;
+    %tmp.3 = "currentLake";
+    %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+    ret %tmp.4;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_109_44_112_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 113; ]
+function getCurrentPosition() as [Double, Double] or Null {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_113_58_116_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 114 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :getValue;
+    %tmp.3 = "currentPosition";
+    %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+    ret %tmp.4;
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_113_58_116_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 119; ]
+function setCurrentLake(lake as String) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_119_47_122_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 120 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "currentLake";
+    %tmp.5 = lgetv %lake;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_119_47_122_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 123; ]
+function setCurrentPosition(position as [Double, Double]) {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_123_57_125_0_start:
+[ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 124 4 ]
+    %tmp.1 = getm $.Toybox.Application.Storage;
+    %tmp.2 = getv function %tmp.1 :setValue;
+    %tmp.3 = "currentPosition";
+    %tmp.5 = lgetv %position;
+    invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_123_57_125_0_stop:
+}
+[ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 1; ]
+<init> {
+}
