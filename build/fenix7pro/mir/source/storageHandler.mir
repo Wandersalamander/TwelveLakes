@@ -217,7 +217,8 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 64 8 ]
     %tmp.13 = lgetv %ret.2;
     %tmp.14 = as %tmp.13 { (!Null) };
-    ret %tmp.14;
+    %tmp.15 = as %tmp.14 String;
+    ret %tmp.15;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_63_9_65_4_stop:
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_61_4_65_4_if_end:
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_58_38_66_0_stop:
@@ -358,7 +359,8 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc
     %tmp.2 = getv function %tmp.1 :getValue;
     %tmp.3 = "currentLake";
     %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
-    ret %tmp.4;
+    %tmp.5 = as %tmp.4 String or Null;
+    ret %tmp.5;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_109_44_112_0_stop:
 }
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 113; ]
@@ -369,7 +371,8 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc
     %tmp.2 = getv function %tmp.1 :getValue;
     %tmp.3 = "currentPosition";
     %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
-    ret %tmp.4;
+    %tmp.5 = as %tmp.4 [Double, Double] or Null;
+    ret %tmp.5;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_113_58_116_0_stop:
 }
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 119; ]
@@ -384,15 +387,15 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_119_47_122_0_stop:
 }
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 123; ]
-function setCurrentPosition(position as [Double, Double]) {
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_123_57_125_0_start:
+function setCurrentPosition(position as [Double, Double]) as Void {
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_123_66_125_0_start:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc" 124 4 ]
     %tmp.1 = getm $.Toybox.Application.Storage;
     %tmp.2 = getv function %tmp.1 :setValue;
     %tmp.3 = "currentPosition";
     %tmp.5 = lgetv %position;
     invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
-C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_123_57_125_0_stop:
+C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_storageHandler_mc_123_66_125_0_stop:
 }
 [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\storageHandler.mc"; @line = 1; ]
 <init> {

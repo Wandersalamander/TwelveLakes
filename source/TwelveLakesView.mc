@@ -87,7 +87,7 @@ class TwelveLakesView extends WatchUi.View {
             dc.drawText(dc.getWidth() / 2.0, 0.1*dc.getHeight(), Graphics.FONT_MEDIUM, Lang.format("$1$°C", [favouriteTemperature.format("%.1f")]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
         }
         if (favouriteLake != null){
-            dc.drawText(dc.getWidth() / 2.0, 0.2*dc.getHeight(), Graphics.FONT_MEDIUM, Lang.format("$1$$2$", [favouriteLake.substring(0,1).toUpper(), favouriteLake.substring(1, favouriteLake.length())]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth() / 2.0, 0.2*dc.getHeight(), Graphics.FONT_MEDIUM, Lang.format("$1$", [readableLakeName(favouriteLake)]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
         }
 
         var text;
@@ -102,7 +102,7 @@ class TwelveLakesView extends WatchUi.View {
         }
         dc.drawText(dc.getWidth()/2, 0.800*dc.getHeight(), Graphics.FONT_AUX1, text, Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
         if (currentLake != null){
-            dc.drawText(dc.getWidth()/2, 0.875*dc.getHeight(), Graphics.FONT_AUX1, Lang.format("$1$$2$", [currentLake.substring(0,1).toUpper(), currentLake.substring(1, currentLake.length())]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(dc.getWidth()/2, 0.875*dc.getHeight(), Graphics.FONT_AUX1, Lang.format("$1$", [readableLakeName(currentLake)]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
         }
         if (currentTemperature != null){
             dc.drawText(dc.getWidth()/2, 0.950*dc.getHeight(), Graphics.FONT_AUX1, Lang.format("$1$°C", [currentTemperature.format("%.1f")]), Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);

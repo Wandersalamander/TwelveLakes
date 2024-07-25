@@ -1,8 +1,4 @@
 <strings>
-    <string id="AppName">TwelveLakesGlance</string>
-    <string id="edit">Edit</string>
-    <string id="dismiss">Dismiss</string>
-    
     <string id="ageri"  scope="glance">Lake Aegeri</string>
     <string id="baldegg"  scope="glance">Lake Baldegg</string>
     <string id="hallwil"  scope="glance">Lake Hallwil</string>

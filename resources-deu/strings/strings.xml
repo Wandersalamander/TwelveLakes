@@ -1,53 +1,49 @@
 <strings>
-    <string id="AppName">TwelveLakesGlance</string>
-    <string id="edit">Edit</string>
-    <string id="dismiss">Dismiss</string>
-    
-    <string id="ageri"  scope="glance">Lake Aegeri</string>
-    <string id="baldegg"  scope="glance">Lake Baldegg</string>
-    <string id="hallwil"  scope="glance">Lake Hallwil</string>
-    <string id="biel"  scope="glance">Lake Biel</string>
-    <string id="upperconstance"  scope="glance">Lake Constance</string>
-    <string id="lowerconstance"  scope="glance">Lake Constance</string>
-    <string id="brienz"  scope="glance">Lake Brienz</string>
-    <string id="thun"  scope="glance">Lake Thun</string>
-    <string id="geneva"  scope="glance">Lake Geneva</string>
-    <string id="greifensee"  scope="glance">Lake Greifen</string>
-    <string id="gruyere"  scope="glance">Lake of Gruyère</string>
-    <string id="klontalersee"  scope="glance">Lake Klöntal</string>
+    <string id="ageri"  scope="glance">Ägerisee</string>
+    <string id="baldegg"  scope="glance">Baldeggersee</string>
+    <string id="hallwil"  scope="glance">Hallwilersee</string>
+    <string id="biel"  scope="glance">Bielersee</string>
+    <string id="upperconstance"  scope="glance">Bodensee</string>
+    <string id="lowerconstance"  scope="glance">Bodensee</string>
+    <string id="brienz"  scope="glance">Brienzersee</string>
+    <string id="thun"  scope="glance">Thunersee</string>
+    <string id="geneva"  scope="glance">Genfersee</string>
+    <string id="greifensee"  scope="glance">Greifensee</string>
+    <string id="gruyere"  scope="glance">Greyerzersee</string>
+    <string id="klontalersee"  scope="glance">Klöntalersee</string>
     <string id="joux"  scope="glance">Lac de Joux</string>
-    <string id="maggiore"  scope="glance">Lake Maggiore</string>
-    <string id="zurich"  scope="glance">Lake Zurich</string>
-    <string id="lucernekreuztrichterandvitznauerbecken"  scope="glance">Lake Lucerne</string>
-    <string id="lucerneurnersee"  scope="glance">Lake Lucerne</string>
-    <string id="lucernegersauerandtreibbecken"  scope="glance">Lake Lucerne</string>
-    <string id="lungern"  scope="glance">Lake Lungern</string>
-    <string id="murten"  scope="glance">Lake Murten</string>
-    <string id="neuchatel"  scope="glance">Lake Neuchâtel</string>
-    <string id="pfaffikon"  scope="glance">Lake Pfäffikon</string>
-    <string id="sempach"  scope="glance">Lake Sempach</string>
-    <string id="sarnen"  scope="glance">Lake Sarnen</string>
-    <string id="alpnachersee"  scope="glance">Lake Alpnach</string>
-    <string id="lugano"  scope="glance">Lake Lugano</string>
-    <string id="walensee"  scope="glance">Lake Walen</string>
-    <string id="zug"  scope="glance">Lake Zug</string>
-    <string id="sihlsee"  scope="glance">Lake Sihl</string>
+    <string id="maggiore"  scope="glance">Langensee</string>
+    <string id="zurich"  scope="glance">Zürichsee</string>
+    <string id="lucernekreuztrichterandvitznauerbecken"  scope="glance">Vierwaldstättersee</string>
+    <string id="lucerneurnersee"  scope="glance">Vierwaldstättersee</string>
+    <string id="lucernegersauerandtreibbecken"  scope="glance">Vierwaldstättersee</string>
+    <string id="lungern"  scope="glance">Lungerersee</string>
+    <string id="murten"  scope="glance">Murtensee</string>
+    <string id="neuchatel"  scope="glance">Neuenburgersee</string>
+    <string id="pfaffikon"  scope="glance">Pfäffikersee</string>
+    <string id="sempach"  scope="glance">Sempachersee</string>
+    <string id="sarnen"  scope="glance">Sarnersee</string>
+    <string id="alpnachersee"  scope="glance">Alpnachersee</string>
+    <string id="lugano"  scope="glance">Luganersee</string>
+    <string id="walensee"  scope="glance">Walensee</string>
+    <string id="zug"  scope="glance">Zugersee</string>
+    <string id="sihlsee"  scope="glance">Sihlsee</string>
     <string id="poschiavo"  scope="glance">Lago di Poschiavo</string>
-    <string id="sils"  scope="glance">Lake Sils</string>
-    <string id="silvaplana"  scope="glance">Lake Silvaplana</string>
-    <string id="stmoritz"  scope="glance">Lake St Moritz</string>
-    <string id="champfer"  scope="glance">Lake Champfèr</string>
-    <string id="lauerz"  scope="glance">Lake Lauerz</string>
+    <string id="sils"  scope="glance">Silsersee</string>
+    <string id="silvaplana"  scope="glance">Silvaplanersee</string>
+    <string id="stmoritz"  scope="glance">St. Moritzersee</string>
+    <string id="champfer"  scope="glance">Champfèrersee</string>
+    <string id="lauerz"  scope="glance">Lauerzersee</string>
     <string id="rotsee"  scope="glance">Rotsee</string>
     <string id="turlersee"  scope="glance">Türlersee</string>
     <string id="amsoldingersee"  scope="glance">Amsoldingersee</string>
     <string id="moossee"  scope="glance">Moossee</string>
     <string id="mauensee"  scope="glance">Mauensee</string>
-    <string id="oeschinensee"  scope="glance">Lake Oeschinen</string>
+    <string id="oeschinensee"  scope="glance">Oeschinensee</string>
     <string id="soppensee"  scope="glance">Soppensee</string>
     <string id="inkwilersee"  scope="glance">Inkwilersee</string>
     <string id="huttwilersee"  scope="glance">Hüttwilersee</string>
-    <string id="cadagno"  scope="glance">Lake Cadagno</string>
+    <string id="cadagno"  scope="glance">Cadagnosee</string>
     <string id="husemersee"  scope="glance">Husemersee</string>
     <string id="huttnersee"  scope="glance">Hüttnersee</string>
     <string id="lutzelsee"  scope="glance">Lützelsee</string>
@@ -63,7 +59,7 @@
     <string id="chlimoossee"  scope="glance">Chli Moossee</string>
     <string id="uebeschisee"  scope="glance">Uebeschisee</string>
     <string id="bret"  scope="glance">Lac de Bret</string>
-    <string id="brenet"  scope="glance">Lake Brenet</string>
+    <string id="brenet"  scope="glance">Lac Brenet</string>
     <string id="chavonnes"  scope="glance">Lac des Chavonnes</string>
     <string id="bretaye"  scope="glance">Lac de Bretaye</string>
     <string id="lioson"  scope="glance">Lac Lioson</string>
@@ -87,6 +83,6 @@
     <string id="vagoweiher"  scope="glance">Vago Weiher</string>
     <string id="wilemersee"  scope="glance">Wilemersee</string>
     <string id="wistererweiher"  scope="glance">Wisterer Weiher</string>
-    <string id="garda"  scope="glance">Lake Garda</string>
-    <string id="caldonazzo"  scope="glance">Lake Caldonazzo</string>
+    <string id="garda"  scope="glance">Gardasee</string>
+    <string id="caldonazzo"  scope="glance">Caldonazzosee</string>
 </strings>

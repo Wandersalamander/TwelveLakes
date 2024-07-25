@@ -34,7 +34,7 @@ class WidgetGlanceView extends Ui.GlanceView {
                 0,
                 0.8*dc.getHeight(), 
                 Graphics.FONT_GLANCE, 
-                Lang.format("$1$$2$ $3$°C", [favouriteLake.substring(0, 1).toUpper(), favouriteLake.substring(1, favouriteLake.length()), temperature.format("%.1f")]),
+                Lang.format("$1$ $2$°C", [readableLakeName(favouriteLake), temperature.format("%.1f")]),
                 Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_LEFT
             );
         }

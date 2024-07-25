@@ -179,44 +179,47 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegat
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 43 28 ]
         %tmp.62 = getm $.Toybox.WatchUi;
         %tmp.63 = getv function %tmp.62 :showToast;
-        %tmp.65 = lgetv %newFavouriteLake.3;
-        %tmp.66 = as %tmp.65 { (!Null) };
-        %tmp.67 = null;
-        invoke %tmp.62 %tmp.63(%tmp.66, %tmp.67);
+        %tmp.64 = self;
+        %tmp.65 = getv function %tmp.64 :readableLakeName;
+        %tmp.67 = lgetv %newFavouriteLake.3;
+        %tmp.68 = as %tmp.67 { (!Null) };
+        %tmp.69 = invoke %tmp.64 %tmp.65(%tmp.68);
+        %tmp.70 = null;
+        invoke %tmp.62 %tmp.63(%tmp.69, %tmp.70);
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 44 28 ]
-        %tmp.68 = lgetv %self;
-        %tmp.69 = getv %tmp.68 :view;
-        %tmp.70 = getv function %tmp.69 :notifyFullUpdate;
-        invoke %tmp.69 %tmp.70();
+        %tmp.71 = lgetv %self;
+        %tmp.72 = getv %tmp.71 :view;
+        %tmp.73 = getv function %tmp.72 :notifyFullUpdate;
+        invoke %tmp.72 %tmp.73();
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_40_83_45_24_stop:
         goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_40_24_47_24_if_end;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_40_24_47_24_if_false:
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_45_29_47_24_start:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 46 28 ]
-        %tmp.71 = getm $.Toybox.WatchUi;
-        %tmp.72 = getv function %tmp.71 :showToast;
-        %tmp.73 = "GPS quality too low";
-        %tmp.74 = null;
-        invoke %tmp.71 %tmp.72(%tmp.73, %tmp.74);
+        %tmp.74 = getm $.Toybox.WatchUi;
+        %tmp.75 = getv function %tmp.74 :showToast;
+        %tmp.76 = "GPS quality too low";
+        %tmp.77 = null;
+        invoke %tmp.74 %tmp.75(%tmp.76, %tmp.77);
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_45_29_47_24_stop:
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_40_24_47_24_if_end:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 48 24 ]
         goto break @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_36_16_55_16_switchStmtEnd;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_49_20_51_29_switchCase:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 50 24 ]
-        %tmp.75 = getm $.Toybox.WatchUi;
-        %tmp.76 = getv function %tmp.75 :showToast;
-        %tmp.77 = "Thanks to Alplakes.ch";
-        %tmp.78 = null;
-        invoke %tmp.75 %tmp.76(%tmp.77, %tmp.78);
+        %tmp.78 = getm $.Toybox.WatchUi;
+        %tmp.79 = getv function %tmp.78 :showToast;
+        %tmp.80 = "Thanks Alplakes.ch";
+        %tmp.81 = null;
+        invoke %tmp.78 %tmp.79(%tmp.80, %tmp.81);
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 51 24 ]
         goto break @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_36_16_55_16_switchStmtEnd;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_52_20_54_29_switchCase:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 53 24 ]
-        %tmp.79 = lgetv %self;
-        %tmp.80 = getv %tmp.79 :view;
-        %tmp.81 = getv function %tmp.80 :notifyFullUpdate;
-        invoke %tmp.80 %tmp.81();
+        %tmp.82 = lgetv %self;
+        %tmp.83 = getv %tmp.82 :view;
+        %tmp.84 = getv function %tmp.83 :notifyFullUpdate;
+        invoke %tmp.83 %tmp.84();
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 54 24 ]
         goto break @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_36_16_55_16_switchStmtEnd;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_36_16_55_16_defaultCodeBegin:
@@ -229,15 +232,15 @@ C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegat
         goto @C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_33_8_58_8_if_end;
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_33_8_58_8_if_end:
 [ "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc" 59 8 ]
-        %tmp.82 = getm $.Toybox.Position;
-        %tmp.83 = getv function %tmp.82 :enableLocationEvents;
-        %tmp.84 = getm $.Toybox.Position;
-        %tmp.85 = getv %tmp.84 :LOCATION_DISABLE;
-        %tmp.86 = self;
-        %tmp.87 = getv function %tmp.86 :method;
-        %tmp.89 = const :onPosition;
-        %tmp.90 = invoke %tmp.86 %tmp.87(%tmp.89);
-        invoke %tmp.82 %tmp.83(%tmp.85, %tmp.90);
+        %tmp.85 = getm $.Toybox.Position;
+        %tmp.86 = getv function %tmp.85 :enableLocationEvents;
+        %tmp.87 = getm $.Toybox.Position;
+        %tmp.88 = getv %tmp.87 :LOCATION_DISABLE;
+        %tmp.89 = self;
+        %tmp.90 = getv function %tmp.89 :method;
+        %tmp.92 = const :onPosition;
+        %tmp.93 = invoke %tmp.89 %tmp.90(%tmp.92);
+        invoke %tmp.85 %tmp.86(%tmp.88, %tmp.93);
 C_Users_Lauber_Documents_Garmin_TwelveLakes_TwelveLakes_source_MyBehaviorDelegate_mc_31_61_60_4_stop:
     }
     [ @file = "C:\Users\Lauber\Documents\Garmin\TwelveLakes\TwelveLakes\source\MyBehaviorDelegate.mc"; @line = 61; ]

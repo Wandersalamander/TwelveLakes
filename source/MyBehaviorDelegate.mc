@@ -40,7 +40,7 @@ class MyActionMenuDelegate extends WatchUi.ActionMenuDelegate {
                         if (position_lat_long != null and newFavouriteLake != null){
                             setFavouritePosition(position_lat_long);
                             setFavouriteLake(newFavouriteLake);
-                            WatchUi.showToast(newFavouriteLake, null);
+                            WatchUi.showToast(readableLakeName(newFavouriteLake), null);
                             self.view.notifyFullUpdate();
                         }else{
                             WatchUi.showToast("GPS quality too low", null);
