@@ -1,4 +1,11 @@
 <strings>
+    
+    <string id="ClosestLake">Lac le plus proche</string>
+    <string id="Away"></string>
+
+    <string id="LakeTemperature"  scope="glance">TEMP. DU LAC</string>
+    
+    
     <string id="ageri"  scope="glance">Lac d'Ägeri</string>
     <string id="baldegg"  scope="glance">Lac de Baldegg</string>
     <string id="hallwil"  scope="glance">Lac de Hallwil</string>
@@ -7,7 +14,7 @@
     <string id="lowerconstance"  scope="glance">Lac de Constance</string>
     <string id="brienz"  scope="glance">Lac de Brienz</string>
     <string id="thun"  scope="glance">Lac de Thoune</string>
-    <string id="geneva"  scope="glance">Le Léman</string>
+    <string id="geneva"  scope="glance">Lac Léman</string>
     <string id="greifensee"  scope="glance">Lac de Greifen</string>
     <string id="gruyere"  scope="glance">Lac de la Gruyère</string>
     <string id="klontalersee"  scope="glance">Lac du Klöntal</string>

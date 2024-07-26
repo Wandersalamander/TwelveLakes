@@ -1,4 +1,0 @@
-<action-menu id="ActionMenu">
-    <action-menu-item id="edit" label="@Strings.edit" />
-    <action-menu-item id="dismiss" label="@Strings.dismiss" />
-</action-menu>

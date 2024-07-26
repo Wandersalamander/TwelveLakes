@@ -23,7 +23,7 @@ class WidgetGlanceView extends Ui.GlanceView {
             0,
             0.2*dc.getHeight(),
             Graphics.FONT_GLANCE,
-            Lang.format("LAKE TEMPERATURE", []),
+            WatchUi.loadResource(Rez.Strings.LakeTemperature) as String,
             Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_LEFT
         );
         drawColorBar(dc);

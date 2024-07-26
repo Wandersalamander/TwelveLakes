@@ -1,4 +1,11 @@
 <strings>
+    
+    <string id="ClosestLake">Più vicino</string>
+    <string id="Away"> di distanza</string>
+
+    <string id="LakeTemperature"  scope="glance">TEMP. DEL LAGO</string>
+    
+    
     <string id="ageri"  scope="glance">Lago di Ägeri</string>
     <string id="baldegg"  scope="glance">Lago di Baldegg</string>
     <string id="hallwil"  scope="glance">Lago di Hallwil</string>

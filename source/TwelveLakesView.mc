@@ -93,12 +93,12 @@ class TwelveLakesView extends WatchUi.View {
         var text;
         if (currentDistance != null){
             if (currentDistance >= 1000){
-                text = Lang.format("Closest lake ($1$km away)", [(currentDistance/1000.0).format("%d")]);
+                text = Lang.format("$1$ ($2$km$3$)", [(WatchUi.loadResource(Rez.Strings.ClosestLake) as String), (currentDistance/1000.0).format("%d"), (WatchUi.loadResource(Rez.Strings.Away) as String)]);
             }else{
-                text = Lang.format("Closest lake ($1$m away)", [(currentDistance).format("%d")]);
+                text = Lang.format("$1$ ($2$m$3$)", [(WatchUi.loadResource(Rez.Strings.ClosestLake) as String), (currentDistance).format("%d"), (WatchUi.loadResource(Rez.Strings.Away) as String)]);
             }
         }else{
-            text = Lang.format("Closest lake", []);
+            text = WatchUi.loadResource(Rez.Strings.ClosestLake) as String;
         }
         dc.drawText(dc.getWidth()/2, 0.800*dc.getHeight(), Graphics.FONT_AUX1, text, Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_CENTER);
         if (currentLake != null){
@@ -146,7 +146,7 @@ class TwelveLakesView extends WatchUi.View {
                 tempMin = tempMean - tempSpan/2.0;
                 tempMax = tempMean + tempSpan/2.0;
             }
-
+            //Upper and lower temperatur plot limits
             dc.drawText(offsetX+spanX+width, offsetY, Graphics.FONT_AUX1,
                 Lang.format("$1$°C", [tempMin.toNumber()]), 
                 Graphics.TEXT_JUSTIFY_VCENTER | Graphics.TEXT_JUSTIFY_LEFT

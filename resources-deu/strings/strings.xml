@@ -1,4 +1,10 @@
 <strings>
+    
+    <string id="ClosestLake">Nächster See</string>
+    <string id="Away"> entfernt</string>
+
+    <string id="LakeTemperature"  scope="glance">SEETEMPERATUR</string>
+    
     <string id="ageri"  scope="glance">Ägerisee</string>
     <string id="baldegg"  scope="glance">Baldeggersee</string>
     <string id="hallwil"  scope="glance">Hallwilersee</string>
