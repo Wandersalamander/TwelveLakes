@@ -1,11 +1,12 @@
 # TwelveLakes <div style="float: left;"><img src="https://github.com/Wandersalamander/TwelveLakes/blob/master/resources/drawables/launcher_icon.png" width="40" height="40"/></div> 
 
-TwelveLakes is a Garmin Glance app designed to provide detailed information about alpine lakes directly on your Garmin watch. By leveraging the Alplakes API, TwelveLakes displays one of twelve alpine lakes with essential details for outdoor enthusiasts, hikers, and nature lovers.
+TwelveLakes is a Garmin Glance app designed to provide detailed information about alpine lakes directly on your Garmin watch. By leveraging the [Alplakes API](https://www.alplakes.eawag.ch/), TwelveLakes displays about 90 different alpine lakes with essential details for outdoor enthusiasts, hikers, and nature lovers.
+<div style="float: left;"><img src="https://github.com/Wandersalamander/TwelveLakes/blob/master/Glance.png" width="200"/> <img src="https://github.com/Wandersalamander/TwelveLakes/blob/master/View.png" width="200"/> </div> 
 
 ## Features
 
 - **Simple Integration:** No API key required to access the Alplakes API.
-- **Detailed Information:** Provides comprehensive data about each lake, including:
+- **Detailed Information:** Provides detailed 3D data about several lakes, including:
   - Geneva
   - Garda
   - Zurich
@@ -69,7 +70,7 @@ If you have any questions, suggestions, or feedback, feel free to contact us via
 
 ## Acknowledgements
 
-- Thanks to the Alplakes API team for providing comprehensive and accessible data.
+- Thanks to the Alplakes team for providing comprehensive and accessible data.
 - Thanks to the Garmin Connect IQ team for their support and tools.
 
 Enjoy exploring the beauty of alpine lakes with TwelveLakes on your Garmin watch!
