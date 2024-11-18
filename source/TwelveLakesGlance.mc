@@ -66,11 +66,14 @@ class WidgetGlanceView extends Ui.GlanceView {
         "Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED,
       },
     };
+    var fourHours = new Time.Duration(4* 60 * 60);
     var today = Time.now();
-
-    var myRequest = alplakesApiString(lakeName, today, today, position);
-    System.println(myRequest);
-    Communications.makeWebRequest(myRequest, null, options, method(:onReceive));
+    var alsoToday = today.subtract(fourHours);
+    if (alsoToday instanceof Time.Moment){
+        var myRequest = alplakesApiString(lakeName, alsoToday, today, position);
+        System.println(myRequest);
+        Communications.makeWebRequest(myRequest, null, options, method(:onReceive));
+    }
   }
 
   function drawColorBar(dc as Gfx.Dc) as Void {
@@ -138,14 +141,16 @@ class WidgetGlanceView extends Ui.GlanceView {
     data as Dictionary or String or Null
   ) as Void {
     System.println(responseCode);
+    System.println(data);
+
     if (responseCode == 200) {
       System.println(data);
       if (data instanceof Dictionary) {
-        var helper = processReceivedData(data); // lake, favouriteTimeArray, favouriteTemperatureArray
+        var helper = processReceivedData(getFavouriteLake(), data); // lake, favouriteTimeArray, favouriteTemperatureArray
         var __favouriteTemperatureArray = helper[2];
         var temperature;
         if (__favouriteTemperatureArray != null) {
-          temperature = __favouriteTemperatureArray[0];
+          temperature = __favouriteTemperatureArray[__favouriteTemperatureArray.size()-1];
           if (temperature != null) {
             setFavouriteTemperature(temperature);
             setGlanceLastUpdate();

@@ -687,7 +687,9 @@ function getPosition() as [Double, Double]? {
   var info = Position.getInfo();
 
   // if (info != null){
-  if (info.accuracy >= Position.QUALITY_USABLE) {
+  System.println(info.accuracy);
+  System.println(Position.QUALITY_USABLE);
+  if (info.accuracy >= Position.QUALITY_LAST_KNOWN) {
     var position = info.position;
     if (position != null) {
       return position.toDegrees();
@@ -762,7 +764,7 @@ function alplakesApiString1DLake(
   var oneFiveHour = new Time.Duration(90 * 60);
 
   return Lang.format(
-    "https://alplakes-api.eawag.ch/simulations/1d/point/simstrat/$1$/T/$2$/$3$/1",
+    "https://alplakes-api.eawag.ch/simulations/1d/point/simstrat/$1$/$2$/$3$/1?variables=T",
     [
       lake,
       asAlplakeString(start.subtract(oneFiveHour) as Time.Moment), // increase timespan
@@ -773,51 +775,40 @@ function alplakesApiString1DLake(
 
 (:glance)
 function processReceivedData(
-  data as Dictionary
+  lake as String, data as Dictionary
 ) as [String, Array<String>, Array<Float>, Float] or
   [String, Array<String>, Array<Float>, Null] or
   [Null, Null, Null, Null] {
   System.println("processReceivedData");
-  var lake;
-  if (data.hasKey("lake")) {
-    lake = data["lake"];
+  var helper;
+  if (lakeType(lake as String).equals("1D")) {
+    helper = processReceivedData1D(lake, data);
   } else {
-    lake = null;
+    helper = processReceivedData3D(lake, data);
   }
+  var favouriteTemperatureArray = helper[2];
 
-  if (lake == null) {
+  if (
+    favouriteTemperatureArray != null &&
+    favouriteTemperatureArray.size() > 0
+  ) {
+    return helper;
+  } else {
     return [null, null, null, null];
-  } else {
-    var helper;
-    if (lakeType(lake as String).equals("1D")) {
-      helper = processReceivedData1D(data);
-    } else {
-      helper = processReceivedData3D(data);
-    }
-    var favouriteTemperatureArray = helper[2];
-
-    if (
-      favouriteTemperatureArray != null &&
-      favouriteTemperatureArray.size() > 0
-    ) {
-      return helper;
-    } else {
-      return [null, null, null, null];
-    }
   }
+
 }
 
 (:glance)
 function processReceivedData3D(
-  data as Dictionary
+  lake as String, data as Dictionary
 ) as [String, Array<String>, Array<Float>, Float] or [Null, Null, Null, Null] {
   System.println("processReceivedData3D");
   var fail = [null, null, null, null];
-  var dataTemperature = data["temperature"];
+  var dataTemperature = data["variables"]["temperature"];
   if (dataTemperature instanceof Dictionary) {
     var favouriteTemperatureArray = dataTemperature["data"] as Array<Float>;
-    var lake = data["lake"] as String;
-    var distane = data["distance"] as Float or Double or Number;
+    var distane = data["distance"]["data"] as Float or Double or Number;
     var favouriteTimeArray = data["time"] as Array<String>; // YYYYmmddhhmm
     return [
       lake,
@@ -832,12 +823,12 @@ function processReceivedData3D(
 
 (:glance)
 function processReceivedData1D(
-  data as Dictionary
+  lake as String, data as Dictionary
 ) as [String, Array<String>, Array<Float>, Null] or [Null, Null, Null, Null] {
   System.println("processReceivedData1D");
-  var favouriteTemperatureArray = data["T"] as Array<Float>;
+  var favouriteTemperatureArray = data["variables"]["T"]["data"] as Array<Float>;
   var favouriteTimeArray = data["time"] as Array<String>; // YYYY-mm-ddThh:mm:ss+00:00
-  var lake = data["lake"] as String;
+  //var lake = data["lake"] as String;
 
   // overwrite string with format YYYYmmddhhmm
   var s;

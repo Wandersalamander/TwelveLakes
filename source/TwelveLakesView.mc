@@ -17,6 +17,7 @@ class TwelveLakesView extends WatchUi.View {
   function initialize() {
     System.println("TwelveLakesView.initialize");
     View.initialize();
+    tryUpdateCurrentPosition();
 
     makeRequest(false, false);
   }
@@ -134,11 +135,11 @@ class TwelveLakesView extends WatchUi.View {
       var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
       var todayString = today.day.format("%02d");
       for (var i = 0; i < (favouriteTimeArray as Array<String>).size(); i++) {
-        dd = (favouriteTimeArray as Array<String>)[i].substring(6, 8) as String;
+        dd = (favouriteTimeArray as Array<String>)[i].substring(8, 10) as String;
         hhmm =
-          (favouriteTimeArray as Array<String>)[i].substring(8, 8 + 4) as
+          (favouriteTimeArray as Array<String>)[i].substring(11, 11+5) as
           String;
-        if (hhmm.equals("1200")) {
+        if (hhmm.equals("12:00")) {
           if (dd.equals(todayString)) {
             dc.drawText(
               offsetX + i * widthT,
@@ -159,7 +160,7 @@ class TwelveLakesView extends WatchUi.View {
             }
           }
         }
-        if (hhmm.equals("0000")) {
+        if (hhmm.equals("00:00")) {
           dc.drawLine(
             offsetX + i * widthT,
             offsetY,
@@ -205,9 +206,9 @@ class TwelveLakesView extends WatchUi.View {
           Graphics.COLOR_DK_GREEN
         );
         dc.fillRectangle(
-          offsetX + i * width,
+          offsetX + i * width - 1,
           offsetY - barHeight,
-          width + width / 10,
+          width + width / 10 + 1,
           barHeight
         );
       }
@@ -293,6 +294,8 @@ class TwelveLakesView extends WatchUi.View {
       },
     };
     var today = Time.now();
+    var fourHours = new Time.Duration(4* 60 * 60);
+    var alsoToday = today.subtract(fourHours);
 
     var currentLake = getCurrentLake();
     var currentPosition = getCurrentPosition();
@@ -301,7 +304,7 @@ class TwelveLakesView extends WatchUi.View {
     if (currentLake != null && currentPosition != null && readyForUpdateProx) {
       var myRequestProx = alplakesApiString(
         currentLake,
-        today,
+        alsoToday,
         today,
         currentPosition
       );
@@ -327,7 +330,7 @@ class TwelveLakesView extends WatchUi.View {
     if (responseCode == 200) {
       System.println(data);
       if (data instanceof Dictionary) {
-        var helper = processReceivedData(data); // lake, favouriteTimeArray, favouriteTemperatureArray
+        var helper = processReceivedData(getFavouriteLake(), data); // lake, favouriteTimeArray, favouriteTemperatureArray
         var favouriteTimeArray = helper[1];
         var favouriteTemperatureArray = helper[2];
         if (favouriteTimeArray != null && favouriteTemperatureArray != null) {
@@ -358,12 +361,12 @@ class TwelveLakesView extends WatchUi.View {
     System.println(responseCode);
     if (responseCode == 200 and data instanceof Dictionary) {
       System.println(data);
-      var helper = processReceivedData(data); // lake, favouriteTimeArray, favouriteTemperatureArray, currentDistance
+      var helper = processReceivedData(getCurrentLake(), data); // lake, favouriteTimeArray, favouriteTemperatureArray, currentDistance
       var __favouriteTemperatureArray = helper[2];
       var currentDistance = helper[3];
       var currentTemperature = null;
       if (__favouriteTemperatureArray != null) {
-        currentTemperature = __favouriteTemperatureArray[0];
+        currentTemperature = __favouriteTemperatureArray[__favouriteTemperatureArray.size()-1];
         setCurrentTemperature(currentTemperature);
         if (currentDistance != null) {
           setCurrentDistance(currentDistance);
